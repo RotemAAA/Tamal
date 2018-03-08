@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#007bbd</color>
+    <color name="colorPrimaryText">#007bbe</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimaryTextWhite">#fff</color>
+    <color name="colorPrimaryFootBar">#c2eaea</color>
+    <color name="colorPrimaryDialButton">#006837</color>
+    <color name="colorHalfButtonGrey">#e1ebf5</color>
+    <color name="colorHalfButtonBlue">#b1f5f2</color>
+    <color name="colorHalfButtonLightBrown">#efefef</color>
+</resources>

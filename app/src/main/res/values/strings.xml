@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Tamal Social Bank take 1</string>
+    <string name="logo">Logo</string>
+    <string name="tamal_social_bank">הבנק החברתי למזון תינוקות</string>
+    <string name="donate_food">לתרומת מזון</string>
+    <string name="donate_money">לתרומת כסף</string>
+    <string name="got_it_thanks">הבנתי</string>
+    <string name="dial_now">חייג עכשיו</string>
+    <string name="leave_details">השאר פרטים</string>
+    <string name="fast_donation">תרומה מהירה</string>
+    <string name="stories">סיפורים</string>
+    <string name="login">התחבר</string>
+    <string name="buy_points">נקודות קניה</string>
+    <string name="scan_barcode">לסריקת ברקוד</string>
+    <string name="pick_from_list">בחר מרשימה</string>
+    <string name="to_scan_the_barcode">סרוק ברקוד</string>
+    <string name="cell_phone">נייד</string>
+    <string name="send">שלח</string>
+    <string name="street_and_number">רחוב ומספר</string>
+    <string name="add_new_delivery_guy">הוסף שליח חדש</string>
+    <string name="code">קוד</string>
+    <string name="send_code">שלח קוד</string>
+    <string name="reset_code">איפוס קוד</string>
+    <string name="full_name">שם מלא</string>
+    <string name="city">עיר</string>
+    <string name="update">עדכן</string>
+
+
+    <string-array name="pick_up_hours">
+        <item>8:00-10:00</item>
+        <item>10:00-12:00</item>
+        <item>12:00-14:00</item>
+        <item>14:00-16:00</item>
+        <item>16:00-18:00</item>
+    </string-array>
+</resources>

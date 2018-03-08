@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.guzman.rotem.tamalsocialbank1">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".LogoActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".MainDonorsActivity" />
+        <activity android:name=".DonateMoneyActivity" />
+        <activity android:name=".LeaveDetailsActivity" />
+        <activity android:name=".ExplainActivity" />
+        <activity android:name=".DonateChooseBarcodeOrListActivity" />
+        <activity android:name=".ScanBarcodeActivity" />
+        <activity android:name=".PickProductsFromList" />
+        <activity android:name=".ChoosePickup" />
+        <activity android:name=".BookDelivery" />
+        <activity android:name=".NearbyDropOffPoint" />
+        <activity android:name=".DropOffConfirmation" />
+        <activity android:name=".DropOffPoints" />
+        <activity android:name=".BuyingPoints" />
+        <activity android:name=".DeliveryGuyDestinationList" />
+        <activity android:name=".MotherMainActivity" />
+        <activity android:name=".MotherStatusActivity" />
+        <activity android:name=".MotherRejectionActivity" />
+        <activity android:name=".MotherDeliveryOnWayActivity" />
+        <activity android:name=".RegistrationChooseActivity" />
+        <activity android:name=".StorageMainActivity" />
+        <activity android:name=".StoraeDeliveryGuysListActivity" />
+        <activity android:name=".StorageManageInventoryActivity" />
+        <activity android:name=".StorageManageDeliveryActivity" />
+        <activity android:name=".StorageManageDonationsActivity" />
+        <activity android:name=".StorageDonationFullDetailsActivity" />
+        <activity android:name=".StorageManageRequestsActivity" />
+        <activity android:name=".StorageManageDropOffPointsActivity" />
+        <activity android:name=".StorageAddNewDropOffPointActivity" />
+        <activity android:name=".RegestrationMainActivity" />
+        <activity android:name=".RegistrationDonorActivity" />
+        <activity android:name=".RegistrationDeliveryGuyActivity" />
+        <activity android:name=".AdminMainActivity" />
+        <activity android:name=".AdminUsersMainActivity" />
+        <activity android:name=".AdminDeliveryGuysActivity" />
+        <activity android:name=".AdminDeliveryGuysEditActivity" />
+        <activity android:name=".AdminStockKeeperActivity" />
+        <activity android:name=".AdminStockKeeperEditActivity" />
+        <activity android:name=".AdminMotherActivity" />
+        <activity android:name=".AdminMotherEditActivity"></activity>
+    </application>
+
+</manifest>
