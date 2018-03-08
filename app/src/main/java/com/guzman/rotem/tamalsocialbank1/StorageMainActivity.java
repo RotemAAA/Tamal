@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class StorageMainActivity extends AppCompatActivity {
-    private Button btnManageInventory, btnManageDelivery, btnManageRequests, btnManagePickUpPoints, btnManageDonations;
+    private Button btnManageInventory, btnManageDelivery, btnManageRequests, btnManagePickUpPoints, btnManageDonations, btnSendDeliveryGuy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,15 @@ public class StorageMainActivity extends AppCompatActivity {
         btnManageRequests = findViewById(R.id.btnManageRequests);
         btnManagePickUpPoints = findViewById(R.id.btnManagePickUpPoints);
         btnManageDonations = findViewById(R.id.btnManageDonations);
+        btnSendDeliveryGuy = findViewById(R.id.btnSendDeliveryGuy);
+
+        btnSendDeliveryGuy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(StorageMainActivity.this, StoraeDeliveryGuysListActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btnManageDonations.setOnClickListener(new View.OnClickListener() {
             @Override

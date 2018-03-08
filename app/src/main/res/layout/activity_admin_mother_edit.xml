@@ -17,7 +17,7 @@
         android:layout_width="149dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="קוד"
@@ -46,8 +46,9 @@
         android:inputType="textPersonName"
         android:text="שם מלא"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="144dp" />
+        tools:layout_editor_absoluteY="75dp" />
 
     <EditText
         android:id="@+id/etPhone"
@@ -98,10 +99,18 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="עדכן"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/etStreetAndNumber"
-        app:layout_constraintStart_toStartOf="@+id/etStreetAndNumber"
-        app:layout_constraintTop_toBottomOf="@+id/etStreetAndNumber" />
+        app:layout_constraintStart_toStartOf="@+id/etStreetAndNumber" />
+
+    <EditText
+        android:id="@+id/etFoodCapacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="קיבולת מזון"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="375dp" />
 </android.support.constraint.ConstraintLayout>

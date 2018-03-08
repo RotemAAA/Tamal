@@ -57,7 +57,7 @@
 
 
     <Button
-        android:id="@+id/btnDestinationAcceptDeliveryToDestination"
+        android:id="@+id/btnSMDonationFullAccept"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:layout_marginBottom="8dp"
@@ -95,7 +95,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline35"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/btnDestinationAcceptDeliveryToDestination"
+        app:layout_constraintStart_toEndOf="@+id/btnSMDonationFullAccept"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 </android.support.constraint.ConstraintLayout>

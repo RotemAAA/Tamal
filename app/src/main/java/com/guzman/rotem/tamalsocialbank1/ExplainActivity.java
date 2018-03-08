@@ -1,6 +1,7 @@
 package com.guzman.rotem.tamalsocialbank1;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,5 +25,15 @@ public class ExplainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Handler h = new Handler();
+        h.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                Intent intent = new Intent(ExplainActivity.this, DonateChooseBarcodeOrListActivity.class);
+                startActivity(intent);
+            }
+        }, 10000);
     }
 }

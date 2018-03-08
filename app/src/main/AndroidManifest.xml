@@ -60,7 +60,8 @@
         <activity android:name=".AdminStockKeeperActivity" />
         <activity android:name=".AdminStockKeeperEditActivity" />
         <activity android:name=".AdminMotherActivity" />
-        <activity android:name=".AdminMotherEditActivity"></activity>
+        <activity android:name=".AdminMotherEditActivity" />
+        <activity android:name=".ClerkMainActivity"></activity>
     </application>
 
 </manifest>

@@ -14,6 +14,7 @@ public class StoraeDeliveryGuysListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_storae_delivery_guys_list);
 
         lvDeliveryGuys = findViewById(R.id.lvDeliveryGuys);
-        //TODO: Create a list??
+        //TODO: connect to: storage_delivery_guys_list_my_list
+
     }
 }

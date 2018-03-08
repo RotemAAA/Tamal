@@ -8,7 +8,8 @@ import android.widget.EditText;
 public class AdminMotherEditActivity extends AppCompatActivity {
 
     private Button btnCodeReset, btnSendCode, btnUpdate;
-    private EditText etCode, etFullName, etPhone, etCity, etStreetAndNumber;
+    private EditText etCode, etFullName, etPhone, etCity, etStreetAndNumber, etFoodCapacity;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,7 @@ public class AdminMotherEditActivity extends AppCompatActivity {
         etCode = findViewById(R.id.etCode);
         etPhone = findViewById(R.id.etPhone);
         etStreetAndNumber = findViewById(R.id.etStreetAndNumber);
+        etFoodCapacity = findViewById(R.id.etFoodCapacity);
 
 
 

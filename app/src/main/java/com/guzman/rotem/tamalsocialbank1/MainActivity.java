@@ -18,8 +18,19 @@ public class MainActivity extends AppCompatActivity {
 
 
         btnFastDonation = findViewById(R.id.btnFastDonation);
+
         btnStories = findViewById(R.id.btnStories);
+        //TODO: connect to web??
+
         btnLogin = findViewById(R.id.btnLogin);
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, RegistrationChooseActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btnFastDonation.setOnClickListener(new View.OnClickListener() {
             @Override
