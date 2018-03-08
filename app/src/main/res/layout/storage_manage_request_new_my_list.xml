@@ -9,9 +9,11 @@
         android:id="@+id/tvSMNewRequestInInventory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="number"
-        tools:layout_editor_absoluteX="249dp"
-        tools:layout_editor_absoluteY="143dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvSMNewRequestInStockNumber"
+        app:layout_constraintTop_toTopOf="@+id/tvSMNewRequestInStockNumber"
+        tools:layout_editor_absoluteX="249dp" />
 
     <Button
         android:id="@+id/btnSMNewRequestCallDeliveryGuy"
