@@ -26,6 +26,10 @@
     <string name="update">עדכן</string>
     <string name="food_capacity">קיבולת מזון</string>
     <string name="logo">Logo</string>
+    <string name="you_chose_to_drop_your_donation_in_this_center">בחרת להוריד תרומה בנקודת מסירה</string>
+    <string name="this_products">את המוצרים</string>
+    <string name="choose_center_to_drop_off_donation">בחר נקודה להורדת התרומה</string>
+    <string name="explain_the_donation_process">explain the donation process</string>
 
 
     <string-array name="pick_up_hours">
