@@ -11,6 +11,8 @@
         android:id="@+id/tvCompanyName"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:fontFamily="@font/varela_round"
         android:gravity="center"
         android:text="@string/tamal_social_bank"
@@ -18,9 +20,9 @@
         android:textColor="@color/colorPrimaryText"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/gh40"
-        app:layout_constraintEnd_toStartOf="@+id/gv90"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="@+id/gv10"
+        app:layout_constraintEnd_toStartOf="@+id/gv80"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gv20"
         app:layout_constraintTop_toTopOf="@+id/gh25"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -170,6 +172,20 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.94" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gv80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gv20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
 
 
 </android.support.constraint.ConstraintLayout>

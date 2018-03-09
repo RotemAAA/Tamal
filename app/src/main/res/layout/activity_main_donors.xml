@@ -8,227 +8,173 @@
 
     <TextView
         android:id="@+id/tvCompanyName"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginStart="60dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:fontFamily="@font/varela_round"
         android:gravity="center"
         android:text="@string/tamal_social_bank"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryText"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/gh35"
-        app:layout_constraintEnd_toEndOf="@+id/gv24"
-        app:layout_constraintHorizontal_bias="0.695"
-        app:layout_constraintStart_toEndOf="@+id/gv76"
-        app:layout_constraintTop_toTopOf="@+id/gh20"
-        app:layout_constraintVertical_bias="0.045" />
+        app:layout_constraintBottom_toTopOf="@+id/gh40"
+        app:layout_constraintEnd_toStartOf="@+id/gv80"
+        app:layout_constraintStart_toStartOf="@+id/gv20"
+        app:layout_constraintTop_toTopOf="@+id/gh25" />
 
     <Button
         android:id="@+id/btnFoodDonation"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/all_states_button"
-        android:drawableLeft="@drawable/round_food_button_icon"
-        android:fontFamily="@font/varela_round"
-        android:text="@string/donate_food"
-        android:textColor="@color/colorPrimaryTextWhite"
-        android:textSize="21sp"
-        app:layout_constraintBottom_toTopOf="@+id/gh50"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gh35" />
+        android:background="@drawable/asset141"
+        app:layout_constraintBottom_toTopOf="@+id/gh58"
+        app:layout_constraintEnd_toStartOf="@+id/gv85"
+        app:layout_constraintStart_toStartOf="@+id/gv15"
+        app:layout_constraintTop_toTopOf="@+id/gh45" />
 
     <Button
         android:id="@+id/btnMoneyDonation"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/all_states_button"
-        android:drawableLeft="@drawable/round_money_button_icon"
-        android:fontFamily="@font/varela_round"
-        android:text="@string/donate_money"
-        android:textColor="@color/colorPrimaryTextWhite"
-        android:textSize="21sp"
-        app:layout_constraintBottom_toTopOf="@+id/gh75"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gh54"
-        app:layout_constraintVertical_bias="0.285" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gv50"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.17" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh35"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.37" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh50"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh80"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9" />
-
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh75"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.67" />
-
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/asset142"
+        app:layout_constraintBottom_toTopOf="@+id/gh76"
+        app:layout_constraintEnd_toStartOf="@+id/gv85"
+        app:layout_constraintStart_toStartOf="@+id/gv15"
+        app:layout_constraintTop_toTopOf="@+id/gh63" />
 
 
     <ImageView
         android:id="@+id/ivLogo"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toTopOf="@+id/gh20"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@+id/gv65"
+        app:layout_constraintStart_toStartOf="@+id/gv35"
+        app:layout_constraintTop_toTopOf="@+id/gh5"
         app:srcCompat="@drawable/asset_52_all" />
 
-    <ImageView
-        android:id="@+id/ivFoodDonationBtn"
+    <Button
+        android:id="@+id/btnBuyPoints"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:elevation="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/gh50"
-        app:layout_constraintEnd_toStartOf="@+id/gv65"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btnFoodDonation"
-        app:layout_constraintTop_toTopOf="@+id/gh35"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/asset_68_s_01" />
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/asset143"
+        app:layout_constraintBottom_toTopOf="@+id/gh94"
+        app:layout_constraintEnd_toStartOf="@+id/gv85"
+        app:layout_constraintStart_toStartOf="@+id/gv15"
+        app:layout_constraintTop_toTopOf="@+id/gh81" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gh20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gh5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gh25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gh40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gh45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gh58"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.58" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gh63"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.63" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gh76"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.76" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gh81"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.81" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gh94"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.94" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gv15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gv20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gv35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gv65"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.33" />
-
-    <ImageView
-        android:id="@+id/ivMoneyDonationBtn"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:elevation="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/gh75"
-        app:layout_constraintEnd_toStartOf="@+id/gv65"
-        app:layout_constraintStart_toStartOf="@+id/btnMoneyDonation"
-        app:layout_constraintTop_toTopOf="@+id/gh54"
-        app:srcCompat="@drawable/asset_69_s_01" />
+        app:layout_constraintGuide_percent="0.65" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/gv24"
+        android:id="@+id/gv80"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.24" />
+        app:layout_constraintGuide_percent="0.8" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/gv76"
+        android:id="@+id/gv85"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.76" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh54"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.54" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh71"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.71" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh84"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.84" />
-
-    <Button
-        android:id="@+id/btnBuyPoints"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/all_states_button"
-        android:drawableLeft="@drawable/round_money_button_icon"
-        android:drawableTint="@color/colorHalfButtonLightBrown"
-        android:text="@string/buy_points"
-        android:fontFamily="@font/varela_round"
-        android:textColor="@color/colorPrimaryTextWhite"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/gh84"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gh71" />
-
-    <ImageView
-        android:id="@+id/ivBuyPoints"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:elevation="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/gh84"
-        app:layout_constraintEnd_toStartOf="@+id/gv65"
-        app:layout_constraintStart_toStartOf="@+id/btnBuyPoints"
-        app:layout_constraintTop_toTopOf="@+id/gh71"
-        app:srcCompat="@drawable/asset_70_s_01" />
+        app:layout_constraintGuide_percent="0.85" />
 
 
 </android.support.constraint.ConstraintLayout>
