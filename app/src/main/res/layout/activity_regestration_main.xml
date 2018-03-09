@@ -96,7 +96,7 @@
         app:srcCompat="@drawable/asset_52_all" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/gv38"
+        android:id="@+id/gv65"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"

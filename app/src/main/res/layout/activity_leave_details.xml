@@ -8,7 +8,7 @@
     tools:context="com.guzman.rotem.tamalsocialbank1.LeaveDetailsActivity">
 
     <android.support.constraint.Guideline
-        android:id="@+id/gh18"
+        android:id="@+id/gh20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -73,7 +73,7 @@
         android:hint="שם מלא"
         android:inputType="textPersonName"
         android:padding="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/gh18"
+        app:layout_constraintBottom_toTopOf="@+id/gh20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/gh4"
@@ -97,7 +97,7 @@
         app:layout_constraintBottom_toTopOf="@+id/gh78"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gh18" />
+        app:layout_constraintTop_toTopOf="@+id/gh20" />
 
     <Button
         android:id="@+id/btnSend"

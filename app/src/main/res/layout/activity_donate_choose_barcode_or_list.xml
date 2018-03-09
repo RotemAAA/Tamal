@@ -7,7 +7,7 @@
     tools:context="com.guzman.rotem.tamalsocialbank1.DonateChooseBarcodeOrListActivity">
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline4"
+        android:id="@+id/gh20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -22,43 +22,48 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/round_primary_button"
-        android:drawableLeft="@drawable/half_big_button"
-        android:drawableTint="#23bcf0"
-        android:fontFamily="@font/varela_round"
-        android:text="@string/scan_barcode"
-        android:textColor="@color/colorPrimaryTextWhite"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:elevation="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/btnToScanBarcode"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/asset_84_s_32" />
+        android:background="@drawable/asset155"
+        app:layout_constraintBottom_toTopOf="@+id/gh20"
+        app:layout_constraintEnd_toStartOf="@+id/gv90"
+        app:layout_constraintStart_toStartOf="@+id/gv10"
+        app:layout_constraintTop_toTopOf="@+id/gh5"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ListView
         android:id="@+id/lvDonorsProducts"
-        android:layout_width="368dp"
-        android:layout_height="392dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gh25" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gh25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gh5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gv90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gv10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
 
 </android.support.constraint.ConstraintLayout>

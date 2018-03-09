@@ -10,147 +10,76 @@
         android:id="@+id/ivMoneyLogo"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/gh24"
-        app:layout_constraintEnd_toStartOf="@+id/gv75"
-        app:layout_constraintStart_toStartOf="@+id/gv25"
-        app:layout_constraintTop_toTopOf="@+id/gh6"
+        app:layout_constraintBottom_toTopOf="@+id/gh20"
+        app:layout_constraintEnd_toStartOf="@+id/gv65"
+        app:layout_constraintStart_toStartOf="@+id/gv35"
+        app:layout_constraintTop_toTopOf="@+id/gh5"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/asset_63_s_03" />
 
     <Button
         android:id="@+id/btnDialNow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@drawable/round_primary_button"
-        android:backgroundTint="@color/colorPrimaryDialButton"
-        android:drawableLeft="@drawable/half_round_call_now_button"
-        android:fontFamily="@font/varela_round"
-        android:text="@string/dial_now"
-        android:textColor="@color/colorPrimaryTextWhite"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/gh54"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gh36"
-        app:layout_constraintVertical_bias="1.0" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/asset139"
+        app:layout_constraintBottom_toTopOf="@+id/gh50"
+        app:layout_constraintEnd_toStartOf="@+id/gv90"
+        app:layout_constraintStart_toStartOf="@+id/gv10"
+        app:layout_constraintTop_toTopOf="@+id/gh35" />
 
     <Button
         android:id="@+id/btnLeaveDetails"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@drawable/round_primary_button"
-        android:drawableLeft="@drawable/half_round_leave_details_button"
-        android:fontFamily="@font/varela_round"
-        android:text="@string/leave_details"
-        android:textColor="@color/colorPrimaryTextWhite"
-        android:textSize="21sp"
-        app:layout_constraintBottom_toTopOf="@+id/gh67"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/asset147"
+        app:layout_constraintBottom_toTopOf="@+id/gh75"
+        app:layout_constraintEnd_toStartOf="@+id/gv90"
         app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gv10"
         app:layout_constraintTop_toTopOf="@+id/gh60"
         app:layout_constraintVertical_bias="0.989" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/gv38"
+        android:id="@+id/gv65"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.385" />
+        app:layout_constraintGuide_percent="0.65" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/gh18"
+        android:id="@+id/gh20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.17" />
-
-    <ImageView
-        android:id="@+id/ivDialNowBtn"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="24dp"
-        android:elevation="2dp"
-        android:foregroundGravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/gh51"
-        app:layout_constraintEnd_toStartOf="@+id/guideline34"
-        app:layout_constraintStart_toStartOf="@+id/btnDialNow"
-        app:layout_constraintTop_toTopOf="@+id/gh41"
-        app:srcCompat="@drawable/asse_60_s_25" />
-
-    <ImageView
-        android:id="@+id/ivLeaveDetailsBtn"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:elevation="2dp"
-        android:foregroundGravity="center"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/gh74"
-        app:layout_constraintEnd_toStartOf="@+id/guideline34"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btnLeaveDetails"
-        app:layout_constraintTop_toTopOf="@+id/gh62"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/asset_62_s_03" />
+        app:layout_constraintGuide_percent="0.2" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/gh36"
+        android:id="@+id/gh35"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.36" />
+        app:layout_constraintGuide_percent="0.35" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/gh54"
+        android:id="@+id/gh75"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.53" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh67"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.76" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gv25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.25" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gv75"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
         app:layout_constraintGuide_percent="0.75" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/gh6"
+        android:id="@+id/gv90"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.06" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/gh24"
+        android:id="@+id/gh5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.24" />
+        app:layout_constraintGuide_percent="0.05" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gh60"
@@ -160,46 +89,25 @@
         app:layout_constraintGuide_percent="0.6" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/gh41"
+        android:id="@+id/gh50"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.41" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh51"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.51" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh62"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.61" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh74"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.7455969" />
+        app:layout_constraintGuide_percent="0.5" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gv10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.17" />
+        app:layout_constraintGuide_percent="0.1" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline34"
+        android:id="@+id/gv35"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.34" />
+        app:layout_constraintGuide_percent="0.35" />
 
 
 </android.support.constraint.ConstraintLayout>
