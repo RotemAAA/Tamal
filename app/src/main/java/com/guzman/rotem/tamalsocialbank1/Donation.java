@@ -13,6 +13,7 @@ public class Donation {
     private String phone;
     private boolean isPickUp;
     private Food food;
+    //TODO: status: (int 0,1,2 - received, delivery, accepted).
 
 
     public Donation() {

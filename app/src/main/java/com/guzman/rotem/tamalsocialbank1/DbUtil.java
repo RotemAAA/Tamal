@@ -2,14 +2,16 @@ package com.guzman.rotem.tamalsocialbank1;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
-import android.view.View;
 import android.widget.Toast;
 
 import com.cloudant.client.api.ClientBuilder;
 import com.cloudant.client.api.CloudantClient;
 import com.cloudant.client.api.Database;
+import com.cloudant.client.org.lightcouch.NoDocumentException;
+import com.google.gson.Gson;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -21,12 +23,13 @@ import java.util.List;
 
 public class DbUtil {
     static ArrayList<Donation> donationArrayList;
+    static ArrayList<User> userArrayList;
 
     //TODO: make this arraylists for requests and storage db and populate from the readFromDb() method
 /*    static ArrayList<Donation> donationArrayList;
     static ArrayList<Donation> donationArrayList;*/
 
-    public static ArrayList<Donation> getDonationArrayList() {
+    static ArrayList<Donation> getDonationArrayList() {
         return donationArrayList;
     }
 
@@ -42,23 +45,37 @@ public class DbUtil {
                         .build();
 
                 Database database = client.database(dbName, false);
-                if (dbName.equals("demo")) {
-                    donationArrayList = getAllDocList(database);
-                }
-                else if (dbName.equals("requests")) {
+                switch (dbName) {
+                    case "demo":
+                        donationArrayList = getAllDocList(database);
+                        break;
+                    case "requests":
 
-                }
-                else if (dbName.equals("storage")) {
+                        break;
+                    case "storage":
 
+                        break;
+                    case "users":
+                        userArrayList = getAllUsersList(database);
+                        break;
                 }
                 return null;
             }
         }.execute();
     }
 
-    static ArrayList<Donation> getAllDocList(Database database) {
+    private static ArrayList<Donation> getAllDocList(Database database) {
         try {
             return (ArrayList<Donation>) database.getAllDocsRequestBuilder().includeDocs(true).build().getResponse().getDocsAs(Donation.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private static ArrayList<User> getAllUsersList(Database database) {
+        try {
+            return (ArrayList<User>) database.getAllDocsRequestBuilder().includeDocs(true).build().getResponse().getDocsAs(User.class);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -110,25 +127,60 @@ public class DbUtil {
 
                 database.save(toWrite);
 
-                Log.i("TAG", "doInBackground: cloudant data was saved.... ");
-                //Toast.makeText(context, "data saved to cloudant....", Toast.LENGTH_LONG).show();
+                Log.i("SAVED", "doInBackground: cloudant data was saved.... ");
                 return null;
             }
 
             @Override
             protected void onPostExecute(Void aVoid) {
-                Toast.makeText(context, "data saved to cloudant...", Toast.LENGTH_LONG).show();
+                Toast.makeText(context, "המידע התקבל בהצלחה", Toast.LENGTH_LONG).show();
                 super.onPostExecute(aVoid);
             }
         }.execute();
     }
 
-    public void writeToDb(View view) {
-        writeToDb(view);
-    }
+    @SuppressLint("StaticFieldLeak")
+    static void role(final Context context, final String id, final String account, final String userName, final String pass, final String dbName) {
+        new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... voids) {
+                CloudantClient client = ClientBuilder.account(account)
+                        .username(userName)
+                        .password(pass)
+                        .build();
+                Database database = client.database(dbName, false);
+                try {
+                    User user = database.find(User.class, id);
+                    String role = user.getRole();
+                    switch (role) {
+                        case "Admin":
+                            Log.i("ADMIN", "Hello Admin " + user.getFirstName() + " Welcome");
+                            break;
+                        case "Manager":
+                            Log.i("WAREHOUSE MANAGER ", "Hello warehouse manager " + user.getFirstName() + " Welcome");
+                            break;
+                        case "Delivery":
+                            Log.i("DELIVERY GUY", "Hello delivery guy, " + user.getFirstName() + " Welcome");
+                            break;
+                        case "Mother":
+                            Log.i("Mom", "Hello mom, " + user.getFirstName() + " Welcome");
+                            Gson gson = new Gson();
+                            String json = gson.toJson(user);
+                            Intent intent = new Intent(context, MotherMainActivity.class);
+                            intent.putExtra("user", json);
+                            context.startActivity(intent);
 
-    public void readFromDb(View view) {
-        readFromDb(view);
+                            break;
+                        default:
+                            Log.i("No Role", "No Role Found");
+                            break;
+                    }
+                } catch (NoDocumentException e) {
+                    Log.i("No User", "No User Found");
+                }
+                return null;
+            }
+        }.execute();
     }
 
 }

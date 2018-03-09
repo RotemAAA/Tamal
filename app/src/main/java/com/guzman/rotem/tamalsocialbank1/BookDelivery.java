@@ -34,9 +34,6 @@ public class BookDelivery extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_delivery);
 
-        //readDonDb();
-        //Donation p = new Donation("Alex", "Barukhov", "055589038", false);
-        //writeDonation(p);
         fullName = findViewById(R.id.etFullName);
         city = findViewById(R.id.etCity);
         street = findViewById(R.id.etStreetAndNumber);

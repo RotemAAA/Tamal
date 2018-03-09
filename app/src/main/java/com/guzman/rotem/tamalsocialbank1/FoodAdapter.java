@@ -48,7 +48,6 @@ public class FoodAdapter extends BaseAdapter {
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         View itemView = convertView;
-
         itemView = (itemView == null) ? inflater.inflate(R.layout.food_list_layout, null) : itemView;
         TextView tvName = itemView.findViewById(R.id.headtext);
         TextView tvDesc = itemView.findViewById(R.id.disctext);

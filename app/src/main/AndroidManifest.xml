@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.guzman.rotem.tamalsocialbank1">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,23 +24,57 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".MainDonorsActivity" />
-        <activity android:name=".DonateMoneyActivity" />
-        <activity android:name=".LeaveDetailsActivity" />
-        <activity android:name=".ExplainActivity" />
-        <activity android:name=".DonateChooseBarcodeOrListActivity" />
-        <activity android:name=".ScanBarcodeActivity" />
-        <activity android:name=".PickProductsFromList" />
-        <activity android:name=".ChoosePickup" />
-        <activity android:name=".BookDelivery" />
-        <activity android:name=".NearbyDropOffPoint" />
-        <activity android:name=".DropOffConfirmation" />
-        <activity android:name=".DropOffPoints" />
-        <activity android:name=".BuyingPoints" />
-        <activity android:name=".DeliveryGuyDestinationList" />
-        <activity android:name=".MotherMainActivity" />
-        <activity android:name=".MotherStatusActivity" />
-        <activity android:name=".MotherRejectionActivity" />
+        <activity android:name=".MainDonorsActivity"
+            android:label="שלום תורם יקר"
+            />
+        <activity android:name=".DonateMoneyActivity"
+            android:label="תרומה כספית"
+            />
+        <activity android:name=".LeaveDetailsActivity"
+            android:label="פרטים"
+            />
+        <activity android:name=".ExplainActivity"
+            android:label="איך זה עובד"
+            />
+        <activity android:name=".DonateChooseBarcodeOrListActivity"
+            android:label="בחירת תרומה"
+            />
+        <activity android:name=".ScanBarcodeActivity"
+            android:label="סריקת ברקוד"
+            />
+        <activity android:name=".PickProductsFromList"
+            android:label="בחירת מזון"
+            />
+        <activity android:name=".ChoosePickup"
+            android:label="משלוח / מסירה"
+            />
+        <activity android:name=".BookDelivery"
+            android:label="ביצוע תרומה"
+            />
+        <activity android:name=".NearbyDropOffPoint"
+            android:label="נקודות מסירה קרובות"
+            />
+        <activity android:name=".DropOffConfirmation"
+            android:label="אישור מסירה"
+            />
+        <activity android:name=".DropOffPoints"
+            android:label="נקודות מסירה"
+            />
+        <activity android:name=".BuyingPoints"
+            android:label="נקודות קניה"
+            />
+        <activity android:name=".DeliveryGuyDestinationList"
+            android:label="איסופים"
+            />
+        <activity android:name=".MotherMainActivity"
+            android:label="שלום הורה יקר"
+            />
+        <activity android:name=".MotherStatusActivity"
+            android:label="סטטוס הזמנה"
+            />
+        <activity android:name=".MotherRejectionActivity"
+            android:label="מגבלה"
+            />
         <activity android:name=".MotherDeliveryOnWayActivity" />
         <activity android:name=".RegistrationChooseActivity" />
         <activity android:name=".StorageMainActivity" />
