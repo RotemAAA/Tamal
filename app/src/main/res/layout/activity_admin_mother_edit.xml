@@ -10,132 +10,145 @@
         android:id="@+id/btnSendCode"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="שלח קוד"
+        android:background="@drawable/asset111"
         app:layout_constraintBottom_toTopOf="@+id/guideline58"
-        app:layout_constraintEnd_toStartOf="@+id/guideline51"
-        app:layout_constraintStart_toStartOf="@+id/guideline50"
+        app:layout_constraintEnd_toStartOf="@+id/gh15"
+        app:layout_constraintStart_toStartOf="@+id/gh20"
         app:layout_constraintTop_toTopOf="@+id/guideline57" />
 
     <EditText
         android:id="@+id/etCode"
-        android:layout_width="149dp"
-        android:layout_height="43dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/asset110"
         android:ems="10"
+        android:gravity="right"
+        android:hint="@string/code"
         android:inputType="textPersonName"
-        android:text="קוד"
+        android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline58"
-        app:layout_constraintEnd_toStartOf="@+id/guideline55"
-        app:layout_constraintStart_toStartOf="@+id/guideline54"
+        app:layout_constraintEnd_toStartOf="@+id/gv10"
+        app:layout_constraintStart_toStartOf="@+id/gv90"
         app:layout_constraintTop_toTopOf="@+id/guideline57" />
 
     <Button
         android:id="@+id/btnCodeReset"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="איפוס קוד"
+        android:background="@drawable/asset112"
         app:layout_constraintBottom_toTopOf="@+id/guideline58"
         app:layout_constraintEnd_toStartOf="@+id/guideline53"
-        app:layout_constraintStart_toStartOf="@+id/guideline52"
+        app:layout_constraintStart_toStartOf="@+id/gh5"
         app:layout_constraintTop_toTopOf="@+id/guideline57"
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/etFullName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:ems="10"
+        android:hint="@string/full_name"
+        android:background="@drawable/asset113"
+        android:gravity="right"
+        android:padding="10dp"
         android:inputType="textPersonName"
-        android:text="שם מלא"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline60"
+        app:layout_constraintEnd_toStartOf="@+id/gv10"
         app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="75dp" />
+        app:layout_constraintStart_toStartOf="@+id/gh20"
+        app:layout_constraintTop_toTopOf="@+id/guideline59" />
 
     <EditText
         android:id="@+id/etPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:ems="10"
+        android:hint="@string/phone"
+        android:background="@drawable/asset113"
+        android:gravity="right"
+        android:padding="10dp"
         android:inputType="phone"
-        android:text="0528-482483"
-        app:layout_constraintEnd_toEndOf="@+id/etFullName"
+        app:layout_constraintBottom_toTopOf="@+id/guideline62"
+        app:layout_constraintEnd_toStartOf="@+id/gv10"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/etFullName"
-        app:layout_constraintTop_toBottomOf="@+id/etFullName" />
+        app:layout_constraintStart_toStartOf="@+id/gh20"
+        app:layout_constraintTop_toTopOf="@+id/guideline61" />
 
     <EditText
         android:id="@+id/etCity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:ems="10"
+        android:hint="@string/city"
+        android:background="@drawable/asset114"
+        android:gravity="right"
+        android:padding="10dp"
         android:inputType="textPersonName"
-        android:text="עיר"
-        app:layout_constraintEnd_toEndOf="@+id/etPhone"
+        app:layout_constraintBottom_toTopOf="@+id/guideline64"
+        app:layout_constraintEnd_toStartOf="@+id/gv10"
         app:layout_constraintHorizontal_bias="0.625"
-        app:layout_constraintStart_toStartOf="@+id/etPhone"
-        app:layout_constraintTop_toBottomOf="@+id/etPhone" />
+        app:layout_constraintStart_toStartOf="@+id/gh20"
+        app:layout_constraintTop_toTopOf="@+id/guideline63" />
 
     <EditText
         android:id="@+id/etStreetAndNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:ems="10"
+        android:hint="@string/street_and_number"
+        android:background="@drawable/asset114"
+        android:gravity="right"
+        android:padding="10dp"
         android:inputType="textPersonName"
-        android:text="רחוב ומספר"
-        app:layout_constraintEnd_toEndOf="@+id/etCity"
+        app:layout_constraintBottom_toTopOf="@+id/guideline66"
+        app:layout_constraintEnd_toStartOf="@+id/gv10"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/etCity"
-        app:layout_constraintTop_toBottomOf="@+id/etCity" />
+        app:layout_constraintStart_toStartOf="@+id/gh20"
+        app:layout_constraintTop_toTopOf="@+id/guideline65" />
 
     <Button
         android:id="@+id/btnUpdate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="עדכן"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/etStreetAndNumber"
-        app:layout_constraintStart_toStartOf="@+id/etStreetAndNumber" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/asset116"
+        app:layout_constraintBottom_toTopOf="@+id/guideline70"
+        app:layout_constraintEnd_toStartOf="@+id/gv10"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gh20"
+        app:layout_constraintTop_toTopOf="@+id/guideline69"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/etFoodCapacity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:ems="10"
+        android:hint="@string/food_capacity"
+        android:background="@drawable/asset114"
+        android:gravity="right"
+        android:padding="10dp"
         android:inputType="textPersonName"
-        android:text="קיבולת מזון"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="375dp" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline68"
+        app:layout_constraintEnd_toStartOf="@+id/gv10"
+        app:layout_constraintStart_toStartOf="@+id/gh20"
+        app:layout_constraintTop_toTopOf="@+id/guideline67" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline50"
+        android:id="@+id/gh20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.1" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline51"
+        android:id="@+id/gh15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.25" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline52"
+        android:id="@+id/gh5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -149,14 +162,14 @@
         app:layout_constraintGuide_percent="0.45" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline54"
+        android:id="@+id/gv90"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline55"
+        android:id="@+id/gv10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -181,69 +194,83 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2" />
+        app:layout_constraintGuide_percent="0.18" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline60"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3" />
+        app:layout_constraintGuide_percent="0.28" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline61"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.35" />
+        app:layout_constraintGuide_percent="0.31" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline62"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintGuide_percent="0.41" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline63"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.44" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline64"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6" />
+        app:layout_constraintGuide_percent="0.54" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline65"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6555773" />
+        app:layout_constraintGuide_percent="0.57" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline66"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.75" />
+        app:layout_constraintGuide_percent="0.67" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline67"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.8" />
+        app:layout_constraintGuide_percent="0.7" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline68"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.8" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline69"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.83" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline70"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9315069" />
 
 </android.support.constraint.ConstraintLayout>

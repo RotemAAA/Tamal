@@ -17,6 +17,7 @@
     <string name="cell_phone">נייד</string>
     <string name="send">שלח</string>
     <string name="street_and_number">רחוב ומספר</string>
+    <string name="phone">טלפון</string>
     <string name="add_new_delivery_guy">הוסף שליח חדש</string>
     <string name="code">קוד</string>
     <string name="send_code">שלח קוד</string>
@@ -24,6 +25,7 @@
     <string name="full_name">שם מלא</string>
     <string name="city">עיר</string>
     <string name="update">עדכן</string>
+    <string name="food_capacity">קיבולת מזון</string>
 
 
     <string-array name="pick_up_hours">
