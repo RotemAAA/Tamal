@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Tamal Social Bank take 1</string>
-    <string name="logo">Logo</string>
     <string name="tamal_social_bank">הבנק החברתי למזון תינוקות</string>
     <string name="donate_food">לתרומת מזון</string>
     <string name="donate_money">לתרומת כסף</string>
@@ -26,6 +25,7 @@
     <string name="city">עיר</string>
     <string name="update">עדכן</string>
     <string name="food_capacity">קיבולת מזון</string>
+    <string name="logo">Logo</string>
 
 
     <string-array name="pick_up_hours">

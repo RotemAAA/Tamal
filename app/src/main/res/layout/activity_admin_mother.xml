@@ -12,15 +12,14 @@
         android:layout_height="0dp"
         android:background="@drawable/asset117"
         app:layout_constraintBottom_toTopOf="@+id/gh15"
-        app:layout_constraintEnd_toStartOf="@+id/gh20"
-        app:layout_constraintStart_toStartOf="@+id/guideline53"
+        app:layout_constraintEnd_toStartOf="@+id/gv90"
+        app:layout_constraintStart_toStartOf="@+id/gv10"
         app:layout_constraintTop_toTopOf="@+id/gh5" />
 
     <ListView
         android:id="@+id/lvMothers"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -51,14 +50,14 @@
         app:layout_constraintGuide_percent="0.05" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline53"
+        android:id="@+id/gv10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.1" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/gh20"
+        android:id="@+id/gv90"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"

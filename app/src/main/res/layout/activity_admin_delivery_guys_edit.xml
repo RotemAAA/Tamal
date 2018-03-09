@@ -25,7 +25,7 @@
         android:gravity="right"
         android:hint="@string/code"
         android:inputType="textPersonName"
-        android:padding="10dp"
+        android:padding="15dp"
         app:layout_constraintBottom_toTopOf="@+id/gh15"
         app:layout_constraintEnd_toStartOf="@+id/gv90"
         app:layout_constraintHorizontal_bias="0.4"
@@ -51,13 +51,13 @@
         android:ems="10"
         android:hint="@string/full_name"
         android:inputType="textPersonName"
-        android:padding="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline53"
-        app:layout_constraintEnd_toStartOf="@+id/guideline62"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline64"
-        app:layout_constraintTop_toTopOf="@+id/gh5"
-        app:layout_constraintVertical_bias="0.0" />
+        android:padding="15dp"
+        android:gravity="right"
+        app:layout_constraintBottom_toTopOf="@+id/gh30"
+        app:layout_constraintEnd_toStartOf="@+id/gv90"
+        app:layout_constraintStart_toStartOf="@+id/gv10"
+        app:layout_constraintTop_toTopOf="@+id/gh20"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/etPhone"
@@ -68,12 +68,11 @@
         android:gravity="right"
         android:hint="@string/cell_phone"
         android:inputType="phone"
-        android:padding="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/gv10"
-        app:layout_constraintEnd_toStartOf="@+id/guideline62"
-        app:layout_constraintStart_toStartOf="@+id/guideline64"
-        app:layout_constraintTop_toTopOf="@+id/gv90"
-        app:layout_constraintVertical_bias="0.333" />
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/gh45"
+        app:layout_constraintEnd_toStartOf="@+id/gv90"
+        app:layout_constraintStart_toStartOf="@+id/gv10"
+        app:layout_constraintTop_toTopOf="@+id/gh35" />
 
     <EditText
         android:id="@+id/etCity"
@@ -83,13 +82,12 @@
         android:ems="10"
         android:hint="@string/city"
         android:inputType="textPersonName"
-        android:padding="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline57"
-        app:layout_constraintEnd_toStartOf="@+id/guideline62"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline64"
-        app:layout_constraintTop_toTopOf="@+id/guideline56"
-        app:layout_constraintVertical_bias="0.0" />
+        android:gravity="right"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/gh60"
+        app:layout_constraintEnd_toStartOf="@+id/gv90"
+        app:layout_constraintStart_toStartOf="@+id/gv10"
+        app:layout_constraintTop_toTopOf="@+id/gh50" />
 
     <EditText
         android:id="@+id/etStreetAndNumber"
@@ -99,22 +97,22 @@
         android:ems="10"
         android:hint="@string/street_and_number"
         android:inputType="textPersonName"
-        android:padding="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline59"
-        app:layout_constraintEnd_toStartOf="@+id/guideline62"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline64"
-        app:layout_constraintTop_toTopOf="@+id/guideline58" />
+        android:gravity="right"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/gh75"
+        app:layout_constraintEnd_toStartOf="@+id/gv90"
+        app:layout_constraintStart_toStartOf="@+id/gv10"
+        app:layout_constraintTop_toTopOf="@+id/gh65" />
 
     <Button
         android:id="@+id/btnUpdate"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/asset116"
-        app:layout_constraintBottom_toTopOf="@+id/guideline61"
-        app:layout_constraintEnd_toStartOf="@+id/guideline62"
-        app:layout_constraintStart_toStartOf="@+id/guideline64"
-        app:layout_constraintTop_toTopOf="@+id/guideline60" />
+        app:layout_constraintBottom_toTopOf="@+id/gh90"
+        app:layout_constraintEnd_toStartOf="@+id/gv90"
+        app:layout_constraintStart_toStartOf="@+id/gv10"
+        app:layout_constraintTop_toTopOf="@+id/gh80" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gh5"
