@@ -9,123 +9,123 @@
     tools:layout_editor_absoluteY="81dp">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/ivCenterName"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/gh3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="@+id/guideline23"
+        app:layout_constraintBottom_toTopOf="@+id/gh10"
+        app:layout_constraintEnd_toStartOf="@+id/gv90"
+        app:layout_constraintStart_toStartOf="@+id/gv80"
+        app:layout_constraintTop_toTopOf="@+id/gh5"
         app:srcCompat="@drawable/asset_75_s_07" />
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline19"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gh3"
+        android:id="@+id/ivCenterAddress"
+        android:layout_width="36dp"
+        android:layout_height="26dp"
+        app:layout_constraintBottom_toTopOf="@+id/gh17"
+        app:layout_constraintEnd_toStartOf="@+id/gv90"
+        app:layout_constraintStart_toStartOf="@+id/gv80"
+        app:layout_constraintTop_toTopOf="@+id/gh12"
         app:srcCompat="@drawable/asset_76_s_07" />
 
     <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="wrap_content"
+        android:id="@+id/ivCenterPhone"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline22"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline19"
+        app:layout_constraintBottom_toTopOf="@+id/gh24"
+        app:layout_constraintEnd_toStartOf="@+id/gv90"
+        app:layout_constraintStart_toStartOf="@+id/gv80"
+        app:layout_constraintTop_toTopOf="@+id/gh19"
         app:srcCompat="@drawable/asset_77_s_07" />
 
     <TextView
         android:id="@+id/tvCenterName"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/varela_round"
         android:paddingEnd="2dp"
         android:text="מרכז קהילתי נאות שושנים"
         android:textColor="#23bcf0"
-        android:textSize="21dp"
-        app:layout_constraintBottom_toTopOf="@+id/gh3"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline23" />
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/gh10"
+        app:layout_constraintEnd_toStartOf="@+id/gv78"
+        app:layout_constraintStart_toStartOf="@+id/gv10"
+        app:layout_constraintTop_toTopOf="@+id/gh5" />
 
     <TextView
         android:id="@+id/tvCenterAddress"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/varela_round"
         android:padding="2dp"
         android:text="רחוב סיגלון 12 חולון"
+        android:textAlignment="center"
         android:textColor="#037cbe"
-        android:textSize="21dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline19"
-        app:layout_constraintEnd_toStartOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gh3" />
+
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/gh17"
+        app:layout_constraintEnd_toStartOf="@+id/gv78"
+        app:layout_constraintStart_toStartOf="@+id/gv10"
+        app:layout_constraintTop_toTopOf="@+id/gh12" />
 
     <TextView
         android:id="@+id/tvCenterPhone"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/varela_round"
         android:padding="2dp"
         android:text="טל: 03-5503977"
         android:textColor="#037cbe"
-        android:textSize="21dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline22"
-        app:layout_constraintEnd_toStartOf="@+id/imageView7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline19" />
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/gh24"
+        app:layout_constraintEnd_toStartOf="@+id/gv78"
+        app:layout_constraintStart_toStartOf="@+id/gv10"
+        app:layout_constraintTop_toTopOf="@+id/gh19" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline7"
+        android:id="@+id/gv90"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.87" />
+        app:layout_constraintGuide_percent="0.9" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/gh3"
+        android:id="@+id/gh10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.08555" />
+        app:layout_constraintGuide_percent="0.1" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline19"
+        android:id="@+id/gh12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.15264188" />
+        app:layout_constraintGuide_percent="0.12" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline22"
+        android:id="@+id/gh17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.21" />
+        app:layout_constraintGuide_percent="0.17" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline23"
+        android:id="@+id/gh5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.03" />
+        app:layout_constraintGuide_percent="0.05" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline24"
+        android:id="@+id/gh28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.24266145" />
+        app:layout_constraintGuide_percent="0.28" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline25"
+        android:id="@+id/gh68"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -133,52 +133,99 @@
 
     <Button
         android:id="@+id/btnWazeNavigation"
-        android:layout_width="wrap_content"
-        android:layout_height="49dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-
-        android:layout_marginStart="8dp"
-        android:background="@drawable/for_waze_button"
-        android:drawableRight="@drawable/for_waze_button_icon"
-        android:fontFamily="@font/varela_round"
-        android:text="ניווט בוויז"
-        android:textColor="#fff"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/asset150"
+        app:layout_constraintBottom_toTopOf="@+id/gh99"
+        app:layout_constraintEnd_toStartOf="@+id/gv90"
+        app:layout_constraintStart_toStartOf="@+id/gv10"
+        app:layout_constraintTop_toTopOf="@+id/gh85" />
 
     <Button
         android:id="@+id/btnDropProductsHere"
-        android:layout_width="wrap_content"
-        android:layout_height="55dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/round_pick_product_button"
         android:fontFamily="@font/varela_round"
         android:text="הורדת מוצרים כאן"
         android:textColor="#fff"
         android:textSize="22dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnWazeNavigation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline25" />
+        app:layout_constraintBottom_toTopOf="@+id/gh82"
+        app:layout_constraintEnd_toStartOf="@+id/gv90"
+        app:layout_constraintStart_toStartOf="@+id/gv10"
+        app:layout_constraintTop_toTopOf="@+id/gh72" />
 
     <com.google.android.gms.maps.MapView
-        android:id="@+id/mapView"
+        android:id="@+id/mvNearByDropOffCenter"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline25"
+        app:layout_constraintBottom_toTopOf="@+id/gh68"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline24"
+        app:layout_constraintTop_toTopOf="@+id/gh28"
         app:layout_constraintVertical_bias="0.512" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gh19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.19" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gh72"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.72" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gh24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.24" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gh82"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.82" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gh85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gh99"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.99" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gv78"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.78" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gv80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gv10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
 
 </android.support.constraint.ConstraintLayout>

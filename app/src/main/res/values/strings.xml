@@ -30,6 +30,9 @@
     <string name="this_products">את המוצרים</string>
     <string name="choose_center_to_drop_off_donation">בחר נקודה להורדת התרומה</string>
     <string name="explain_the_donation_process">explain the donation process</string>
+    <string name="pick_return_hour">בחירת שעה לחזרה</string>
+    <string name="enter_code">הכנס קוד כניסה</string>
+    <string name="center_name">שם נקודת האיסוף</string>
 
 
     <string-array name="pick_up_hours">

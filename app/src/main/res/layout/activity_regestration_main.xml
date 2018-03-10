@@ -7,188 +7,196 @@
     tools:context="com.guzman.rotem.tamalsocialbank1.MainActivity">
 
 
-
     <TextView
         android:id="@+id/tvCompanyName"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginStart="60dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/varela_round"
         android:gravity="center"
         android:text="@string/tamal_social_bank"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryText"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/gh33"
-        app:layout_constraintEnd_toEndOf="@+id/gv24"
-        app:layout_constraintHorizontal_bias="0.695"
-        app:layout_constraintStart_toEndOf="@+id/gv76"
-        app:layout_constraintTop_toTopOf="@+id/gh17"
-        app:layout_constraintVertical_bias="0.045" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gv50"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.17" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh33"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.32" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh48"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.48" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh80"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9" />
-
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh54"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.53" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh65"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65" />
+        app:layout_constraintBottom_toTopOf="@+id/gh40"
+        app:layout_constraintEnd_toStartOf="@+id/gv80"
+        app:layout_constraintStart_toStartOf="@+id/gv20"
+        app:layout_constraintTop_toTopOf="@+id/gh25" />
 
 
     <ImageView
         android:id="@+id/ivLogo"
-        android:contentDescription="@string/logo"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/gh17"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/logo"
+        app:layout_constraintBottom_toTopOf="@+id/gh20"
+        app:layout_constraintEnd_toStartOf="@+id/gv65"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gv35"
+        app:layout_constraintTop_toTopOf="@+id/gh5"
         app:srcCompat="@drawable/asset_52_all" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/asset114"
+        android:ems="10"
+        android:fontFamily="@font/varela_round"
+        android:hint="@string/enter_code"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toTopOf="@+id/gh55"
+        app:layout_constraintEnd_toStartOf="@+id/gv90"
+        app:layout_constraintStart_toStartOf="@+id/gv10"
+        app:layout_constraintTop_toTopOf="@+id/gh45" />
+
+    <Button
+        android:id="@+id/btnEnter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/asset136"
+        app:layout_constraintBottom_toTopOf="@+id/gh75"
+        app:layout_constraintEnd_toStartOf="@+id/gv75"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gv25"
+        app:layout_constraintTop_toTopOf="@+id/gh60"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/asset137"
+        app:layout_constraintBottom_toTopOf="@+id/gh95"
+        app:layout_constraintEnd_toStartOf="@+id/gv75"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="@+id/gv25"
+        app:layout_constraintTop_toTopOf="@+id/gh80" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gh20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gh5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gv90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gv80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gv65"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.39" />
+        app:layout_constraintGuide_percent="0.65" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/gv24"
+        android:id="@+id/gv35"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.11" />
+        app:layout_constraintGuide_percent="0.35" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/gv76"
+        android:id="@+id/gv20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.76" />
+        app:layout_constraintGuide_percent="0.2" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/gh71"
+        android:id="@+id/gv10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gh25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.70" />
+        app:layout_constraintGuide_percent="0.25" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/gh82"
+        android:id="@+id/gh40"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.82" />
+        app:layout_constraintGuide_percent="0.4" />
 
-    <EditText
-        android:id="@+id/etPassword"
+    <android.support.constraint.Guideline
+        android:id="@+id/gh45"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="הכנס סיסמה"
-        android:inputType="textPersonName"
-        android:textAlignment="textEnd"
-        app:layout_constraintBottom_toTopOf="@+id/gh54"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gh33" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
 
-    <Button
-        android:id="@+id/btnEnter"
+    <android.support.constraint.Guideline
+        android:id="@+id/gh55"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="כניסה"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gh54" />
-
-    <Button
-        android:id="@+id/btnRegister"
+    <android.support.constraint.Guideline
+        android:id="@+id/gh60"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="הרשמה"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEnter" /><![CDATA[
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
 
-    ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:elevation="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/gh65"
-        app:layout_constraintEnd_toStartOf="@+id/gv38"
-        app:layout_constraintStart_toStartOf="@+id/gv24"
-        app:layout_constraintTop_toTopOf="@+id/gh54"
-        app:srcCompat="@drawable/asset_58_s_22" />
+    <android.support.constraint.Guideline
+        android:id="@+id/gh75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
 
+    <android.support.constraint.Guideline
+        android:id="@+id/gh80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
 
-]]>
+    <android.support.constraint.Guideline
+        android:id="@+id/gh95"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gv25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gv75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
 </android.support.constraint.ConstraintLayout>

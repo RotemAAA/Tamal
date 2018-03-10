@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
         String id = "k1312tsur";
         DbUtil.role(getApplicationContext(), id, dbAcnt, dbUser, dbPass, dbName);*/
 
-        String id = "mom092";
-        DbUtil.role(getApplicationContext(), id, dbAcnt, dbUser, dbPass, dbName);
+//        String id = "mom092";
+//        DbUtil.role(getApplicationContext(), id, dbAcnt, dbUser, dbPass, dbName);
 
 
 
