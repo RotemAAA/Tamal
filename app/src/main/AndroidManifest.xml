@@ -13,11 +13,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
         <activity android:name=".LogoActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data
@@ -58,8 +54,13 @@
             android:label="אישור מסירה"
             />
         <activity android:name=".DropOffPoints"
-            android:label="נקודות מסירה"
-            />
+            android:label="נקודות מסירה">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".BuyingPoints"
             android:label="נקודות קניה"
             />

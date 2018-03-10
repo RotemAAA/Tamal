@@ -16,6 +16,8 @@ public class DropOffPoints extends AppCompatActivity {
 
         lvDropOffPoints = findViewById(R.id.lvDropOffPoints);
 
-        //TODO: connect to: drop-off_points_my_list
+        DropOffCenterAdapter dropOffCenterAdapter = new DropOffCenterAdapter(DropOffCenterDataSource.getDate(), this);
+        lvDropOffPoints.setAdapter(dropOffCenterAdapter);
+
     }
 }
