@@ -10,12 +10,17 @@
         android:id="@+id/tvSMDonationFullOrderNumber"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="number"
+        android:fontFamily="@font/varela_round"
+        android:gravity="right"
+        android:text="45"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="18dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline23"
         app:layout_constraintEnd_toStartOf="@+id/guideline33"
-        app:layout_constraintHorizontal_bias="0.689"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline34"
-        app:layout_constraintTop_toTopOf="@+id/guideline24" />
+        app:layout_constraintTop_toTopOf="@+id/guideline24"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btnSMDonationFullCallDeliveryGuy"
@@ -31,23 +36,28 @@
 
     <ListView
         android:id="@+id/lvSMDonationFullProductsDetails"
-        android:layout_width="368dp"
-        android:layout_height="123dp"
-        android:layout_marginBottom="180dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="8dp" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline45"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tvExplain"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_height="0dp"
+        android:background="#268ec7"
         android:text="לתיקון הכמות לחץ על הפריט"
-        app:layout_constraintBottom_toTopOf="@+id/lvSMDonationFullProductsDetails"
+        android:fontFamily="@font/varela_round"
+        android:textColor="@color/colorPrimaryTextWhite"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline45"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline29" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline45"
@@ -58,25 +68,25 @@
 
     <Button
         android:id="@+id/btnSMDonationFullAccept"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="אשר לקלוט למחסן"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="59dp"
+        android:background="@drawable/asset164"
+        app:layout_constraintBottom_toTopOf="@+id/guideline50"
+        app:layout_constraintEnd_toStartOf="@+id/guideline42"
         app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lvSMDonationFullProductsDetails"
+        app:layout_constraintStart_toStartOf="@+id/guideline43"
+        app:layout_constraintTop_toTopOf="@+id/guideline46"
         app:layout_constraintVertical_bias="0.267" />
 
     <TextView
         android:id="@+id/tvSMDonationFullOrderDate"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:text="date"
+        android:fontFamily="@font/varela_round"
+        android:gravity="center"
+        android:text="17.03.2018"
+        android:textSize="14sp"
+        android:textColor="@color/colorPrimaryText"
         app:layout_constraintBottom_toTopOf="@+id/guideline23"
         app:layout_constraintEnd_toStartOf="@+id/guideline38"
         app:layout_constraintStart_toStartOf="@+id/guideline39"
@@ -84,9 +94,13 @@
 
     <TextView
         android:id="@+id/tvSMDonationFullOrderTime"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:text="time"
+        android:fontFamily="@font/varela_round"
+        android:gravity="center"
+        android:text="17:05"
+        android:textSize="14sp"
+        android:textColor="#e99b1f"
         app:layout_constraintBottom_toTopOf="@+id/guideline23"
         app:layout_constraintEnd_toStartOf="@+id/guideline36"
         app:layout_constraintStart_toStartOf="@+id/guideline37"
@@ -125,7 +139,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3" />
+        app:layout_constraintGuide_begin="169dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline30"
@@ -146,7 +160,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6947162" />
+        app:layout_constraintGuide_percent="0.66" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline33"
@@ -160,28 +174,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.69" />
+        app:layout_constraintGuide_percent="0.53" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline36"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintGuide_percent="0.47" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline37"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.3" />
+        app:layout_constraintGuide_percent="0.33" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline38"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.25" />
+        app:layout_constraintGuide_percent="0.28" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline39"
@@ -213,5 +227,19 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.2" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline46"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
 
 </android.support.constraint.ConstraintLayout>
