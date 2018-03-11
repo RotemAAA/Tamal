@@ -88,4 +88,7 @@ public class DeliveryGuyAdapter extends BaseAdapter {
 
         return v;
     }
+
+
+    //TODO: btnSDGLSend --> send delivery guy to donor/mother
 }

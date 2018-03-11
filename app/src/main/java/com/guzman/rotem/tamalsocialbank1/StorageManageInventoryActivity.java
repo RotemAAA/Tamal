@@ -28,7 +28,11 @@ public class StorageManageInventoryActivity extends AppCompatActivity {
         formatTxt = (TextView)findViewById(R.id.scan_format);
         contentTxt = (TextView)findViewById(R.id.scan_content);
         lvInventory = findViewById(R.id.lvInventory);
-        //TODO: connect to: storage_manage_inventory_my_list
+
+
+
+        InventoryFLAdapter inventoryFLAdapter = new InventoryFLAdapter(InventoryFLDataSource.getData(), this);
+        lvInventory.setAdapter(inventoryFLAdapter);
 
 
 

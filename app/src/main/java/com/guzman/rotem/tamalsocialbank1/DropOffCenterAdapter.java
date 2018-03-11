@@ -90,9 +90,6 @@ public class DropOffCenterAdapter extends BaseAdapter {
                 }
             }
         });
-        ivDropOffCenterName.setImageResource(center.getImageName());
-        ivDropOffCenterAddress.setImageResource(center.getImageAddress());
-        ivDropOffCenterPhone.setImageResource(center.getImagePhone());
 
         return v;
     }
