@@ -82,6 +82,10 @@ public class DbUtil {
         return null;
     }
 
+    public static ArrayList<User> getUserArrayList() {
+        return userArrayList;
+    }
+
     @SuppressLint("StaticFieldLeak")
     private void deleteFirst() {
         new AsyncTask<Void, Void, Void>() {
@@ -155,9 +159,19 @@ public class DbUtil {
                     switch (role) {
                         case "Admin":
                             Log.i("ADMIN", "Hello Admin " + user.getFirstName() + " Welcome");
+                            Gson gson2 = new Gson();
+                            String json2 = gson2.toJson(user);
+                            Intent intent2 = new Intent(context, AdminMainActivity.class);
+                            intent2.putExtra("user", json2);
+                            context.startActivity(intent2);
                             break;
                         case "Manager":
                             Log.i("WAREHOUSE MANAGER ", "Hello warehouse manager " + user.getFirstName() + " Welcome");
+                            Gson gson1 = new Gson();
+                            String json1 = gson1.toJson(user);
+                            Intent intent1 = new Intent(context, StorageMainActivity.class);
+                            intent1.putExtra("user", json1);
+                            context.startActivity(intent1);
                             break;
                         case "Delivery":
                             Log.i("DELIVERY GUY", "Hello delivery guy, " + user.getFirstName() + " Welcome");
