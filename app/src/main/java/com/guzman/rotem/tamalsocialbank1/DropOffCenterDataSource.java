@@ -12,7 +12,7 @@ public class DropOffCenterDataSource {
         ArrayList<DropOffCenter> data = new ArrayList<>();
 
         data.add(new DropOffCenter("מרכז קהילתי נאות שושנים",
-                "רח\' צבי סיגלון 12",
+                "רח\' צבי סיגלון 12 חולון",
                 "טל: 03-5503977",
                 R.drawable.asset_78_s_07,
                 R.drawable.asset_75_s_07,
@@ -20,7 +20,7 @@ public class DropOffCenterDataSource {
                 R.drawable.asset_77_s_07));
 
         data.add(new DropOffCenter("מרכז קהילתי ומרכז הספורט בן גוריון",
-                "רח\' קרסל 6",
+                "רח\' קרסל 6 חולון",
                 "טל: 03-65528490",
                 R.drawable.asset_78_s_07,
                 R.drawable.asset_75_s_07,
@@ -29,7 +29,7 @@ public class DropOffCenterDataSource {
 
 
         data.add(new DropOffCenter("מרכז קהילתי נווה ארזים",
-                "רח\' ישעיהו 16",
+                "רח\' ישעיהו 16 חולון",
                 "טל: 03-5506772",
                 R.drawable.asset_78_s_07,
                 R.drawable.asset_75_s_07,
@@ -38,7 +38,7 @@ public class DropOffCenterDataSource {
 
 
         data.add(new DropOffCenter("מרכז קהילתי וולפסון",
-                "רח\' צבי ש\"ץ 29",
+                "רח\' צבי ש\"ץ 29 חולון",
                 "טל: 03-6519181",
                 R.drawable.asset_78_s_07,
                 R.drawable.asset_75_s_07,
@@ -46,7 +46,7 @@ public class DropOffCenterDataSource {
                 R.drawable.asset_77_s_07));
 
         data.add(new DropOffCenter("מרכז קהילתי לזרוס",
-                "רח\' סנהדרין 27",
+                "רח\' סנהדרין 27 חולון",
                 "טל: 03-5030068",
                 R.drawable.asset_78_s_07,
                 R.drawable.asset_75_s_07,
@@ -54,7 +54,7 @@ public class DropOffCenterDataSource {
                 R.drawable.asset_77_s_07));
 
         data.add(new DropOffCenter("מרכז קהילתי נאות רחל",
-                "רח\' חצרים 2",
+                "רח\' חצרים 2 חולון",
                 "טל: 03-5035499",
                 R.drawable.asset_78_s_07,
                 R.drawable.asset_75_s_07,
@@ -62,7 +62,7 @@ public class DropOffCenterDataSource {
                 R.drawable.asset_77_s_07));
 
         data.add(new DropOffCenter("מרכז קהילתי קליין",
-                "רח\' פילדלפיה 16",
+                "רח\' פילדלפיה 16 חולון",
                 "טל: 03-5038083",
                 R.drawable.asset_78_s_07,
                 R.drawable.asset_75_s_07,
@@ -70,7 +70,7 @@ public class DropOffCenterDataSource {
                 R.drawable.asset_77_s_07));
 
         data.add(new DropOffCenter("מקהל\"ת מרכז קהילתי תורני",
-                "רח\' פילדלפיה 5",
+                "רח\' פילדלפיה 5 חולון",
                 "טל: 03-5015529",
                 R.drawable.asset_78_s_07,
                 R.drawable.asset_75_s_07,
@@ -78,7 +78,7 @@ public class DropOffCenterDataSource {
                 R.drawable.asset_77_s_07));
 
         data.add(new DropOffCenter("מרכז פסגות",
-                "רח\' סרלין 21",
+                "רח\' סרלין 21 חולון",
                 "טל: 03-6530300",
                 R.drawable.asset_78_s_07,
                 R.drawable.asset_75_s_07,
@@ -86,7 +86,7 @@ public class DropOffCenterDataSource {
                 R.drawable.asset_77_s_07));
 
         data.add(new DropOffCenter("מרכז חנקין",
-                "רח\' חנקין 109",
+                "רח\' חנקין 109 חולון",
                 "טל: 03-6530300",
                 R.drawable.asset_78_s_07,
                 R.drawable.asset_75_s_07,
@@ -94,7 +94,7 @@ public class DropOffCenterDataSource {
                 R.drawable.asset_77_s_07));
 
         data.add(new DropOffCenter("רעים מרכז למחול ותנועת הגוף",
-                "רח\' הופיין 44",
+                "רח\' הופיין 44 חולון",
                 "טל: 03-5035299",
                 R.drawable.asset_78_s_07,
                 R.drawable.asset_75_s_07,
@@ -102,14 +102,12 @@ public class DropOffCenterDataSource {
                 R.drawable.asset_77_s_07));
 
         data.add(new DropOffCenter("מרכז שטיינברג החדש- במה למוסיקה חיה",
-                "רח\' גבעת התחמושת 21",
+                "רח\' גבעת התחמושת 21 חולון",
                 "טל: 03-5500012",
                 R.drawable.asset_78_s_07,
                 R.drawable.asset_75_s_07,
                 R.drawable.asset_76_s_07,
                 R.drawable.asset_77_s_07));
-
-
 
         return data;
     }

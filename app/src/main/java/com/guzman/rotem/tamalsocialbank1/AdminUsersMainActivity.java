@@ -31,6 +31,7 @@ public class AdminUsersMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(AdminUsersMainActivity.this, AdminDeliveryGuysActivity.class);
+                startActivity(intent);
             }
         });
 

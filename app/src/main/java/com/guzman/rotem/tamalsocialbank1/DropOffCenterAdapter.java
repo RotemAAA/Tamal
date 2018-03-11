@@ -47,7 +47,7 @@ public class DropOffCenterAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        DropOffCenter center = data.get(position);
+        final DropOffCenter center = data.get(position);
 
         LayoutInflater inflater = LayoutInflater.from(context);
 
@@ -61,13 +61,13 @@ public class DropOffCenterAdapter extends BaseAdapter {
         ImageView ivDropOffCenterAddress = v.findViewById(R.id.ivDropOffCenterAddress);
         ImageView ivDropOffCenterPhone = v.findViewById(R.id.ivDropOffCenterPhone);
 
-        tvDropOffCenterName.setText(DropOffCenter.getName());
-        tvDropOffCenterAddress.setText(DropOffCenter.getAddress());
-        tvDropOffCenterPhone.setText(DropOffCenter.getPhone());
+        tvDropOffCenterName.setText(center.getName());
+        tvDropOffCenterAddress.setText(center.getAddress());
+        tvDropOffCenterPhone.setText(center.getPhone());
         btnDropOffCenterGoToWaze.setOnClickListener(new View.OnClickListener() {
 
 
-            //TODO: כרגע הרשימה מציגה רק את התא האחרון. הפכתי את הגטרים לסטטים כי זה עשה לי שגיאה. אולי בכלל זה?
+            //TODO: כרגע הרשימה מציגה רק את התא האחרון.
 
 
             @Override
@@ -75,7 +75,7 @@ public class DropOffCenterAdapter extends BaseAdapter {
                 try
                 {
                     // Launch Waze to look for Hawaii:
-                    String address = DropOffCenter.getAddress();
+                    String address = center.getAddress();
                     String url = "https://waze.com/ul?q=" + address + "";
 
 
@@ -90,9 +90,9 @@ public class DropOffCenterAdapter extends BaseAdapter {
                 }
             }
         });
-        ivDropOffCenterName.setImageResource(DropOffCenter.getImageName());
-        ivDropOffCenterAddress.setImageResource(DropOffCenter.getImageAddress());
-        ivDropOffCenterPhone.setImageResource(DropOffCenter.getImagePhone());
+        ivDropOffCenterName.setImageResource(center.getImageName());
+        ivDropOffCenterAddress.setImageResource(center.getImageAddress());
+        ivDropOffCenterPhone.setImageResource(center.getImagePhone());
 
         return v;
     }

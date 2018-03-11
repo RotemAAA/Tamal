@@ -38,7 +38,7 @@ public class DropOffCenter {
         this.imagePhone = imagePhone;
     }
 
-    public static String getName() {
+    public String getName() {
         return name;
     }
 
@@ -46,7 +46,7 @@ public class DropOffCenter {
         this.name = name;
     }
 
-    public static String getAddress() {
+    public String getAddress() {
         return address;
     }
 
@@ -54,7 +54,7 @@ public class DropOffCenter {
         this.address = address;
     }
 
-    public static String getPhone() {
+    public String getPhone() {
         return phone;
     }
 
@@ -62,7 +62,7 @@ public class DropOffCenter {
         this.phone = phone;
     }
 
-    public static int getImageWaze() {
+    public int getImageWaze() {
         return imageWaze;
     }
 
@@ -70,7 +70,7 @@ public class DropOffCenter {
         this.imageWaze = imageWaze;
     }
 
-    public static int getImageName() {
+    public int getImageName() {
         return imageName;
     }
 
@@ -78,7 +78,7 @@ public class DropOffCenter {
         this.imageName = imageName;
     }
 
-    public static int getImageAddress() {
+    public int getImageAddress() {
         return imageAddress;
     }
 
@@ -86,7 +86,7 @@ public class DropOffCenter {
         this.imageAddress = imageAddress;
     }
 
-    public static int getImagePhone() {
+    public int getImagePhone() {
         return imagePhone;
     }
 

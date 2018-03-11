@@ -1,7 +1,7 @@
 package com.guzman.rotem.tamalsocialbank1;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
 public class DropOffPoints extends AppCompatActivity {
@@ -18,6 +18,10 @@ public class DropOffPoints extends AppCompatActivity {
 
         DropOffCenterAdapter dropOffCenterAdapter = new DropOffCenterAdapter(DropOffCenterDataSource.getDate(), this);
         lvDropOffPoints.setAdapter(dropOffCenterAdapter);
+
+//       ArrayList<DropOffCenter> d1  = DropOffCenterDataSource.getDate();
+////        System.out.println(d1.toString());
+//        Log.d("sdghsghgf", d1.toString());
 
     }
 }

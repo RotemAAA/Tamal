@@ -45,8 +45,9 @@
             android:label="משלוח / מסירה"
             />
         <activity android:name=".BookDelivery"
-            android:label="ביצוע תרומה"
-            />
+            android:label="ביצוע תרומה">
+
+        </activity>
         <activity android:name=".NearbyDropOffPoint"
             android:label="נקודות מסירה קרובות"
             />
@@ -90,7 +91,9 @@
         <activity android:name=".RegestrationMainActivity" />
         <activity android:name=".RegistrationDonorActivity" />
         <activity android:name=".RegistrationDeliveryGuyActivity" />
-        <activity android:name=".AdminMainActivity" />
+        <activity android:name=".AdminMainActivity">
+
+        </activity>
         <activity android:name=".AdminUsersMainActivity" />
         <activity android:name=".AdminDeliveryGuysActivity" />
         <activity android:name=".AdminDeliveryGuysEditActivity" />
