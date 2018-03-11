@@ -5,5 +5,5 @@ package com.guzman.rotem.tamalsocialbank1;
  */
 
 public class Rotem {
-    private String rotem;
+    private String rotemG;
 }
