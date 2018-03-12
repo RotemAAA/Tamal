@@ -30,10 +30,10 @@
         android:layout_height="110dp"
 
         android:layout_marginEnd="3dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/asset131"
         app:layout_constraintEnd_toStartOf="@+id/guideline52"
-        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="@+id/guideline52"
         app:layout_constraintTop_toBottomOf="@+id/tvHeadLine" />
 
