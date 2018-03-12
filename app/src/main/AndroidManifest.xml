@@ -12,8 +12,13 @@
         android:supportsRtl="false"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+
         <activity android:name=".LogoActivity">
 
         </activity>
@@ -79,13 +84,8 @@
         <activity android:name=".RegistrationChooseActivity" >
 
         </activity>
-        <activity android:name=".StorageMainActivity" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".StorageMainActivity"/>
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
         <activity android:name=".StoraeDeliveryGuysListActivity">
 
         </activity>
