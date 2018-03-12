@@ -4,52 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.guzman.rotem.tamalsocialbank1.RegistrationChooseActivity">
+    tools:context="com.guzman.rotem.tamalsocialbank1.RegistrationChooseActivity"
+    tools:layout_editor_absoluteY="81dp">
 
     <TextView
         android:id="@+id/tvHeadLine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="64dp"
+
+        android:layout_marginTop="8dp"
         android:text="הרשמה"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="37dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline53"
+        app:layout_constraintEnd_toStartOf="@+id/guideline52"
+        app:layout_constraintStart_toStartOf="@+id/guideline52"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnDonor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="110dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="52dp"
-        android:text="רוצה לתרום"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHeadLine" />
+        android:layout_marginTop="8dp"
+        android:background="@drawable/asset175"
+        app:layout_constraintEnd_toStartOf="@+id/guideline52"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@+id/guideline52"
+        app:layout_constraintTop_toTopOf="@+id/guideline53" />
 
     <Button
         android:id="@+id/btnMother"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="מבקשת תרומה"
-        app:layout_constraintEnd_toEndOf="@+id/btnDonor"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btnDonor"
+        android:layout_width="350dp"
+        android:layout_height="110dp"
+
+        android:layout_marginEnd="3dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/asset131"
+        app:layout_constraintEnd_toStartOf="@+id/guideline52"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/guideline52"
         app:layout_constraintTop_toBottomOf="@+id/btnDonor" />
 
     <Button
         android:id="@+id/btnVolunteer"
-        android:layout_width="89dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:text="רוצה להתנדב"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnMother"
-        app:layout_constraintStart_toStartOf="@+id/btnMother"
+        android:layout_width="350dp"
+        android:layout_height="110dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/asset132"
+        app:layout_constraintEnd_toStartOf="@+id/guideline52"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@+id/guideline52"
         app:layout_constraintTop_toBottomOf="@+id/btnMother" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline52"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline53"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13894325" />
 </android.support.constraint.ConstraintLayout>
