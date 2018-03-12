@@ -5,11 +5,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 public class DonateChooseBarcodeOrListActivity extends AppCompatActivity {
 
-    private Button toScanBarcode;
+    private ImageView toScanBarcode;
     private Button btnPickFromList;
     private ListView lvDonorsProducts;
 

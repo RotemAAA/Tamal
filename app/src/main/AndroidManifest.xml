@@ -58,11 +58,7 @@
             />
         <activity android:name=".DropOffPoints"
             android:label="נקודות מסירה">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".BuyingPoints"
             android:label="נקודות קניה"
@@ -80,8 +76,16 @@
             android:label="מגבלה"
             />
         <activity android:name=".MotherDeliveryOnWayActivity" />
-        <activity android:name=".RegistrationChooseActivity" />
-        <activity android:name=".StorageMainActivity" />
+        <activity android:name=".RegistrationChooseActivity" >
+
+        </activity>
+        <activity android:name=".StorageMainActivity" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".StoraeDeliveryGuysListActivity">
 
         </activity>

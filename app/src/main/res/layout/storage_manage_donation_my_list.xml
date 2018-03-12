@@ -28,11 +28,11 @@
 
     <Button
         android:id="@+id/btnSMDonationBookDelivery"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="הזמן שליח"
+        android:background="@drawable/asset168"
         app:layout_constraintEnd_toStartOf="@+id/guideline48"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="130dp" />
@@ -103,16 +103,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.25" />
+        app:layout_constraintGuide_percent="0.21" />
 
     <Button
         android:id="@+id/btnSMDonationShowFullDetails"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="270dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="הצג פירוט מלא"
+        android:background="@drawable/asset167"
         app:layout_constraintBottom_toTopOf="@+id/guideline44"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -131,13 +131,15 @@
 
     <Button
         android:id="@+id/btnSMDonationAccept"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="אשר וקלוט"
+        android:background="@drawable/asset163"
         app:layout_constraintBottom_toTopOf="@+id/guideline44"
+        app:layout_constraintEnd_toStartOf="@+id/guideline48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSMDonationBookDelivery" />
 
