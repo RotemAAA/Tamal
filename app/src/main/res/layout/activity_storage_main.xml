@@ -39,7 +39,7 @@
         android:id="@+id/btnManageRequests"
         android:layout_width="290dp"
         android:layout_height="80dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="40dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/asset159"
         android:textColor="@color/colorPrimaryTextWhite"
