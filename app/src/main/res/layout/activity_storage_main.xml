@@ -49,18 +49,6 @@
         app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="@+id/guideline17" />
 
-    <Button
-        android:id="@+id/btnManagePickUpPoints"
-        android:layout_width="350dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-       android:background="@drawable/asset176"
-        android:textColor="@color/colorPrimaryTextWhite"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnManageDelivery"
-        tools:layout_editor_absoluteX="35dp" />
 
     <Button
         android:id="@+id/btnManageDonations"
