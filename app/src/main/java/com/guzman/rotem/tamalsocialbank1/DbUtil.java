@@ -163,7 +163,8 @@ public class DbUtil {
                             String json2 = gson2.toJson(user);
                             Intent intent2 = new Intent(context, AdminMainActivity.class);
                             intent2.putExtra("user", json2);
-                            context.startActivity(intent2);
+                                context.startActivity(intent2);
+
                             break;
                         case "Manager":
                             Log.i("WAREHOUSE MANAGER ", "Hello warehouse manager " + user.getFirstName() + " Welcome");
