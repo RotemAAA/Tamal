@@ -15,23 +15,27 @@
         app:layout_constraintTop_toTopOf="@+id/tvSMNewRequestInStockNumber"
         tools:layout_editor_absoluteX="249dp" />
 
-    <Button
+    <ImageView
         android:id="@+id/btnSMNewRequestCallDeliveryGuy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="97dp"
+        android:layout_height="84dp"
         android:layout_marginStart="8dp"
         android:text="הזמן שליח"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="43dp" />
+        app:srcCompat="@drawable/asset168"
+        tools:layout_editor_absoluteY="43dp"
 
-    <Button
+        />
+
+    <ImageView
         android:id="@+id/btnSMNewRequestChangeStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="91dp"
+        android:layout_height="99dp"
         android:layout_marginStart="8dp"
         android:text="שנה סטטוס"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="95dp" />
+        app:srcCompat="@drawable/asset169"
+        tools:layout_editor_absoluteY="99dp" />
 
     <TextView
         android:id="@+id/tvSMNewRequestShowProduct2"
@@ -39,12 +43,10 @@
         android:layout_height="15dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvSMNewRequestShowProductNumber2"
         app:layout_constraintTop_toTopOf="@+id/guideline47" />
 
     <TextView
@@ -137,18 +139,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/tvSMNewRequestShowProduct1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvSMNewRequestShowProduct1" />
-
-    <TextView
-        android:id="@+id/tvSMNewRequestShowProductNumber2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/tvSMNewRequestShowProduct2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvSMNewRequestShowProduct2" />
 
     <TextView
         android:id="@+id/textView8"
