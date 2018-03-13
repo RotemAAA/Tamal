@@ -32,10 +32,7 @@
             android:label="איך זה עובד" />
         <activity
             android:name=".donor.DonateChooseBarcodeOrListActivity"
-            android:label="בחירת תרומה">
-
-        </activity>
-
+            android:label="בחירת תרומה" />
         <activity
             android:name=".donor.ScanBarcodeActivity"
             android:label="סריקת ברקוד" />
@@ -70,9 +67,7 @@
             android:name=".mother.MotherStatusActivity"
             android:label="סטטוס הזמנה" />
         <activity android:name=".registration.RegistrationChooseActivity" />
-        <activity android:name=".stockKeeper.StorageMainActivity">
-
-        </activity>
+        <activity android:name=".stockKeeper.StorageMainActivity" />
         <activity android:name=".stockKeeper.StoraeDeliveryGuysListActivity" />
         <activity android:name=".stockKeeper.StorageManageInventoryActivity" />
         <activity android:name=".stockKeeper.StorageManageDeliveryActivity" />
@@ -84,25 +79,23 @@
         <activity android:name=".registration.RegestrationMainActivity" />
         <activity android:name=".admin.AdminMainActivity" />
         <activity android:name=".admin.AdminUsersMainActivity" />
-        <activity android:name=".admin.AdminDeliveryGuysActivity">
-
-        </activity>
+        <activity android:name=".admin.AdminDeliveryGuysActivity" />
         <activity android:name=".admin.AdminDeliveryGuysEditActivity" />
-        <activity android:name=".admin.AdminStockKeeperActivity">
+        <activity android:name=".admin.AdminStockKeeperActivity"></activity>
+        <activity android:name=".admin.AdminStockKeeperEditActivity" />
+        <activity android:name=".admin.AdminMotherActivity" />
+        <activity android:name=".admin.AdminMotherEditActivity" />
+        <activity android:name=".clerk.ClerkMainActivity" />
+        <activity android:name=".stockKeeper.StorageRequestsNewActivity" />
+        <activity android:name=".stockKeeper.StorageRequestsInProccessActivity" />
+        <activity android:name=".admin.AdminProductsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".admin.AdminStockKeeperEditActivity" />
-        <activity android:name=".admin.AdminMotherActivity">
-
-        </activity>
-        <activity android:name=".admin.AdminMotherEditActivity" />
-        <activity android:name=".clerk.ClerkMainActivity" />
-        <activity android:name=".stockKeeper.StorageRequestsNewActivity" />
-        <activity android:name=".stockKeeper.StorageRequestsInProccessActivity"></activity>
+        <activity android:name=".admin.AdminProductEditActivity"></activity>
     </application>
 
 </manifest>

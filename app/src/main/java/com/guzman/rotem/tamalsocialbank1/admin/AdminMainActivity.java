@@ -19,6 +19,16 @@ public class AdminMainActivity extends AppCompatActivity {
 
         btnManageInventory = findViewById(R.id.btnManageInventory);
         btnManageUsers = findViewById(R.id.btnManageUsers);
+        btnManageProducrs = findViewById(R.id.btnManageProducts);
+
+        btnManageProducrs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AdminMainActivity.this, AdminProductsActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
         btnManageInventory.setOnClickListener(new View.OnClickListener() {
             @Override
