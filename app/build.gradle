@@ -39,4 +39,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     compile 'com.cloudant:cloudant-client:2.9.0'
     compile 'com.cloudant:cloudant-sync-datastore-android:latest.release'
+
 }

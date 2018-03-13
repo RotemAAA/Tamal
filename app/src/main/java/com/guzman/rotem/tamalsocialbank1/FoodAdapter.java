@@ -49,13 +49,14 @@ public class FoodAdapter extends BaseAdapter {
     public View getView(final int position, View convertView, ViewGroup parent) {
         View itemView = convertView;
         itemView = (itemView == null) ? inflater.inflate(R.layout.food_list_layout, null) : itemView;
+        //TODO: Rotem's speciality, work the fucking layout
         TextView tvName = itemView.findViewById(R.id.headtext);
         TextView tvDesc = itemView.findViewById(R.id.disctext);
         ImageView foodImage = itemView.findViewById(R.id.image);
         Food currentFood = foods.get(position);
         tvName.setText(currentFood.getName());
         tvDesc.setText(currentFood.getDescription());
-        foodImage.setImageResource(R.drawable.asset_1);
+        foodImage.setImageResource(currentFood.getImgSrc());
 
 
         itemView.setOnClickListener(new View.OnClickListener() {

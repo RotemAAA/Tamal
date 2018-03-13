@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+
 public class DonateChooseBarcodeOrListActivity extends AppCompatActivity {
 
     private Button toScanBarcode;
@@ -20,7 +22,13 @@ public class DonateChooseBarcodeOrListActivity extends AppCompatActivity {
 
 
         lvDonorsProducts = findViewById(R.id.lvDonorsProducts);
-        //TODO: connect to: food_list_layout
+
+        ArrayList<Food> foods = new ArrayList<>();
+        Food food = new Food("מטרנה extra care comfort", "דל לקטוז פרו ביוטי", R.drawable.asset_1);
+        foods.add(food);
+        FoodAdapter foodAdapter = new FoodAdapter(this, foods);
+
+        lvDonorsProducts.setAdapter(foodAdapter);
 
 
         toScanBarcode = findViewById(R.id.btnToScanBarcode);

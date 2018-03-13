@@ -12,8 +12,9 @@ public class Donation {
     private String streetAddress;
     private String phone;
     private boolean isPickUp;
-    private Food food;
+    private Food food; //TODO: maybe I need to think about arraylist cuz I want to give the user the option to donate more than 1
     //TODO: status: (int 0,1,2 - received, delivery, accepted).
+    //TODO: int for amount
 
 
     public Donation() {
@@ -29,7 +30,7 @@ public class Donation {
     }
 
 
-    //TODO: ctor for pickup donation
+    //TODO: ctor for pickup donation / just work it out with the boolean I made
 
     public String get_id() {
         return _id;

@@ -7,12 +7,12 @@ package com.guzman.rotem.tamalsocialbank1;
 public class Food {
     private String name;
     private String description;
-    private int type;
+    private int imgSrc;
 
-    public Food(String name, String description, int status) {
+    public Food(String name, String description, int imgSrc) {
         this.name = name;
         this.description = description;
-        this.type = status;
+        this.imgSrc = imgSrc;
     }
 
     public String getName() {
@@ -23,8 +23,8 @@ public class Food {
         return description;
     }
 
-    public int getType() {
-        return type;
+    public int getImgSrc() {
+        return imgSrc;
     }
 
     @Override
@@ -32,7 +32,7 @@ public class Food {
         return "Food{" +
                 "name='" + name + '\'' +
                 ", description='" + description + '\'' +
-                ", type=" + type +
+                ", imgSrc=" + imgSrc +
                 '}';
     }
 }
