@@ -10,7 +10,7 @@ import com.guzman.rotem.tamalsocialbank1.R;
 import com.guzman.rotem.tamalsocialbank1.stockKeeper.StorageMainActivity;
 
 public class AdminMainActivity extends AppCompatActivity {
-    private Button btnManageUsers, btnManageInventory;
+    private Button btnManageUsers, btnManageInventory, btnManageProducrs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

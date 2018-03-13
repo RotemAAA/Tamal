@@ -42,4 +42,7 @@
         <item>14:00-16:00</item>
         <item>16:00-18:00</item>
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

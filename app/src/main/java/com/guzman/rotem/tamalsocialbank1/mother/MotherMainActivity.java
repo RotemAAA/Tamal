@@ -36,7 +36,7 @@ public class MotherMainActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String json = intent.getStringExtra("user");
         Gson gson = new Gson();
-        user = gson.fromJson(json, User.class);
+        user = gson.fromJson(json, MomUser.class);
         btnAskHelp = findViewById(R.id.btnAskHelp);
 
         checkStatus();
@@ -69,14 +69,14 @@ public class MotherMainActivity extends AppCompatActivity {
                                     startActivity(intent2);
                                     break;
                                 case 2:
-                                    Request request = new Request(user, 0);
+                                    Request request = new Request((MomUser) user, 0);
                                     DbUtil.writeToDb(getApplicationContext(), dbAcnt, dbUser, dbPass, dbName, request);
                                     break;
                             }
 
                         } catch (NoDocumentException e) {
                             // no such request, make a new one
-                            Request request = new Request(user, 0);
+                            Request request = new Request((MomUser) user, 0);
                             DbUtil.writeToDb(getApplicationContext(), dbAcnt, dbUser, dbPass, dbName, request);
                         }
                         return null;
