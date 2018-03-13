@@ -11,7 +11,7 @@ public class Request {
     private int status; // 0 processing, 1 delivery , 2 done
 
 
-    public Request(User user, int status) {
+    public Request(MomUser user, int status) {
         this._id = user.get_id();
         this.firstName = user.getFirstName();
         this.lastName = user.getLastName();
