@@ -28,7 +28,7 @@ public class DonateChooseBarcodeOrListActivity extends AppCompatActivity {
         lvDonorsProducts = findViewById(R.id.lvDonorsProducts);
 
         ArrayList<Food> foods = new ArrayList<>();
-        Food food = new Food("מטרנה extra care comfort", "דל לקטוז פרו ביוטי", R.drawable.asset_1);
+        Food food = new Food("מטרנה extra care comfort", "דל לקטוז פרו ביוטי","35633567437", R.drawable.asset_1);
         foods.add(food);
         FoodAdapter foodAdapter = new FoodAdapter(this, foods);
 

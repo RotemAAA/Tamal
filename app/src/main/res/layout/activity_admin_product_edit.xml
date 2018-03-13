@@ -7,22 +7,43 @@
     tools:context="com.guzman.rotem.tamalsocialbank1.admin.AdminProductEditActivity">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/tvProductName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="68dp"
         android:ems="10"
         android:hint="שם המוצר"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="112dp"
-        tools:layout_editor_absoluteY="37dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.417"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/tvProductDisc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="תיאור המוצר"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="112dp"
-        tools:layout_editor_absoluteY="118dp" />
+        app:layout_constraintEnd_toEndOf="@+id/tvProductName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvProductName"
+        app:layout_constraintTop_toBottomOf="@+id/tvProductName" />
+
+    <EditText
+        android:id="@+id/tvProductBarcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="ברקוד"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/tvProductDisc"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvProductDisc"
+        app:layout_constraintTop_toBottomOf="@+id/tvProductDisc" />
 </android.support.constraint.ConstraintLayout>

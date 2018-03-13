@@ -42,12 +42,13 @@
         android:layout_width="0dp"
         android:layout_height="15dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="4dp"
         android:layout_marginTop="8dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline47" />
+        app:layout_constraintTop_toTopOf="@+id/guideline47"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/tvSMNewRequestShowProduct1"
@@ -67,11 +68,12 @@
         android:id="@+id/tvSMNewRequestTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="44dp"
         android:text="time"
         app:layout_constraintBottom_toBottomOf="@+id/tvSMNewRequestDate"
         app:layout_constraintStart_toEndOf="@+id/tvSMNewRequestDate"
-        app:layout_constraintTop_toTopOf="@+id/tvSMNewRequestDate" />
+        app:layout_constraintTop_toTopOf="@+id/tvSMNewRequestDate"
+        app:layout_constraintVertical_bias="0.0" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline44"
@@ -114,19 +116,18 @@
         android:text="Date"
         app:layout_constraintBottom_toTopOf="@+id/guideline49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tvSMNewRequestShowProductNumber1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="19dp"
+        android:layout_marginEnd="12dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/tvSMNewRequestShowProduct1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvSMNewRequestShowProduct1" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvSMNewRequestShowProduct2"
+        app:layout_constraintEnd_toStartOf="@+id/tvSMNewRequestShowProduct2"
+        app:layout_constraintTop_toTopOf="@+id/tvSMNewRequestShowProduct2" />
 
     <TextView
         android:id="@+id/textView8"
@@ -150,11 +151,12 @@
         android:id="@+id/imageView"
         android:layout_width="33dp"
         android:layout_height="35dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline49"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/asset_99_s_19" />
 
     <android.support.constraint.Guideline

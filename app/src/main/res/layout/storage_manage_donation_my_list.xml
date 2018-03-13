@@ -74,16 +74,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="52dp" />
 
-    <TextView
-        android:id="@+id/tvSMDonationFullOrderNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <android.support.constraint.Guideline
         android:id="@+id/guideline44"
         android:layout_width="wrap_content"
@@ -127,7 +117,7 @@
         android:text="שם התורם"
         app:layout_constraintBottom_toTopOf="@+id/tvSMDonationInInventory"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSMDonationFullOrderNumber" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnSMDonationAccept"

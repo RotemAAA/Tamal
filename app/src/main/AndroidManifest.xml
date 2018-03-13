@@ -66,7 +66,13 @@
         <activity
             android:name=".mother.MotherStatusActivity"
             android:label="סטטוס הזמנה" />
-        <activity android:name=".registration.RegistrationChooseActivity" />
+        <activity android:name=".registration.RegistrationChooseActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".stockKeeper.StorageMainActivity" />
         <activity android:name=".stockKeeper.StoraeDeliveryGuysListActivity" />
         <activity android:name=".stockKeeper.StorageManageInventoryActivity" />
@@ -81,7 +87,7 @@
         <activity android:name=".admin.AdminUsersMainActivity" />
         <activity android:name=".admin.AdminDeliveryGuysActivity" />
         <activity android:name=".admin.AdminDeliveryGuysEditActivity" />
-        <activity android:name=".admin.AdminStockKeeperActivity"></activity>
+        <activity android:name=".admin.AdminStockKeeperActivity" />
         <activity android:name=".admin.AdminStockKeeperEditActivity" />
         <activity android:name=".admin.AdminMotherActivity" />
         <activity android:name=".admin.AdminMotherEditActivity" />
@@ -89,13 +95,9 @@
         <activity android:name=".stockKeeper.StorageRequestsNewActivity" />
         <activity android:name=".stockKeeper.StorageRequestsInProccessActivity" />
         <activity android:name=".admin.AdminProductsActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".admin.AdminProductEditActivity"></activity>
+        <activity android:name=".admin.AdminProductEditActivity" />
+        <activity android:name=".registration.RegistrationWebViewActivity"></activity>
     </application>
 
 </manifest>

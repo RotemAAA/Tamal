@@ -16,18 +16,21 @@ public class FoodDataSource {
         data.add(new Food(
                 "מטרנה שלב 3",
                 "לגילאים 0-3",
+                "414313T530809",
                 R.drawable.asset_1
         ));
 
         data.add(new Food(
                 "מטרנה שלב 2",
                 "לגילאים 3-6",
+                "414313T530809",
                 R.drawable.asset_3
         ));
 
         data.add(new Food(
                 "מטרנה שלב 4",
                 "לגילאים 0-6",
+                "414313T530809",
                 R.drawable.asset_4
         ));
 

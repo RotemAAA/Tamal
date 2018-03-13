@@ -1,7 +1,10 @@
 package com.guzman.rotem.tamalsocialbank1.registration;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
 
 import com.guzman.rotem.tamalsocialbank1.R;
@@ -19,5 +22,14 @@ public class RegistrationChooseActivity extends AppCompatActivity {
         btnVolunteer = findViewById(R.id.btnVolunteer);
 
         //TODO: go to the web page from the Amuta site, webView
+
+        btnMother.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse("https://www.2help.org.il/food");
+                Intent intent = new Intent(RegistrationChooseActivity.this, RegistrationWebViewActivity.class);
+                intent.putExtra("URI", uri);
+            }
+        });
     }
 }

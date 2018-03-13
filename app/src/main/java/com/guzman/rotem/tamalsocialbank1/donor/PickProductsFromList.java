@@ -26,7 +26,7 @@ public class PickProductsFromList extends AppCompatActivity {
         foodListView = findViewById(R.id.lvProducts);
         btnPickDropoffPoint = findViewById(R.id.btnPickDropoffPoint);
 
-        Food food = new Food("מטרנה Extra Care Comfort", "תמ\"ל דל לקטוז והיחיד מסוגו המכיל פרוביוטיקה מסוג לקטובצילוס ראוטרי", 0);
+        Food food = new Food("מטרנה Extra Care Comfort", "תמ\"ל דל לקטוז והיחיד מסוגו המכיל פרוביוטיקה מסוג לקטובצילוס ראוטרי","4525665", 0);
 
         ArrayList<Food> foods = new ArrayList<>();
         foods.add(food);
