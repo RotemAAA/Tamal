@@ -24,10 +24,7 @@ import java.util.List;
 public class DbUtil {
     static ArrayList<Donation> donationArrayList;
     static ArrayList<User> userArrayList;
-
-    //TODO: make this arraylists for requests and storage db and populate from the readFromDb() method
-/*    static ArrayList<Donation> donationArrayList;
-    static ArrayList<Donation> donationArrayList;*/
+    //TODO: wait for next lesson with Tomer, I think there ill be better method to do so (rather those arraylists)
 
     static ArrayList<Donation> getDonationArrayList() {
         return donationArrayList;
@@ -52,7 +49,7 @@ public class DbUtil {
                     case "requests":
 
                         break;
-                    case "storage":
+                    case "inventory":
 
                         break;
                     case "users":
@@ -153,7 +150,10 @@ public class DbUtil {
                         .password(pass)
                         .build();
                 Database database = client.database(dbName, false);
+                //TODO: start moms code with m, delivery guy with g, etc.... and then go to the right class
                 try {
+                    String statrsWith = id.substring(0, 1);
+                    Log.d("IDSUB", statrsWith);
                     User user = database.find(User.class, id);
                     String role = user.getRole();
                     switch (role) {
@@ -163,24 +163,32 @@ public class DbUtil {
                             String json2 = gson2.toJson(user);
                             Intent intent2 = new Intent(context, AdminMainActivity.class);
                             intent2.putExtra("user", json2);
-                                context.startActivity(intent2);
+                            context.startActivity(intent2);
 
                             break;
                         case "Manager":
-                            Log.i("WAREHOUSE MANAGER ", "Hello warehouse manager " + user.getFirstName() + " Welcome");
+                            StockKeeperUser sUser = database.find(StockKeeperUser.class, id);
+                            Log.i("WAREHOUSE MANAGER ", "Hello warehouse manager " + sUser.getFirstName() + " Welcome");
                             Gson gson1 = new Gson();
-                            String json1 = gson1.toJson(user);
+                            String json1 = gson1.toJson(sUser);
                             Intent intent1 = new Intent(context, StorageMainActivity.class);
                             intent1.putExtra("user", json1);
                             context.startActivity(intent1);
                             break;
                         case "Delivery":
-                            Log.i("DELIVERY GUY", "Hello delivery guy, " + user.getFirstName() + " Welcome");
+                            DeliveryUser dUser = database.find(DeliveryUser.class, id);
+                            Log.i("DELIVERY GUY", "Hello delivery guy, " + dUser.getFirstName() + " Welcome");
+                            Gson gson3 = new Gson();
+                            String json3 = gson3.toJson(dUser);
+                            Intent intent3 = new Intent(context, DeliveryGuyDestinationList.class);
+                            intent3.putExtra("user", json3);
+                            context.startActivity(intent3);
                             break;
                         case "Mother":
-                            Log.i("Mom", "Hello mom, " + user.getFirstName() + " Welcome");
+                            MomUser momUser = database.find(MomUser.class, id);
+                            Log.i("Mom", "Hello mom, " + momUser.getFirstName() + " Welcome");
                             Gson gson = new Gson();
-                            String json = gson.toJson(user);
+                            String json = gson.toJson(momUser);
                             Intent intent = new Intent(context, MotherMainActivity.class);
                             intent.putExtra("user", json);
                             context.startActivity(intent);

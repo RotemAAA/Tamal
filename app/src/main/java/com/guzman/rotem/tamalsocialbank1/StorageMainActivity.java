@@ -14,8 +14,6 @@ public class StorageMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_storage_main);
 
-        //TODO: StorageManageDropOffPointsActivity
-
         btnManageInventory = findViewById(R.id.btnManageInventory);
         btnManageDelivery = findViewById(R.id.btnManageDelivery);
         btnManageRequests = findViewById(R.id.btnManageRequests);

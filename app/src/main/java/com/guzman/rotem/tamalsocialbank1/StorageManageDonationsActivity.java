@@ -14,6 +14,6 @@ public class StorageManageDonationsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_storage_manage_donations);
 
         lvManageDonations = findViewById(R.id.lvManageDonations);
-        //TODO: connect to: storage_manage_donation_my_list
+        //TODO: arrange: storage_manage_donation_my_list, and than connect it...
     }
 }
