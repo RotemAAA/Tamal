@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         btnFastDonation = findViewById(R.id.btnFastDonation);
 
         btnStories = findViewById(R.id.btnStories);
-        //TODO: connect to web??
+        //TODO: WebView to the Amuta Site
 
         btnLogin = findViewById(R.id.btnLogin);
 

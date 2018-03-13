@@ -72,14 +72,14 @@ public class DeliveryGuyAdapterAdmin extends BaseAdapter {
         btnEditDeliveryGuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: edit delivery guy
+                //TODO: edit delivery guy - server
             }
         });
 
         btnDeleteDeliveryGuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: delete delivery guy
+                //TODO: delete delivery guy - server
             }
         });
         return v;

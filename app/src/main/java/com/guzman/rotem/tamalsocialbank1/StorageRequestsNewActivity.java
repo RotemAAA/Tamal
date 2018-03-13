@@ -13,7 +13,7 @@ public class StorageRequestsNewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_storage_requests_new);
 
         lvRequestsNew = findViewById(R.id.lvRequestsNew);
-
+        //TODO: get all the requests from the server, then -
         //TODO: connect to: storage_manage_request_new_my_list
     }
 }

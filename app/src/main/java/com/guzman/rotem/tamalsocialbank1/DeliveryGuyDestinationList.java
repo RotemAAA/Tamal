@@ -14,8 +14,8 @@ public class DeliveryGuyDestinationList extends AppCompatActivity {
         setContentView(R.layout.activity_delivery_guy_destination_list);
 
         lvDeliveryDestinations = findViewById(R.id.lvDeliveryDestinations);
-        //TODO: get the intent with the user json, show a list of destinations.
+        //TODO: get the intent from dbUtil with the user json, show a list of destinations.
 
-        //TODO: show all the destionations in a list
+        //TODO: show all the destionations in a list - frmo server
     }
 }

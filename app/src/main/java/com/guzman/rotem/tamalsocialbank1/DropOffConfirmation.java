@@ -23,10 +23,8 @@ public class DropOffConfirmation extends AppCompatActivity {
         tvCenterPhone = findViewById(R.id.tvCenterPhone);
 
         lvChosenProducts = findViewById(R.id.lvChosenProducts);
-        //TODO: connect to: food_list_layout
+        //TODO: connect to: food_list_layout to show the foods chosen
 
         btnConfirm = findViewById(R.id.btnConfirm);
-
-        //TODO: ALL
     }
 }

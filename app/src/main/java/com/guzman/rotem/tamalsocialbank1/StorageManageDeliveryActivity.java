@@ -15,6 +15,7 @@ public class StorageManageDeliveryActivity extends AppCompatActivity {
 
         lvManageDelivery = findViewById(R.id.lvManageDelivery);
         //TODO: connect to: storage_manage_delivery_my_list
+        //TODO: see al the Deliveries online
 
     }
 }

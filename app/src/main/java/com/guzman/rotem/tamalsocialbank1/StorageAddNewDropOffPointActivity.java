@@ -22,6 +22,6 @@ public class StorageAddNewDropOffPointActivity extends AppCompatActivity {
         etCenterPhone = findViewById(R.id.etPhone);
         btnAdd = findViewById(R.id.btnAdd);
 
-        //TODO: ALL
+        //TODO: ALL  -  server
     }
 }

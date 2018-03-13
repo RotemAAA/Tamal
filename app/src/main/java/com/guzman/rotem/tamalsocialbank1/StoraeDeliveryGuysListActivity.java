@@ -15,6 +15,9 @@ public class StoraeDeliveryGuysListActivity extends AppCompatActivity {
 
         lvDeliveryGuys = findViewById(R.id.lvDeliveryGuys);
 
+
+        //TODO: get in intent the Truma details from the previous screen and send the delivery guy to there
+
         DeliveryGuyAdapter deliveryGuyAdapter = new DeliveryGuyAdapter(DeliveryGuyDataSource.getData(),this);
         lvDeliveryGuys.setAdapter(deliveryGuyAdapter);
 

@@ -73,14 +73,15 @@ public class MomUserAdapter extends BaseAdapter {
         btnEditMother.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: edit mother
+                //TODO: edit mother - download from server, edit data and upload with same id
             }
         });
 
         btnDeleteMother.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: detete mother
+
+                //TODO: detete mother - server
             }
         });
 

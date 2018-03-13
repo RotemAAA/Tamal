@@ -21,7 +21,7 @@ public class NearbyDropOffPoint extends AppCompatActivity {
         tvCenterAddress = findViewById(R.id.tvCenterAddress);
         tvCenterName = findViewById(R.id.tvCenterName);
         tvCenterPhone = findViewById(R.id.tvCenterPhone);
-        //TODO: GET THE DETAILS
+        //TODO: go to drop_off_center db, and show the close point (maybe by city) if we have time so with gps - server
 
 
         btnWazeNavigation = findViewById(R.id.btnWazeNavigation);

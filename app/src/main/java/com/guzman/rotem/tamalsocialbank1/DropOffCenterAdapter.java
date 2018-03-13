@@ -66,10 +66,6 @@ public class DropOffCenterAdapter extends BaseAdapter {
         tvDropOffCenterPhone.setText(center.getPhone());
         btnDropOffCenterGoToWaze.setOnClickListener(new View.OnClickListener() {
 
-
-            //TODO: כרגע הרשימה מציגה רק את התא האחרון.
-
-
             @Override
             public void onClick(View view) {
                 try

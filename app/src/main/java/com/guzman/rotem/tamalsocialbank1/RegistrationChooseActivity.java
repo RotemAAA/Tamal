@@ -16,6 +16,6 @@ public class RegistrationChooseActivity extends AppCompatActivity {
         btnMother = findViewById(R.id.btnMother);
         btnVolunteer = findViewById(R.id.btnVolunteer);
 
-        //TODO: connect to web
+        //TODO: go to the web page from the Amuta site, webView
     }
 }
