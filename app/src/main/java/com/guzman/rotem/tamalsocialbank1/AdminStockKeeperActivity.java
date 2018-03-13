@@ -21,7 +21,9 @@ public class AdminStockKeeperActivity extends AppCompatActivity {
 
 
         lvStockKeepers = findViewById(R.id.lvStockKeepers);
-        //TODO: connect to: admin_manage_stock_keepers_my_list
+
+        StockKeeperAdapter stockKeeperAdapter = new StockKeeperAdapter(StockKeeperDataSource.getData(), this);
+        lvStockKeepers.setAdapter(stockKeeperAdapter);
 
         btnAddNewStockKeeper.setOnClickListener(new View.OnClickListener() {
             @Override

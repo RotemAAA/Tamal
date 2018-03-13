@@ -32,7 +32,10 @@
             android:label="איך זה עובד" />
         <activity
             android:name=".DonateChooseBarcodeOrListActivity"
-            android:label="בחירת תרומה" />
+            android:label="בחירת תרומה">
+
+        </activity>
+
         <activity
             android:name=".ScanBarcodeActivity"
             android:label="סריקת ברקוד" />
@@ -91,14 +94,16 @@
 
         </activity>
         <activity android:name=".AdminDeliveryGuysEditActivity" />
-        <activity android:name=".AdminStockKeeperActivity" />
-        <activity android:name=".AdminStockKeeperEditActivity" />
-        <activity android:name=".AdminMotherActivity">
+        <activity android:name=".AdminStockKeeperActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".AdminStockKeeperEditActivity" />
+        <activity android:name=".AdminMotherActivity">
+
         </activity>
         <activity android:name=".AdminMotherEditActivity" />
         <activity android:name=".ClerkMainActivity" />
