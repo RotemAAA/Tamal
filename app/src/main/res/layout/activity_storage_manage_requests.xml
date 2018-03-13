@@ -6,51 +6,40 @@
     android:layout_height="match_parent"
     tools:context="com.guzman.rotem.tamalsocialbank1.StorageManageRequestsActivity">
 
-    <TextView
-        android:id="@+id/tvNewRequests"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="16dp"
-        android:text="בקשות חדשות"
-        app:layout_constraintBottom_toTopOf="@+id/lvNewRequests"
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="127dp"
+        android:layout_marginTop="54dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRequestsNew"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/asset_52_all" />
 
-    <TextView
-        android:id="@+id/tvInProcessRequests"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="8dp"
-        android:text="בקשות בתהליך"
-        app:layout_constraintBottom_toTopOf="@+id/lvInProccessRequests"
-        app:layout_constraintEnd_toEndOf="@+id/lvNewRequests"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lvNewRequests" />
-
-    <ListView
-        android:id="@+id/lvNewRequests"
-        android:layout_width="0dp"
-        android:layout_height="290dp"
-        android:layout_marginBottom="8dp"
+    <Button
+        android:id="@+id/btnRequestsNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="204dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/tvInProcessRequests"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNewRequests" />
-
-    <ListView
-        android:id="@+id/lvInProccessRequests"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:text="הזמנות חדשות"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvInProcessRequests" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnRequestsInProcess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:text="הזמנות בתהליך"
+        app:layout_constraintEnd_toEndOf="@+id/btnRequestsNew"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toStartOf="@+id/btnRequestsNew"
+        app:layout_constraintTop_toBottomOf="@+id/btnRequestsNew" />
 </android.support.constraint.ConstraintLayout>

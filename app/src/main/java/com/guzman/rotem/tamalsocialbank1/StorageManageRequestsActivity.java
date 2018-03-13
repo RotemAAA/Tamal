@@ -1,21 +1,39 @@
 package com.guzman.rotem.tamalsocialbank1;
 
-        import android.support.v7.app.AppCompatActivity;
+        import android.content.Intent;
         import android.os.Bundle;
-        import android.widget.ListView;
+import android.support.v7.app.AppCompatActivity;
+        import android.view.View;
+        import android.widget.Button;
 
 public class StorageManageRequestsActivity extends AppCompatActivity {
 
-    private ListView lvNewRequests, lvProccessRquests;
+    private Button btnRequestsNew, btnRequestsInProcess;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_storage_manage_requests);
 
-        lvNewRequests = findViewById(R.id.lvNewRequests);
-        //TODO: connect to: storage_manage_request_new_my_list
+        btnRequestsNew = findViewById(R.id.btnRequestsNew);
+        btnRequestsInProcess = findViewById(R.id.btnRequestsInProcess);
 
-        lvProccessRquests = findViewById(R.id.lvInProccessRequests);
-        //TODO: connect to: storage_manage_request_new_my_list
+        btnRequestsInProcess.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(StorageManageRequestsActivity.this, StorageRequestsInProccessActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnRequestsNew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(StorageManageRequestsActivity.this, StorageRequestsNewActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

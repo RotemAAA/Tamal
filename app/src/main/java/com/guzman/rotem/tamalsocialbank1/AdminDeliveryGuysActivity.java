@@ -22,7 +22,9 @@ public class AdminDeliveryGuysActivity extends AppCompatActivity {
 
 
         lvAdminDeliveryGuys = findViewById(R.id.lvAdminDeliveryGuys);
-        //TODO: connect ListView to: admin_manage_delivery_guys_my_list
+
+        DeliveryGuyAdapterAdmin deliveryGuyAdapterAdmin = new DeliveryGuyAdapterAdmin(DeliveryGuyDataSource.getData(), this);
+        lvAdminDeliveryGuys.setAdapter(deliveryGuyAdapterAdmin);
 
         btnAddNewDeliveryGuy.setOnClickListener(new View.OnClickListener() {
             @Override

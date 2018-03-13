@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.guzman.rotem.tamalsocialbank1">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,89 +11,71 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
-
-        <activity android:name=".LogoActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".LogoActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".MainDonorsActivity"
-            android:label="שלום תורם יקר"
-            />
-        <activity android:name=".DonateMoneyActivity"
-            android:label="תרומה כספית"
-            />
-        <activity android:name=".LeaveDetailsActivity"
-            android:label="פרטים"
-            />
-        <activity android:name=".ExplainActivity"
-            android:label="איך זה עובד"
-            />
-        <activity android:name=".DonateChooseBarcodeOrListActivity"
-            android:label="בחירת תרומה"
-            />
-        <activity android:name=".ScanBarcodeActivity"
-            android:label="סריקת ברקוד"
-            />
-        <activity android:name=".PickProductsFromList"
-            android:label="בחירת מזון"
-            />
-        <activity android:name=".ChoosePickup"
-            android:label="משלוח / מסירה"
-            />
-        <activity android:name=".BookDelivery"
-            android:label="ביצוע תרומה">
-
-        </activity>
-        <activity android:name=".NearbyDropOffPoint"
-            android:label="נקודות מסירה קרובות"
-            />
-        <activity android:name=".DropOffConfirmation"
-            android:label="אישור מסירה"
-            />
-        <activity android:name=".DropOffPoints"
-            android:label="נקודות מסירה">
-
-        </activity>
-        <activity android:name=".BuyingPoints"
-            android:label="נקודות קניה"
-            />
-        <activity android:name=".DeliveryGuyDestinationList"
-            android:label="איסופים"
-            />
-        <activity android:name=".MotherMainActivity"
-            android:label="שלום הורה יקר"
-            />
-        <activity android:name=".MotherStatusActivity"
-            android:label="סטטוס הזמנה"
-            />
-        <activity android:name=".MotherRejectionActivity"
-            android:label="מגבלה"
-            />
+        <activity
+            android:name=".MainDonorsActivity"
+            android:label="שלום תורם יקר" />
+        <activity
+            android:name=".DonateMoneyActivity"
+            android:label="תרומה כספית" />
+        <activity
+            android:name=".LeaveDetailsActivity"
+            android:label="פרטים" />
+        <activity
+            android:name=".ExplainActivity"
+            android:label="איך זה עובד" />
+        <activity
+            android:name=".DonateChooseBarcodeOrListActivity"
+            android:label="בחירת תרומה" />
+        <activity
+            android:name=".ScanBarcodeActivity"
+            android:label="סריקת ברקוד" />
+        <activity
+            android:name=".PickProductsFromList"
+            android:label="בחירת מזון" />
+        <activity
+            android:name=".ChoosePickup"
+            android:label="משלוח / מסירה" />
+        <activity
+            android:name=".BookDelivery"
+            android:label="ביצוע תרומה" />
+        <activity
+            android:name=".NearbyDropOffPoint"
+            android:label="נקודות מסירה קרובות" />
+        <activity
+            android:name=".DropOffConfirmation"
+            android:label="אישור מסירה" />
+        <activity
+            android:name=".DropOffPoints"
+            android:label="נקודות מסירה" />
+        <activity
+            android:name=".BuyingPoints"
+            android:label="נקודות קניה" />
+        <activity
+            android:name=".DeliveryGuyDestinationList"
+            android:label="איסופים" />
+        <activity
+            android:name=".MotherMainActivity"
+            android:label="שלום הורה יקר" />
+        <activity
+            android:name=".MotherStatusActivity"
+            android:label="סטטוס הזמנה" />
+        <activity
+            android:name=".MotherRejectionActivity"
+            android:label="מגבלה" />
         <activity android:name=".MotherDeliveryOnWayActivity" />
-        <activity android:name=".RegistrationChooseActivity" >
-
-        </activity>
+        <activity android:name=".RegistrationChooseActivity" />
         <activity android:name=".StorageMainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".StoraeDeliveryGuysListActivity">
 
         </activity>
-        <activity android:name=".StorageManageInventoryActivity">
-
-        </activity>
+        <activity android:name=".StoraeDeliveryGuysListActivity" />
+        <activity android:name=".StorageManageInventoryActivity" />
         <activity android:name=".StorageManageDeliveryActivity" />
         <activity android:name=".StorageManageDonationsActivity" />
         <activity android:name=".StorageDonationFullDetailsActivity" />
@@ -103,17 +85,23 @@
         <activity android:name=".RegestrationMainActivity" />
         <activity android:name=".RegistrationDonorActivity" />
         <activity android:name=".RegistrationDeliveryGuyActivity" />
-        <activity android:name=".AdminMainActivity">
-
-        </activity>
+        <activity android:name=".AdminMainActivity" />
         <activity android:name=".AdminUsersMainActivity" />
-        <activity android:name=".AdminDeliveryGuysActivity" />
+        <activity android:name=".AdminDeliveryGuysActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".AdminDeliveryGuysEditActivity" />
         <activity android:name=".AdminStockKeeperActivity" />
         <activity android:name=".AdminStockKeeperEditActivity" />
         <activity android:name=".AdminMotherActivity" />
         <activity android:name=".AdminMotherEditActivity" />
-        <activity android:name=".ClerkMainActivity"></activity>
+        <activity android:name=".ClerkMainActivity" />
+        <activity android:name=".StorageRequestsNewActivity" />
+        <activity android:name=".StorageRequestsInProccessActivity"></activity>
     </application>
 
 </manifest>
