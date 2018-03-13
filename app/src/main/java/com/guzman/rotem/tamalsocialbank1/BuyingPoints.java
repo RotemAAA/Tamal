@@ -14,6 +14,5 @@ public class BuyingPoints extends AppCompatActivity {
         setContentView(R.layout.activity_buying_points);
 
         lvBuyingPoints = findViewById(R.id.lvBuyingPoints);
-        //TODO: connect to drop_off_points_my_list
     }
 }

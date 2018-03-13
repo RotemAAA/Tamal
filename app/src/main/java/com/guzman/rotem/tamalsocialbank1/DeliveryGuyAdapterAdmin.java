@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class DeliveryGuyAdapterAdmin extends BaseAdapter {
 
-    private ArrayList<DeliveryGuy> data;
+    private ArrayList<DeliveryUser> data;
     private Context context;
     private String firstName;
     private String lastName;
@@ -25,7 +25,7 @@ public class DeliveryGuyAdapterAdmin extends BaseAdapter {
     private String city;
     private String address;
 
-    public DeliveryGuyAdapterAdmin (ArrayList<DeliveryGuy> data, Context context) {
+    public DeliveryGuyAdapterAdmin (ArrayList<DeliveryUser> data, Context context) {
         this.data = data;
         this.context = context;
     }
@@ -48,7 +48,7 @@ public class DeliveryGuyAdapterAdmin extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        final DeliveryGuy deliveryGuy = data.get(position);
+        final DeliveryUser deliveryGuy = data.get(position);
         LayoutInflater inflater = LayoutInflater.from(context);
 
         View v = inflater.inflate(R.layout.admin_manage_delivery_guys_my_list, parent, false);
@@ -62,7 +62,7 @@ public class DeliveryGuyAdapterAdmin extends BaseAdapter {
         lastName = deliveryGuy.getLastName();
         fullName = firstName + " " + lastName;
 
-        streetAndNumber = deliveryGuy.getStreetAndNumber();
+        streetAndNumber = deliveryGuy.getStreetNumber();
         city = deliveryGuy.getCity();
         address = streetAndNumber + " " + city;
 
