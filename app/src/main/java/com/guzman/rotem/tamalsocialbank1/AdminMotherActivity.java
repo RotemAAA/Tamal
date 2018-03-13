@@ -28,7 +28,8 @@ public class AdminMotherActivity extends AppCompatActivity {
 
 
         lvMothers = findViewById(R.id.lvMothers);
-        //TODO: connect to admin_manage_mother_my_list
+        MomUserAdapter momUserAdapter = new MomUserAdapter(MomUserDataSource.getData(), this);
+        lvMothers.setAdapter(momUserAdapter);
 
 /*        ArrayList<User> users = DbUtil.getUserArrayList();
         ArrayList<MomUser> moms = new ArrayList<>();
