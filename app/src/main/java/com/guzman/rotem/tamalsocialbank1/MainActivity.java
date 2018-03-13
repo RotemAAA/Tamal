@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.guzman.rotem.tamalsocialbank1.donor.MainDonorsActivity;
+import com.guzman.rotem.tamalsocialbank1.registration.RegestrationMainActivity;
+
 public class MainActivity extends AppCompatActivity {
     private Button btnFastDonation;
     private Button btnStories;

@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.guzman.rotem.tamalsocialbank1.donor.DonateChooseBarcodeOrListActivity;
+
 public class ExplainActivity extends AppCompatActivity {
 
     private Button btnGotIt;

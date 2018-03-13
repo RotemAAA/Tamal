@@ -1,5 +1,7 @@
 package com.guzman.rotem.tamalsocialbank1;
 
+import com.guzman.rotem.tamalsocialbank1.mother.MomUser;
+
 /**
  * Created by tsuryohananov on 06/03/2018.
  */

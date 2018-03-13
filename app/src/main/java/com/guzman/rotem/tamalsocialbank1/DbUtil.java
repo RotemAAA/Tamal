@@ -12,6 +12,13 @@ import com.cloudant.client.api.CloudantClient;
 import com.cloudant.client.api.Database;
 import com.cloudant.client.org.lightcouch.NoDocumentException;
 import com.google.gson.Gson;
+import com.guzman.rotem.tamalsocialbank1.admin.AdminMainActivity;
+import com.guzman.rotem.tamalsocialbank1.deliveryGuy.DeliveryGuyDestinationList;
+import com.guzman.rotem.tamalsocialbank1.deliveryGuy.DeliveryUser;
+import com.guzman.rotem.tamalsocialbank1.mother.MomUser;
+import com.guzman.rotem.tamalsocialbank1.mother.MotherMainActivity;
+import com.guzman.rotem.tamalsocialbank1.stockKeeper.StockKeeperUser;
+import com.guzman.rotem.tamalsocialbank1.stockKeeper.StorageMainActivity;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -26,12 +33,12 @@ public class DbUtil {
     static ArrayList<User> userArrayList;
     //TODO: wait for next lesson with Tomer, I think there will be better method to do so (rather those arraylists)
 
-    static ArrayList<Donation> getDonationArrayList() {
+    public static ArrayList<Donation> getDonationArrayList() {
         return donationArrayList;
     }
 
     @SuppressLint("StaticFieldLeak")
-    static void readFromDb(final Context context, final String account, final String userName, final String pass, final String dbName) {
+    public static void readFromDb(final Context context, final String account, final String userName, final String pass, final String dbName) {
         new AsyncTask<Void, Void, Void>() {
 
             @Override
@@ -111,7 +118,7 @@ public class DbUtil {
     }
 
     @SuppressLint("StaticFieldLeak")
-    static void writeToDb(final Context context, final String account, final String userName, final String pass, final String dbName, final Object toWrite) {
+    public static void writeToDb(final Context context, final String account, final String userName, final String pass, final String dbName, final Object toWrite) {
         new AsyncTask<Void, Void, Void>() {
 
             @Override
@@ -141,7 +148,7 @@ public class DbUtil {
     }
 
     @SuppressLint("StaticFieldLeak")
-    static void role(final Context context, final String id, final String account, final String userName, final String pass, final String dbName) {
+    public static void role(final Context context, final String id, final String account, final String userName, final String pass, final String dbName) {
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... voids) {

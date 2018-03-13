@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context="com.guzman.rotem.tamalsocialbank1.BookDelivery">
+    tools:context="com.guzman.rotem.tamalsocialbank1.donor.BookDelivery">
 
     <android.support.constraint.Guideline
         android:id="@+id/gh18"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.guzman.rotem.tamalsocialbank1.StorageMainActivity">
+    tools:context="com.guzman.rotem.tamalsocialbank1.stockKeeper.StorageMainActivity">
 
     <Button
         android:id="@+id/btnManageInventory"
@@ -19,13 +19,13 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline17"
         app:layout_constraintStart_toStartOf="@+id/guideline17"
         app:layout_constraintTop_toBottomOf="@+id/btnSendDeliveryGuy"
-        app:layout_constraintVertical_bias="0.178" />
+        app:layout_constraintVertical_bias="0.58" />
 
     <Button
         android:id="@+id/btnManageDelivery"
         android:layout_width="290dp"
         android:layout_height="80dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/asset158"
         android:textColor="@color/colorPrimaryTextWhite"
@@ -39,7 +39,7 @@
         android:id="@+id/btnManageRequests"
         android:layout_width="290dp"
         android:layout_height="80dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/asset159"
         android:textColor="@color/colorPrimaryTextWhite"
@@ -54,7 +54,7 @@
         android:id="@+id/btnManageDonations"
         android:layout_width="290dp"
         android:layout_height="80dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/asset160"
         app:layout_constraintBottom_toTopOf="@+id/btnManageDelivery"
@@ -64,11 +64,12 @@
 
     <Button
         android:id="@+id/btnSendDeliveryGuy"
-        android:layout_width="350dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="48dp"
-        android:background="@drawable/asset156"
+        android:layout_width="311dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/asset144"
         app:layout_constraintEnd_toStartOf="@+id/guideline17"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/guideline17"
         app:layout_constraintTop_toTopOf="parent" />
 

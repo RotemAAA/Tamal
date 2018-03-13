@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.guzman.rotem.tamalsocialbank1.AdminMotherActivity">
+    tools:context="com.guzman.rotem.tamalsocialbank1.admin.AdminMotherActivity">
 
     <Button
         android:id="@+id/btnAddMother"
