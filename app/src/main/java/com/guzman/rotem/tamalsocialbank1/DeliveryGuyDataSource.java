@@ -8,17 +8,12 @@ import java.util.ArrayList;
 
 public class DeliveryGuyDataSource {
 
-    public static ArrayList<DeliveryGuy> getData(){
-        ArrayList<DeliveryGuy> data = new ArrayList<>();
+    public static ArrayList<DeliveryUser> getData() {
+        ArrayList<DeliveryUser> data = new ArrayList<>();
+        //TODO: get the list from the server
+        data.add(new DeliveryUser("1234", "רותם", "שליחה", "Delivery", "05380498282", "Tel Aviv", "Shenkin 5"));
 
-        data.add(new DeliveryGuy(
-                "רותם",
-                "גוזמן",
-                "0528482483",
-                "פתח תקווה",
-                "יוסף פפר 4"));
-
-        data.add(new DeliveryGuy(
+/*        data.add(new DeliveryGuy(
                 "דור",
                 "צמח",
                 "036884312",
@@ -50,7 +45,7 @@ public class DeliveryGuyDataSource {
                 "יוחננוב",
                 "036774545",
                 "גבעתיים",
-                "סירקין 7"));
+                "סירקין 7"));*/
 
         return data;
     }
