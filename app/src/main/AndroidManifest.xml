@@ -88,16 +88,18 @@
         <activity android:name=".AdminMainActivity" />
         <activity android:name=".AdminUsersMainActivity" />
         <activity android:name=".AdminDeliveryGuysActivity">
+
+        </activity>
+        <activity android:name=".AdminDeliveryGuysEditActivity" />
+        <activity android:name=".AdminStockKeeperActivity" />
+        <activity android:name=".AdminStockKeeperEditActivity" />
+        <activity android:name=".AdminMotherActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AdminDeliveryGuysEditActivity" />
-        <activity android:name=".AdminStockKeeperActivity" />
-        <activity android:name=".AdminStockKeeperEditActivity" />
-        <activity android:name=".AdminMotherActivity" />
         <activity android:name=".AdminMotherEditActivity" />
         <activity android:name=".ClerkMainActivity" />
         <activity android:name=".StorageRequestsNewActivity" />
