@@ -16,13 +16,13 @@ import java.util.ArrayList;
 
 public class StockKeeperAdapter extends BaseAdapter{
 
-    private ArrayList<StockKeeper> data;
+    private ArrayList<StockKeeperUser> data;
     private Context context;
     private String firstName;
     private String lastName;
     private String fullName;
 
-    public StockKeeperAdapter(ArrayList<StockKeeper> data, Context context) {
+    public StockKeeperAdapter(ArrayList<StockKeeperUser> data, Context context) {
         this.data = data;
         this.context = context;
     }
@@ -45,7 +45,7 @@ public class StockKeeperAdapter extends BaseAdapter{
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        final StockKeeper stockKeeper = data.get(position);
+        StockKeeperUser stockKeeperUser = data.get(position);
         LayoutInflater inflater = LayoutInflater.from(context);
 
        View v = inflater.inflate(R.layout.admin_manage_stock_keepers_my_list, parent, false);
@@ -54,8 +54,8 @@ public class StockKeeperAdapter extends BaseAdapter{
         Button btnEditStockKeeper = v.findViewById(R.id.btnEditStockKeeper);
         Button btnDeleteStockKeeper = v.findViewById(R.id.btnDeleteStockKeeper);
 
-        firstName = stockKeeper.getFirstName();
-        lastName = stockKeeper.getLastName();
+        firstName = stockKeeperUser.getFirstName();
+        lastName = stockKeeperUser.getLastName();
         fullName = firstName + " " + lastName;
 
         tvStockKeeperName.setText(fullName);

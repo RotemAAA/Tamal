@@ -8,43 +8,33 @@ import java.util.ArrayList;
 
 public class StockKeeperDataSource {
 
-    public static ArrayList<StockKeeper> getData(){
-        ArrayList<StockKeeper> data = new ArrayList<>();
+    public static ArrayList<StockKeeperUser> getData(){
+        ArrayList<StockKeeperUser> data = new ArrayList<>();
 
-        data.add(new StockKeeper(
+
+
+
+        data.add(new StockKeeperUser(
+                "1323",
                 "רותם",
                 "גוזמן",
-                "0528482483"
+                "stockKeeper",
+                "0238583843"
         ));
-
-        data.add(new StockKeeper(
+        data.add(new StockKeeperUser(
+                "13777",
                 "צור",
                 "יוחננוב",
-                "036772323"
-        ));
-
-        data.add(new StockKeeper(
+                "stockKeeper",
+                "0238583843"
+        ));  data.add(new StockKeeperUser(
+                "55555",
                 "דור",
                 "צמח",
-                "089831212"
-        ));
-        data.add(new StockKeeper(
-                "רותם",
-                "גוזמן",
-                "0528482483"
+                "stockKeeper",
+                "0238583843"
         ));
 
-        data.add(new StockKeeper(
-                "צור",
-                "יוחננוב",
-                "036772323"
-        ));
-
-        data.add(new StockKeeper(
-                "דור",
-                "צמח",
-                "089831212"
-        ));
 
         return data;
     }
