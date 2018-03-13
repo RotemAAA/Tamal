@@ -9,6 +9,7 @@ public class MomUser extends User {
     private String phone;
     private String streetNumber;
     private int foodLimit;
+    //TODO: int for how much the mom got already to talk with the food limit
 
     public MomUser(String _id, String firstName, String lastName, String role) {
         super(_id, firstName, lastName, role);
