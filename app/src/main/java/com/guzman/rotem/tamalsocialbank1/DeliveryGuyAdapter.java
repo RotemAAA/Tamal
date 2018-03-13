@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class DeliveryGuyAdapter extends BaseAdapter {
 
-    private ArrayList<DeliveryGuy> data;
+    private ArrayList<DeliveryUser> data;
     private Context context;
     private String firstName;
     private String lastName;
@@ -27,7 +27,7 @@ public class DeliveryGuyAdapter extends BaseAdapter {
     private String city;
     private String address;
 
-    public DeliveryGuyAdapter(ArrayList<DeliveryGuy> data, Context context) {
+    public DeliveryGuyAdapter(ArrayList<DeliveryUser> data, Context context) {
         this.data = data;
         this.context = context;
     }
@@ -49,8 +49,8 @@ public class DeliveryGuyAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        
-        final DeliveryGuy deliveryGuy = data.get(position);
+
+        final DeliveryUser deliveryGuy = data.get(position);
 
         LayoutInflater inflater = LayoutInflater.from(context);
 
@@ -66,7 +66,7 @@ public class DeliveryGuyAdapter extends BaseAdapter {
         lastName = deliveryGuy.getLastName();
         fullName = firstName + " " + lastName;
 
-        streetAndNumber = deliveryGuy.getStreetAndNumber();
+        streetAndNumber = deliveryGuy.getStreetNumber();
         city = deliveryGuy.getCity();
         address = streetAndNumber + " " + city;
 
@@ -76,7 +76,7 @@ public class DeliveryGuyAdapter extends BaseAdapter {
         btnSDGLCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String phone = deliveryGuy.getPhone();
+                String phone = deliveryGuy.getPhoneNumber();
 
                 Uri phoneUri = Uri.parse("tel:" + phone + "");
 

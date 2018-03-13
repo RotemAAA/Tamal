@@ -10,9 +10,7 @@ public class StockKeeperDataSource {
 
     public static ArrayList<StockKeeperUser> getData(){
         ArrayList<StockKeeperUser> data = new ArrayList<>();
-
-
-
+        
 
         data.add(new StockKeeperUser(
                 "1323",

@@ -24,7 +24,7 @@ import java.util.List;
 public class DbUtil {
     static ArrayList<Donation> donationArrayList;
     static ArrayList<User> userArrayList;
-    //TODO: wait for next lesson with Tomer, I think there ill be better method to do so (rather those arraylists)
+    //TODO: wait for next lesson with Tomer, I think there will be better method to do so (rather those arraylists)
 
     static ArrayList<Donation> getDonationArrayList() {
         return donationArrayList;
@@ -150,7 +150,6 @@ public class DbUtil {
                         .password(pass)
                         .build();
                 Database database = client.database(dbName, false);
-                //TODO: start moms code with m, delivery guy with g, etc.... and then go to the right class
                 try {
                     String statrsWith = id.substring(0, 1);
                     Log.d("IDSUB", statrsWith);

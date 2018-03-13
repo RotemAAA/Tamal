@@ -34,9 +34,6 @@ public class AdminStockKeeperEditActivity extends AppCompatActivity {
         etFullName = findViewById(R.id.etFullName);
         etPhone = findViewById(R.id.etPhone);
 
-
-        //TODO: user for warehouse manager with phone number... same as MomUser and DeliveryUser
-
         etFullName.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
