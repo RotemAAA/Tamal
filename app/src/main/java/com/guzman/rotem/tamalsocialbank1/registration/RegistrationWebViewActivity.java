@@ -18,10 +18,10 @@ public class RegistrationWebViewActivity extends AppCompatActivity {
             if(extras == null) {
                 uri= null;
             } else {
-                uri= extras.getString("URI");
+                uri= extras.getString("uri");
             }
         } else {
-            uri= (String) savedInstanceState.getSerializable("URI");
+            uri= (String) savedInstanceState.getSerializable("uri");
         }
     }
 }

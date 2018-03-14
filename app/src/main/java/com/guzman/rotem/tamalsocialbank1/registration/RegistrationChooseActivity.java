@@ -1,7 +1,6 @@
 package com.guzman.rotem.tamalsocialbank1.registration;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -26,9 +25,10 @@ public class RegistrationChooseActivity extends AppCompatActivity {
         btnMother.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Uri uri = Uri.parse("https://www.2help.org.il/food");
+
                 Intent intent = new Intent(RegistrationChooseActivity.this, RegistrationWebViewActivity.class);
-                intent.putExtra("URI", uri);
+                intent.putExtra("uri", "https://www.2help.org.il/food");
+                startActivity(intent);
             }
         });
     }
