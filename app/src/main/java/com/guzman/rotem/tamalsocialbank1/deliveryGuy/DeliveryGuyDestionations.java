@@ -26,6 +26,9 @@ public class DeliveryGuyDestionations extends AppCompatActivity {
 
     private ViewPager mViewPager;
 
+    private DeliveryUser dUser;
+    private String json;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,8 +36,7 @@ public class DeliveryGuyDestionations extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        // Create the adapter that will return a fragment for each of the three
-        // primary sections of the activity.
+
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
@@ -49,17 +51,7 @@ public class DeliveryGuyDestionations extends AppCompatActivity {
 
         //get intent extra's with the delivery user json
         Intent intent = getIntent();
-        String json = intent.getStringExtra("user");
-        Gson gson = new Gson();
-        DeliveryUser dUser = gson.fromJson(json, DeliveryUser.class);
-        try {
-            ArrayList<Donation> donations = dUser.getDonations();
-            ArrayList<Request> requests = dUser.getRequests(); // arraylists for destinations
-        } catch (Exception e) {
-            Log.d("No Destinations", "No Destinations");
-
-            // some textview that says "no destinations"
-        }
+        json = intent.getStringExtra("user");
         //TODO: populate the listview (maybe we need 2). the ware house manager will update his arraylist with destinations
         // it means the wh manager will take a donation for ex and change it status and push it to the wanted delivery guy's arraylist of destinations
 
@@ -96,16 +88,26 @@ public class DeliveryGuyDestionations extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            // getItem is called to instantiate the fragment for the given page.
-            // Return a PlaceholderFragment (defined as a static inner class below).
-            switch (position) {
-                case 0:
-                    return new DonationsListFragment();
-                case 1:
-                    return new RequestsListFragment();
-                default:
-                    return new DonationsListFragment();
+            Gson gson = new Gson();
+            dUser = gson.fromJson(json, DeliveryUser.class);
+            String des = "";
+            int i= 0;
+            try {
+                if (position == 0) {
+                    ArrayList<Donation> donations = dUser.getDonations();
+                    des = gson.toJson(donations);
+                } else {
+                    ArrayList<Request> requests = dUser.getRequests(); // arraylists for destinations
+                    des = gson.toJson(requests);
+                }
+
+            } catch (Exception e) {
+                Log.d("No Destinations", "No Destinations");
+
+                // some textview that says "no destinations"
             }
+            return DestinationsFragment.newInstance(des, i);
+
         }
 
         @Override

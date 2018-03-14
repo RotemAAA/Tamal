@@ -20,8 +20,6 @@ public class RegistrationChooseActivity extends AppCompatActivity {
         btnMother = findViewById(R.id.btnMother);
         btnVolunteer = findViewById(R.id.btnVolunteer);
 
-        //TODO: go to the web page from the Amuta site, webView
-
         btnVolunteer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
