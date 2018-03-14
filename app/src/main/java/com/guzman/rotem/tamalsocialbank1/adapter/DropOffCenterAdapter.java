@@ -1,5 +1,6 @@
 package com.guzman.rotem.tamalsocialbank1.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -54,6 +55,7 @@ public class DropOffCenterAdapter extends BaseAdapter {
 
         LayoutInflater inflater = LayoutInflater.from(context);
 
+        @SuppressLint("ViewHolder")
         View v = inflater.inflate(R.layout.drop_off_points_my_list, parent, false);
 
         TextView tvDropOffCenterName = v.findViewById(R.id.tvDropOffCenterName);

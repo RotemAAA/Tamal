@@ -1,5 +1,6 @@
 package com.guzman.rotem.tamalsocialbank1.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -48,6 +49,7 @@ public class SupplyAdapter extends BaseAdapter {
         Supply supply = data.get(position);
         LayoutInflater inflater = LayoutInflater.from(context);
 
+        @SuppressLint("ViewHolder")
         View v = inflater.inflate(R.layout.storage_manage_inventory_my_list, parent, false);
 
         TextView tvFoodName = v.findViewById(R.id.tvFoodeName);
@@ -58,8 +60,6 @@ public class SupplyAdapter extends BaseAdapter {
 
         tvFoodName.setText(supply.getFoodName());
         tvNumberInInventory.setText(s);
-
-
 
 
         return v;

@@ -1,5 +1,6 @@
 package com.guzman.rotem.tamalsocialbank1.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,6 +51,7 @@ public class AdminProductsAdapter extends BaseAdapter{
 
         LayoutInflater inflater = LayoutInflater.from(context);
 
+        @SuppressLint("ViewHolder")
         View v = inflater.inflate(R.layout.admin_products_my_list, parent, false);
 
         ImageView ivFood = v.findViewById(R.id.ivFood);

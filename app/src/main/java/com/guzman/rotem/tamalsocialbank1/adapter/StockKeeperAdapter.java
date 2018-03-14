@@ -1,5 +1,6 @@
 package com.guzman.rotem.tamalsocialbank1.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -51,6 +52,7 @@ public class StockKeeperAdapter extends BaseAdapter{
         StockKeeperUser stockKeeperUser = data.get(position);
         LayoutInflater inflater = LayoutInflater.from(context);
 
+       @SuppressLint("ViewHolder")
        View v = inflater.inflate(R.layout.admin_manage_stock_keepers_my_list, parent, false);
 
         TextView tvStockKeeperName = v.findViewById(R.id.tvStockKeeperName);

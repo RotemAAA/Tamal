@@ -8,7 +8,7 @@ import java.util.ArrayList;
 /**
  * Created by Rotem on 13/03/2018.
  */
-
+//TODO: "DataSource" classes to all the data that comes from the server, donations, requests, etc... inside methods like requests in status 1/ 2/ 0 etc...
 public class FoodDataSource {
     public static ArrayList<Food> getData(){
         ArrayList<Food> data = new ArrayList<>();

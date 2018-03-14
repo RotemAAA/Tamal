@@ -1,5 +1,6 @@
 package com.guzman.rotem.tamalsocialbank1.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -54,6 +55,7 @@ public class DeliveryGuyAdapterAdmin extends BaseAdapter {
         final DeliveryUser deliveryGuy = data.get(position);
         LayoutInflater inflater = LayoutInflater.from(context);
 
+        @SuppressLint("ViewHolder")
         View v = inflater.inflate(R.layout.admin_manage_delivery_guys_my_list, parent, false);
 
         TextView tvDeliveryGuyName = v.findViewById(R.id.tvDeliveryGuyName);

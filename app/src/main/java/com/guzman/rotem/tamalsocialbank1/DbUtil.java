@@ -72,7 +72,7 @@ public class DbUtil {
         try {
             return (ArrayList<Donation>) database.getAllDocsRequestBuilder().includeDocs(true).build().getResponse().getDocsAs(Donation.class);
         } catch (IOException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
         }
         return null;
     }

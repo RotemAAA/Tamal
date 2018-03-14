@@ -16,12 +16,11 @@ import com.google.gson.Gson;
 import com.guzman.rotem.tamalsocialbank1.DbUtil;
 import com.guzman.rotem.tamalsocialbank1.R;
 import com.guzman.rotem.tamalsocialbank1.Request;
-import com.guzman.rotem.tamalsocialbank1.User;
 
 public class MotherMainActivity extends AppCompatActivity {
 
     private Button btnAskHelp;
-    private User user;
+    private MomUser user;
     final String dbAcnt = "67817cbe-88be-4383-98a9-93784d2103e2-bluemix";
     final String dbUser = "brommeninimelleandeeding";
     final String dbPass = "9cb4e3bf199f7c0c8eb51d862befb9899c5f0df1";

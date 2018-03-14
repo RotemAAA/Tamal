@@ -9,7 +9,8 @@ import java.util.ArrayList;
  */
 
 public class MomUserDataSource {
-    public static ArrayList<MomUser> getData(){
+
+    public static ArrayList<MomUser> getData() {
         ArrayList<MomUser> data = new ArrayList<>();
 
         data.add(new MomUser(
@@ -81,7 +82,8 @@ public class MomUserDataSource {
         ));
 
 
-
         return data;
     }
+
+
 }

@@ -41,6 +41,22 @@ public class MomUser extends User {
         return foodLimit;
     }
 
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setStreetNumber(String streetNumber) {
+        this.streetNumber = streetNumber;
+    }
+
+    public void setFoodLimit(int foodLimit) {
+        this.foodLimit = foodLimit;
+    }
+
     @Override
     public String toString() {
         return "MomUser{" +
