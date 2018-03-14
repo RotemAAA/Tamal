@@ -1,4 +1,4 @@
-package com.guzman.rotem.tamalsocialbank1.fragments;
+package com.guzman.rotem.tamalsocialbank1.intro;
 
 
 import android.os.Bundle;
@@ -12,10 +12,10 @@ import com.guzman.rotem.tamalsocialbank1.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FifthFragment extends Fragment {
+public class DonorFifthFragment extends Fragment {
 
 
-    public FifthFragment() {
+    public DonorFifthFragment() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class FifthFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fifth, container, false);
+        return inflater.inflate(R.layout.fragment_fifth_donor, container, false);
     }
 
 }
