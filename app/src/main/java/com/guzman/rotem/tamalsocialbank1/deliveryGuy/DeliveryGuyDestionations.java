@@ -34,6 +34,13 @@ public class DeliveryGuyDestionations extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery_guy_destionations);
 
+
+        //get intent extra's with the delivery user json
+        Intent intent = getIntent();
+        json = intent.getStringExtra("user");
+        //TODO: get the user from server again (for the latest data, show some loading anim and than proceed);
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -49,10 +56,6 @@ public class DeliveryGuyDestionations extends AppCompatActivity {
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
 
-        //get intent extra's with the delivery user json
-        Intent intent = getIntent();
-        json = intent.getStringExtra("user");
-        // it means the wh manager will take a donation for ex and change it status and push it to the wanted delivery guy's arraylist of destinations
 
     }
 
