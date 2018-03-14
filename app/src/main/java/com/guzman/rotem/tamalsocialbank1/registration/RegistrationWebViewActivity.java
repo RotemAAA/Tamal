@@ -37,18 +37,8 @@ public class RegistrationWebViewActivity extends AppCompatActivity {
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
                 Toast.makeText(getApplicationContext(), description, Toast.LENGTH_SHORT).show();
             }
-
-
         });
 
         webView.loadUrl(url);
-    }
-
-    public class WebViewController extends WebViewClient {
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            view.loadUrl(url);
-            return true;
-        }
     }
 }
