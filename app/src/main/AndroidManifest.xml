@@ -12,6 +12,11 @@
         android:supportsRtl="false"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".LogoActivity" />
 
@@ -65,11 +70,6 @@
             android:name=".mother.MotherStatusActivity"
             android:label="סטטוס הזמנה" />
         <activity android:name=".registration.RegistrationChooseActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".stockKeeper.StorageMainActivity" />
         <activity android:name=".stockKeeper.StoraeDeliveryGuysListActivity" />
