@@ -52,7 +52,6 @@ public class DeliveryGuyDestionations extends AppCompatActivity {
         //get intent extra's with the delivery user json
         Intent intent = getIntent();
         json = intent.getStringExtra("user");
-        //TODO: populate the listview (maybe we need 2). the ware house manager will update his arraylist with destinations
         // it means the wh manager will take a donation for ex and change it status and push it to the wanted delivery guy's arraylist of destinations
 
     }
