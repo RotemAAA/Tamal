@@ -17,7 +17,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            
         </activity>
         <activity android:name=".LogoActivity" />
 
@@ -70,8 +69,7 @@
         <activity
             android:name=".mother.MotherStatusActivity"
             android:label="סטטוס הזמנה" />
-        <activity android:name=".registration.RegistrationChooseActivity">
-        </activity>
+        <activity android:name=".registration.RegistrationChooseActivity"></activity>
         <activity android:name=".stockKeeper.StorageMainActivity" />
         <activity android:name=".stockKeeper.StoraeDeliveryGuysListActivity" />
         <activity android:name=".stockKeeper.StorageManageInventoryActivity" />
@@ -93,14 +91,14 @@
         <activity android:name=".clerk.ClerkMainActivity" />
         <activity android:name=".stockKeeper.StorageRequestsNewActivity" />
         <activity android:name=".stockKeeper.StorageRequestsInProccessActivity" />
-        <activity android:name=".admin.AdminProductsActivity"></activity>
+        <activity android:name=".admin.AdminProductsActivity" />
         <activity android:name=".admin.AdminProductEditActivity" />
         <activity android:name=".registration.RegistrationWebViewActivity" />
         <activity
             android:name=".deliveryGuy.DeliveryGuyDestionations"
             android:label="@string/title_activity_delivery_guy_destionations"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".donor.StoriesActivity"></activity>
     </application>
 
 </manifest>
