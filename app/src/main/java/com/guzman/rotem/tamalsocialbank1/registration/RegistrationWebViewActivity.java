@@ -27,6 +27,7 @@ public class RegistrationWebViewActivity extends AppCompatActivity {
 
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     private void loadWebView(String url, WebView webView) {
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
