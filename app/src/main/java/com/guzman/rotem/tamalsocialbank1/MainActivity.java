@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, StoriesActivity.class);
-                intent.putExtra("uri", "https://www.2help.org.il/forum/dvyvt-mmhvt");
+                intent.putExtra("url", "https://www.2help.org.il/forum/dvyvt-mmhvt");
                 startActivity(intent);
             }
         });

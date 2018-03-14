@@ -1,6 +1,6 @@
 package com.guzman.rotem.tamalsocialbank1.registration;
 
-import android.annotation.SuppressLint;
+        import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.webkit.WebSettings;

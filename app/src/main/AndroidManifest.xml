@@ -11,91 +11,90 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".LogoActivity" />
+        <activity android:name=".LogoActivity"  android:screenOrientation="portrait"/>
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
         <activity
-            android:name=".donor.MainDonorsActivity"
+            android:name=".donor.MainDonorsActivity" android:screenOrientation="portrait"
             android:label="שלום תורם יקר" />
         <activity
-            android:name=".donor.DonateMoneyActivity"
+            android:name=".donor.DonateMoneyActivity" android:screenOrientation="portrait"
             android:label="תרומה כספית" />
         <activity
-            android:name=".donor.LeaveDetailsActivity"
+            android:name=".donor.LeaveDetailsActivity" android:screenOrientation="portrait"
             android:label="פרטים" />
         <activity
-            android:name=".ExplainActivity"
+            android:name=".ExplainActivity" android:screenOrientation="portrait"
             android:label="איך זה עובד" />
         <activity
-            android:name=".donor.DonateChooseBarcodeOrListActivity"
+            android:name=".donor.DonateChooseBarcodeOrListActivity" android:screenOrientation="portrait"
             android:label="בחירת תרומה" />
         <activity
-            android:name=".donor.ScanBarcodeActivity"
+            android:name=".donor.ScanBarcodeActivity" android:screenOrientation="portrait"
             android:label="סריקת ברקוד" />
         <activity
-            android:name=".donor.PickProductsFromList"
+            android:name=".donor.PickProductsFromList" android:screenOrientation="portrait"
             android:label="בחירת מזון" />
         <activity
-            android:name=".donor.ChoosePickup"
+            android:name=".donor.ChoosePickup" android:screenOrientation="portrait"
             android:label="משלוח / מסירה" />
         <activity
-            android:name=".donor.BookDelivery"
+            android:name=".donor.BookDelivery" android:screenOrientation="portrait"
             android:label="ביצוע תרומה" />
         <activity
-            android:name=".donor.NearbyDropOffPoint"
+            android:name=".donor.NearbyDropOffPoint" android:screenOrientation="portrait"
             android:label="נקודות מסירה קרובות" />
         <activity
-            android:name=".donor.DropOffConfirmation"
+            android:name=".donor.DropOffConfirmation" android:screenOrientation="portrait"
             android:label="אישור מסירה" />
         <activity
-            android:name=".donor.DropOffPoints"
+            android:name=".donor.DropOffPoints" android:screenOrientation="portrait"
             android:label="נקודות מסירה" />
         <activity
-            android:name=".donor.BuyingPoints"
+            android:name=".donor.BuyingPoints" android:screenOrientation="portrait"
             android:label="נקודות קניה" />
         <activity
-            android:name=".mother.MotherMainActivity"
+            android:name=".mother.MotherMainActivity" android:screenOrientation="portrait"
             android:label="שלום הורה יקר" />
         <activity
-            android:name=".mother.MotherStatusActivity"
+            android:name=".mother.MotherStatusActivity" android:screenOrientation="portrait"
             android:label="סטטוס הזמנה" />
-        <activity android:name=".registration.RegistrationChooseActivity"></activity>
-        <activity android:name=".stockKeeper.StorageMainActivity" />
-        <activity android:name=".stockKeeper.StoraeDeliveryGuysListActivity" />
-        <activity android:name=".stockKeeper.StorageManageInventoryActivity" />
-        <activity android:name=".stockKeeper.StorageManageDeliveryActivity" />
-        <activity android:name=".stockKeeper.StorageManageDonationsActivity" />
-        <activity android:name=".stockKeeper.StorageDonationFullDetailsActivity" />
-        <activity android:name=".stockKeeper.StorageManageRequestsActivity" />
-        <activity android:name=".stockKeeper.StorageManageDropOffPointsActivity" />
-        <activity android:name=".stockKeeper.StorageAddNewDropOffPointActivity" />
-        <activity android:name=".registration.RegestrationMainActivity" />
-        <activity android:name=".admin.AdminMainActivity" />
-        <activity android:name=".admin.AdminUsersMainActivity" />
-        <activity android:name=".admin.AdminDeliveryGuysActivity" />
-        <activity android:name=".admin.AdminDeliveryGuysEditActivity" />
-        <activity android:name=".admin.AdminStockKeeperActivity" />
-        <activity android:name=".admin.AdminStockKeeperEditActivity" />
-        <activity android:name=".admin.AdminMotherActivity" />
-        <activity android:name=".admin.AdminMotherEditActivity" />
-        <activity android:name=".clerk.ClerkMainActivity" />
-        <activity android:name=".stockKeeper.StorageRequestsNewActivity" />
-        <activity android:name=".stockKeeper.StorageRequestsInProccessActivity" />
-        <activity android:name=".admin.AdminProductsActivity" />
-        <activity android:name=".admin.AdminProductEditActivity" />
-        <activity android:name=".registration.RegistrationWebViewActivity" />
-        <activity
-            android:name=".deliveryGuy.DeliveryGuyDestionations"
+        <activity android:name=".registration.RegistrationChooseActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".stockKeeper.StorageMainActivity" android:screenOrientation="portrait" />
+        <activity android:name=".stockKeeper.StoraeDeliveryGuysListActivity" android:screenOrientation="portrait" />
+        <activity android:name=".stockKeeper.StorageManageInventoryActivity" android:screenOrientation="portrait" />
+        <activity android:name=".stockKeeper.StorageManageDeliveryActivity" android:screenOrientation="portrait" />
+        <activity android:name=".stockKeeper.StorageManageDonationsActivity" android:screenOrientation="portrait" />
+        <activity android:name=".stockKeeper.StorageDonationFullDetailsActivity" android:screenOrientation="portrait" />
+        <activity android:name=".stockKeeper.StorageManageRequestsActivity" android:screenOrientation="portrait" />
+        <activity android:name=".stockKeeper.StorageManageDropOffPointsActivity" android:screenOrientation="portrait" />
+        <activity android:name=".stockKeeper.StorageAddNewDropOffPointActivity" android:screenOrientation="portrait" />
+        <activity android:name=".registration.RegestrationMainActivity" android:screenOrientation="portrait" />
+        <activity android:name=".admin.AdminMainActivity" android:screenOrientation="portrait" />
+        <activity android:name=".admin.AdminUsersMainActivity" android:screenOrientation="portrait" />
+        <activity android:name=".admin.AdminDeliveryGuysActivity" android:screenOrientation="portrait" />
+        <activity android:name=".admin.AdminDeliveryGuysEditActivity" android:screenOrientation="portrait" />
+        <activity android:name=".admin.AdminStockKeeperActivity" android:screenOrientation="portrait" />
+        <activity android:name=".admin.AdminStockKeeperEditActivity" android:screenOrientation="portrait" />
+        <activity android:name=".admin.AdminMotherActivity" android:screenOrientation="portrait" />
+        <activity android:name=".admin.AdminMotherEditActivity" android:screenOrientation="portrait" />
+        <activity android:name=".clerk.ClerkMainActivity" android:screenOrientation="portrait" />
+        <activity android:name=".stockKeeper.StorageRequestsNewActivity" android:screenOrientation="portrait" />
+        <activity android:name=".stockKeeper.StorageRequestsInProccessActivity" android:screenOrientation="portrait" />
+        <activity android:name=".admin.AdminProductsActivity" android:screenOrientation="portrait" />
+        <activity android:name=".admin.AdminProductEditActivity" android:screenOrientation="portrait" />
+        <activity android:name=".registration.RegistrationWebViewActivity"/>
+        <activity android:name=".deliveryGuy.DeliveryGuyDestionations" android:screenOrientation="portrait"
             android:label="@string/title_activity_delivery_guy_destionations"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".donor.StoriesActivity"></activity>
