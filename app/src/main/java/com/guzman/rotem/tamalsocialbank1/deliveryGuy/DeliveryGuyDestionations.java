@@ -38,6 +38,7 @@ public class DeliveryGuyDestionations extends AppCompatActivity {
         //get intent extra's with the delivery user json
         Intent intent = getIntent();
         json = intent.getStringExtra("user");
+        //dUser.DeliveryUserDataSource.getUser(id)
         //TODO: get the user from server again (for the latest data, show some loading anim and than proceed);
 
 
