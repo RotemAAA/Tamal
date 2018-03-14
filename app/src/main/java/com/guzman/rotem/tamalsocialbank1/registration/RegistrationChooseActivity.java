@@ -25,7 +25,7 @@ public class RegistrationChooseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(RegistrationChooseActivity.this, RegistrationWebViewActivity.class);
-                intent.putExtra("uri", "https://www.2help.org.il/volunteering");
+                intent.putExtra("url", "https://www.2help.org.il/volunteering");
                 startActivity(intent);
             }
         });
@@ -36,7 +36,7 @@ public class RegistrationChooseActivity extends AppCompatActivity {
 
 
                 Intent intent = new Intent(RegistrationChooseActivity.this, RegistrationWebViewActivity.class);
-                intent.putExtra("uri", "https://www.2help.org.il/food");
+                intent.putExtra("url", "https://www.2help.org.il/food");
                 startActivity(intent);
             }
         });
