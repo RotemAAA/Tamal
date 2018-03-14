@@ -11,7 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".LogoActivity" />
 
         <meta-data
@@ -94,10 +100,13 @@
         <activity android:name=".clerk.ClerkMainActivity" />
         <activity android:name=".stockKeeper.StorageRequestsNewActivity" />
         <activity android:name=".stockKeeper.StorageRequestsInProccessActivity" />
-        <activity android:name=".admin.AdminProductsActivity">
-        </activity>
+        <activity android:name=".admin.AdminProductsActivity"></activity>
         <activity android:name=".admin.AdminProductEditActivity" />
-        <activity android:name=".registration.RegistrationWebViewActivity"></activity>
+        <activity android:name=".registration.RegistrationWebViewActivity" />
+        <activity
+            android:name=".deliveryGuy.DeliveryGuyDestionations"
+            android:label="@string/title_activity_delivery_guy_destionations"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
