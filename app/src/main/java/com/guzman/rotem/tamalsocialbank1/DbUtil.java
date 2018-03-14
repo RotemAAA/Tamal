@@ -13,7 +13,7 @@ import com.cloudant.client.api.Database;
 import com.cloudant.client.org.lightcouch.NoDocumentException;
 import com.google.gson.Gson;
 import com.guzman.rotem.tamalsocialbank1.admin.AdminMainActivity;
-import com.guzman.rotem.tamalsocialbank1.deliveryGuy.DeliveryGuyDestinationList;
+import com.guzman.rotem.tamalsocialbank1.deliveryGuy.DeliveryGuyDestionations;
 import com.guzman.rotem.tamalsocialbank1.deliveryGuy.DeliveryUser;
 import com.guzman.rotem.tamalsocialbank1.mother.MomUser;
 import com.guzman.rotem.tamalsocialbank1.mother.MotherMainActivity;
@@ -186,7 +186,7 @@ public class DbUtil {
                             Log.i("DELIVERY GUY", "Hello delivery guy, " + dUser.getFirstName() + " Welcome");
                             Gson gson3 = new Gson();
                             String json3 = gson3.toJson(dUser);
-                            Intent intent3 = new Intent(context, DeliveryGuyDestinationList.class);
+                            Intent intent3 = new Intent(context, DeliveryGuyDestionations.class);
                             intent3.putExtra("user", json3);
                             context.startActivity(intent3);
                             break;
