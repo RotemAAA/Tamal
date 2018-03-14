@@ -64,9 +64,6 @@
             android:name=".donor.BuyingPoints"
             android:label="נקודות קניה" />
         <activity
-            android:name=".deliveryGuy.DeliveryGuyDestinationList"
-            android:label="איסופים" />
-        <activity
             android:name=".mother.MotherMainActivity"
             android:label="שלום הורה יקר" />
         <activity
