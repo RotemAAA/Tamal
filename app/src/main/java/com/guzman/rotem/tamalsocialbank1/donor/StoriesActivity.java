@@ -1,6 +1,6 @@
-package com.guzman.rotem.tamalsocialbank1.registration;
+package com.guzman.rotem.tamalsocialbank1.donor;
 
-        import android.annotation.SuppressLint;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.webkit.WebSettings;
@@ -10,16 +10,16 @@ import android.widget.Toast;
 
 import com.guzman.rotem.tamalsocialbank1.R;
 
-public class RegistrationWebViewActivity extends AppCompatActivity {
+public class StoriesActivity extends AppCompatActivity {
     private WebView webView;
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registration_web_view);
+        setContentView(R.layout.activity_stories);
 
-        webView = findViewById(R.id.webView);
+        webView = findViewById(R.id.webView2);
         webView.getSettings().setJavaScriptEnabled(true);
         String url = getIntent().getStringExtra("url");
 
