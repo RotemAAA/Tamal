@@ -22,9 +22,19 @@ public class RegistrationChooseActivity extends AppCompatActivity {
 
         //TODO: go to the web page from the Amuta site, webView
 
+        btnVolunteer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RegistrationChooseActivity.this, RegistrationWebViewActivity.class);
+                intent.putExtra("uri", "https://www.2help.org.il/volunteering");
+                startActivity(intent);
+            }
+        });
+
         btnMother.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
 
                 Intent intent = new Intent(RegistrationChooseActivity.this, RegistrationWebViewActivity.class);
                 intent.putExtra("uri", "https://www.2help.org.il/food");
