@@ -32,7 +32,7 @@ public class RegestrationMainActivity extends AppCompatActivity {
         btnRegister = findViewById(R.id.btnRegister);
         btnEnter = findViewById(R.id.btnEnter);
         etPassword = findViewById(R.id.etPassword);
-        
+
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +47,7 @@ public class RegestrationMainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // here I need to go to the server and intent to required activity
                 if (id != null && !id.equals("")) {
-                    DbUtil.role(getApplicationContext(), id, dbAcnt, dbUser, dbPass, dbName);
+                    DbUtil.role(RegestrationMainActivity.this, id, dbAcnt, dbUser, dbPass, dbName);
                 } else {
                     Toast.makeText(getApplicationContext(), "נא להזין את הקוד המזהה", Toast.LENGTH_LONG).show();
                 }

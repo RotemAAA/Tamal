@@ -1,6 +1,7 @@
 package com.guzman.rotem.tamalsocialbank1;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -148,7 +149,7 @@ public class DbUtil {
     }
 
     @SuppressLint("StaticFieldLeak")
-    public static void role(final Context context, final String id, final String account, final String userName, final String pass, final String dbName) {
+    public static void role(final Activity context, final String id, final String account, final String userName, final String pass, final String dbName) {
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... voids) {
