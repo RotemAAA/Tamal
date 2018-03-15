@@ -10,6 +10,7 @@ import com.cloudant.client.api.CloudantClient;
 import com.cloudant.client.api.Database;
 import com.guzman.rotem.tamalsocialbank1.DbUtil;
 import com.guzman.rotem.tamalsocialbank1.User;
+import com.guzman.rotem.tamalsocialbank1.adapter.DeliveryGuyAdapter;
 import com.guzman.rotem.tamalsocialbank1.deliveryGuy.DeliveryUser;
 
 import java.util.ArrayList;
@@ -60,8 +61,9 @@ public class DeliveryGuyDataSource extends AsyncTask<Void, Void, ArrayList<Deliv
         System.out.println(deliveryUsers.toString());
 
         //TODO: adapter and populate the list
-        // DeliveryGuyAdapter adapter = new DeliveryGuyAdapter(dUsers, )
-        //listView.setAdapter();
+        DeliveryGuyAdapter adapter = new DeliveryGuyAdapter(deliveryUsers, context);
+
+        listView.setAdapter(adapter);
     }
 }
 
