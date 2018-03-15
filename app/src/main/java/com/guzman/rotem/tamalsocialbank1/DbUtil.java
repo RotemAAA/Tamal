@@ -56,8 +56,10 @@ public class DbUtil {
                         donationArrayList = getAllDocList(database);
                         break;
                     case "requests":
+                        // return requests ArrayList
                         break;
                     case "inventory":
+                        // return inventory ArrayList
                         break;
                     case "users":
                         userArrayList = getAllUsersList(database);
