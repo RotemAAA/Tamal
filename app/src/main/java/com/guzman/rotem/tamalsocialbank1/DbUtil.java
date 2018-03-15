@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import com.cloudant.client.api.ClientBuilder;
@@ -40,7 +39,7 @@ public class DbUtil {
     }
 
     @SuppressLint("StaticFieldLeak")
-    public static void readFromDb(final Context context, final String account, final String userName, final String pass, final String dbName, ListView listView) {
+    public static void readFromDb(final Context context, final String account, final String userName, final String pass, final String dbName) {
         //TODO: give as parameter an arraylist and return the result / or give the listview and then set it
         AsyncTask as = new AsyncTask<Void, Void, Void>() {
 
