@@ -10,10 +10,8 @@
         android:id="@+id/ivDestinationDonorOrMother"
         android:layout_width="36dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/asset_103_s_34" />
@@ -21,7 +19,7 @@
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline27"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
@@ -42,6 +40,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:text="שם"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20dp"
         app:layout_constraintEnd_toStartOf="@+id/ivDestinationDonorOrMother"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline35"
@@ -59,13 +59,11 @@
         android:id="@+id/btnSMDonationFullAccept"
         android:layout_width="65dp"
         android:layout_height="65dp"
-        android:layout_marginBottom="8dp"
 
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/round_exept_button"
         android:text="קבל"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -77,6 +75,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
         android:text="כתובת"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="@+id/btnCallDestination"
         app:layout_constraintEnd_toStartOf="@+id/ivDestinationDonorOrMother"
         app:layout_constraintTop_toBottomOf="@+id/tvDestinationContactName"
@@ -86,12 +85,10 @@
         android:id="@+id/btnCallDestination"
         android:layout_width="65dp"
         android:layout_height="65dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/asset_102_s_33"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline35"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/btnSMDonationFullAccept"
@@ -99,21 +96,28 @@
 
     <TextView
         android:id="@+id/tvDestinationFoodType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDestinationAddress"
-        tools:layout_editor_absoluteX="258dp" />
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/backTVDesType"
+        android:padding="17dp"
+        android:text="מטרנה Extra Care Comfort"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvDestinationoodNum"
+        tools:layout_editor_absoluteY="95dp" />
 
     <TextView
         android:id="@+id/tvDestinationoodNum"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:background="@color/backTVDesNum"
+        android:padding="8dp"
+
+        android:text="20"
+        android:textColor="@color/colorPrimaryTextWhite"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvDestinationFoodType"
-        app:layout_constraintTop_toTopOf="@+id/tvDestinationFoodType"
-        tools:layout_editor_absoluteX="188dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvDestinationFoodType" />
 </android.support.constraint.ConstraintLayout>

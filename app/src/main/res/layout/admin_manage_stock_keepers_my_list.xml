@@ -15,6 +15,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="שם"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/btnEditStockKeeper"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnEditStockKeeper"
@@ -22,21 +24,21 @@
 
     <Button
         android:id="@+id/btnEditStockKeeper"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="ערוך"
+        android:background="@drawable/asset128"
         app:layout_constraintStart_toEndOf="@+id/btnDeleteStockKeeper"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnDeleteStockKeeper"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="מחק"
+        android:background="@drawable/asset129"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

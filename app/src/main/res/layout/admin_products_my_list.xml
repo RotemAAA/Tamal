@@ -19,11 +19,11 @@
 
     <Button
         android:id="@+id/btnDeleteProduct"
-        android:layout_width="55dp"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="16dp"
-        android:text="מחק"
+        android:background="@drawable/asset129"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -31,11 +31,11 @@
 
     <Button
         android:id="@+id/btnEditPtoduct"
-        android:layout_width="52dp"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="16dp"
-        android:text="ערוך"
+        android:background="@drawable/asset128"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnDeleteProduct"
         app:layout_constraintTop_toTopOf="parent"
