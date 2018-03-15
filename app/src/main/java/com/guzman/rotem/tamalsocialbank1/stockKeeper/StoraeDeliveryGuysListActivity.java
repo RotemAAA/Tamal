@@ -1,12 +1,11 @@
 package com.guzman.rotem.tamalsocialbank1.stockKeeper;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
-import com.guzman.rotem.tamalsocialbank1.dataSource.DeliveryGuyDataSource;
 import com.guzman.rotem.tamalsocialbank1.R;
-import com.guzman.rotem.tamalsocialbank1.adapter.DeliveryGuyAdapter;
+import com.guzman.rotem.tamalsocialbank1.dataSource.DeliveryGuyDataSource;
 
 public class StoraeDeliveryGuysListActivity extends AppCompatActivity {
 
@@ -22,9 +21,10 @@ public class StoraeDeliveryGuysListActivity extends AppCompatActivity {
 
         //TODO: get in intent the Truma details from the previous screen and send the delivery guy to there
 
-        DeliveryGuyAdapter deliveryGuyAdapter = new DeliveryGuyAdapter(DeliveryGuyDataSource.getData(),this);
-        lvDeliveryGuys.setAdapter(deliveryGuyAdapter);
+ /*       DeliveryGuyAdapter deliveryGuyAdapter = new DeliveryGuyAdapter(DeliveryGuyDataSource.getData(),this);
+        lvDeliveryGuys.setAdapter(deliveryGuyAdapter);*/
 
-
+        DeliveryGuyDataSource dataSource = new DeliveryGuyDataSource(lvDeliveryGuys, this);
+        dataSource.execute();
     }
 }

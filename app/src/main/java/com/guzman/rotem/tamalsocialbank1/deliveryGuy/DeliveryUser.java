@@ -63,4 +63,15 @@ public class DeliveryUser extends User {
     public void setRequests(ArrayList<Request> requests) {
         this.requests = requests;
     }
+
+    @Override
+    public String toString() {
+        return "DeliveryUser{" +
+                "phoneNumber='" + phoneNumber + '\'' +
+                ", city='" + city + '\'' +
+                ", streetNumber='" + streetNumber + '\'' +
+                ", donations=" + donations +
+                ", requests=" + requests +
+                '}';
+    }
 }
