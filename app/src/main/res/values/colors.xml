@@ -10,4 +10,6 @@
     <color name="colorHalfButtonGrey">#e1ebf5</color>
     <color name="colorHalfButtonBlue">#b1f5f2</color>
     <color name="colorHalfButtonLightBrown">#efefef</color>
+    <color name="backTVDesNum">#5eacc9</color>
+    <color name="backTVDesType">#ebf9f2</color>
 </resources>
