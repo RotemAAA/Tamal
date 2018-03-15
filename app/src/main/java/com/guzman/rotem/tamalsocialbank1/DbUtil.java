@@ -81,7 +81,7 @@ public class DbUtil {
         return null;
     }
 
-    private static ArrayList<User> getAllUsersList(Database database) {
+    public static ArrayList<User> getAllUsersList(Database database) {
         try {
             return (ArrayList<User>) database.getAllDocsRequestBuilder().includeDocs(true).build().getResponse().getDocsAs(User.class);
         } catch (IOException e) {
@@ -192,6 +192,7 @@ public class DbUtil {
                             break;
                         case "Mother":
                             MomUser momUser = database.find(MomUser.class, id);
+                            System.out.println(momUser.toString());
                             Log.i("Mom", "Hello mom, " + momUser.getFirstName() + " Welcome");
                             Gson gson = new Gson();
                             String json = gson.toJson(momUser);
