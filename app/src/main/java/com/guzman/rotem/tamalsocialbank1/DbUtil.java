@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.cloudant.client.api.ClientBuilder;
@@ -39,8 +40,9 @@ public class DbUtil {
     }
 
     @SuppressLint("StaticFieldLeak")
-    public static void readFromDb(final Context context, final String account, final String userName, final String pass, final String dbName) {
-        new AsyncTask<Void, Void, Void>() {
+    public static void readFromDb(final Context context, final String account, final String userName, final String pass, final String dbName, ListView listView) {
+        //TODO: give as parameter an arraylist and return the result / or give the listview and then set it
+        AsyncTask as = new AsyncTask<Void, Void, Void>() {
 
             @Override
             protected Void doInBackground(Void... voids) {
@@ -55,10 +57,8 @@ public class DbUtil {
                         donationArrayList = getAllDocList(database);
                         break;
                     case "requests":
-
                         break;
                     case "inventory":
-
                         break;
                     case "users":
                         userArrayList = getAllUsersList(database);
@@ -67,6 +67,8 @@ public class DbUtil {
                 return null;
             }
         }.execute();
+
+
     }
 
     private static ArrayList<Donation> getAllDocList(Database database) {
@@ -129,11 +131,7 @@ public class DbUtil {
                         .password(pass)
                         .build();
 
-                Database database = client.database(/*"demo"*/dbName, false);
-/*
-                Donation person = new Donation("Tsur", "Yohananov", "0538049882",
-                        true*//*, "example_id", null*//*);*/
-
+                Database database = client.database(dbName, false);
                 database.save(toWrite);
 
                 Log.i("SAVED", "doInBackground: cloudant data was saved.... ");
