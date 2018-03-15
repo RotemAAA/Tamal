@@ -57,7 +57,7 @@ public class BookDelivery extends AppCompatActivity {
                 if (fullName.getText().toString().equals("") || city.getText().toString().equals("") || street.getText().toString().equals("") || phone.getText().toString().equals("")) {
                     Toast.makeText(getApplicationContext(), "נא למלא את השדות", Toast.LENGTH_LONG).show();
                 } else {
-                    //TODO: get the amount and set status to 0 
+                    //TODO: get the amount and set status to 0
                     Donation donation = new Donation(fullName.getText().toString(), city.getText().toString(), street.getText().toString(), phone.getText().toString(), false, food);
                     writeDonation(donation);
                     saveDetails(donation);
