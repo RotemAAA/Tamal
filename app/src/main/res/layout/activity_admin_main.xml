@@ -8,119 +8,51 @@
 
     <Button
         android:id="@+id/btnManageUsers"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="290dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/asset124"
-        app:layout_constraintBottom_toTopOf="@+id/gh50"
-        app:layout_constraintEnd_toStartOf="@+id/gv90"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/gv10"
-        app:layout_constraintTop_toTopOf="@+id/gh35"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintBottom_toTopOf="@+id/btnManageProducts"
+        app:layout_constraintEnd_toStartOf="@+id/guideline41"
+        app:layout_constraintStart_toStartOf="@+id/guideline41" />
 
     <Button
         android:id="@+id/btnManageInventory"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="290dp"
+        android:layout_height="85dp"
         android:background="@drawable/asset157"
-        app:layout_constraintBottom_toTopOf="@+id/gh80"
-        app:layout_constraintEnd_toStartOf="@+id/gv90"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toStartOf="@+id/gv10"
-        app:layout_constraintTop_toTopOf="@+id/gh65" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh35"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.29" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh50"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.42" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh65"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh80"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.66" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gv90"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gv10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.05" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gv35"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.35" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gv65"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.65" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline41"
+        app:layout_constraintStart_toStartOf="@+id/guideline41"
+        tools:layout_editor_absoluteY="301dp" />
 
     <ImageView
         android:id="@+id/ivLogo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="8dp"
         android:contentDescription="@string/logo"
-        app:layout_constraintBottom_toTopOf="@+id/gh20"
-        app:layout_constraintEnd_toStartOf="@+id/gv65"
-        app:layout_constraintStart_toStartOf="@+id/gv35"
-        app:layout_constraintTop_toTopOf="@+id/gh5"
+        app:layout_constraintBottom_toTopOf="@+id/btnManageUsers"
+        app:layout_constraintEnd_toStartOf="@+id/guideline41"
+        app:layout_constraintStart_toStartOf="@+id/guideline41"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/asset_52_all" />
 
     <Button
         android:id="@+id/btnManageProducts"
+        android:layout_width="290dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/asset179"
+        app:layout_constraintBottom_toTopOf="@+id/btnManageInventory"
+        app:layout_constraintEnd_toStartOf="@+id/guideline41"
+        app:layout_constraintStart_toStartOf="@+id/guideline41" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline41"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="44dp"
-        android:text="ניהול מוצרים"
-        app:layout_constraintEnd_toStartOf="@+id/gv90"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="@+id/gv10"
-        app:layout_constraintTop_toTopOf="@+id/gh80" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
 
 </android.support.constraint.ConstraintLayout>

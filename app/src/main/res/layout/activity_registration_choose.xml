@@ -11,13 +11,11 @@
         android:id="@+id/tvHeadLine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
         android:text="הרשמה"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="37dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline53"
         app:layout_constraintEnd_toStartOf="@+id/guideline52"
         app:layout_constraintStart_toStartOf="@+id/guideline52"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,28 +23,25 @@
 
     <Button
         android:id="@+id/btnMother"
-        android:layout_width="350dp"
-        android:layout_height="110dp"
+        android:layout_width="290dp"
+        android:layout_height="90dp"
 
-        android:layout_marginEnd="3dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/asset131"
+        app:layout_constraintBottom_toTopOf="@+id/btnVolunteer"
         app:layout_constraintEnd_toStartOf="@+id/guideline52"
         app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/guideline52"
-        app:layout_constraintTop_toBottomOf="@+id/tvHeadLine" />
+        app:layout_constraintStart_toStartOf="@+id/guideline52" />
 
     <Button
         android:id="@+id/btnVolunteer"
-        android:layout_width="350dp"
-        android:layout_height="110dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="290dp"
+        android:layout_height="90dp"
         android:background="@drawable/asset132"
         app:layout_constraintEnd_toStartOf="@+id/guideline52"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="@+id/guideline52"
-        app:layout_constraintTop_toBottomOf="@+id/btnMother" />
+        tools:layout_editor_absoluteY="199dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline52"
@@ -55,10 +50,4 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline53"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.13894325" />
 </android.support.constraint.ConstraintLayout>
