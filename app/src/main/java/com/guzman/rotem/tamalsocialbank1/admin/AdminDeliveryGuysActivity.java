@@ -40,4 +40,11 @@ public class AdminDeliveryGuysActivity extends AppCompatActivity {
         DeliveryGuyDataSource dataSource = new DeliveryGuyDataSource(lvAdminDeliveryGuys, this, 1);
         dataSource.execute();
     }
+
+    @Override
+    protected void onPostResume() {
+        DeliveryGuyDataSource dataSource = new DeliveryGuyDataSource(lvAdminDeliveryGuys, this, 1);
+        dataSource.execute();
+        super.onPostResume();
+    }
 }

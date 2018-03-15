@@ -1,5 +1,6 @@
 package com.guzman.rotem.tamalsocialbank1.admin;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
 import com.guzman.rotem.tamalsocialbank1.DbUtil;
 import com.guzman.rotem.tamalsocialbank1.deliveryGuy.DeliveryUser;
 import com.guzman.rotem.tamalsocialbank1.R;
@@ -29,6 +31,12 @@ public class AdminDeliveryGuysEditActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_delivery_guys_edit);
 
+        Intent intent = getIntent();
+        String json = intent.getStringExtra("toEdit");
+        Gson gson = new Gson();
+
+        final DeliveryUser deliveryUser = gson.fromJson(json, DeliveryUser.class);
+
         btnCodeReset = findViewById(R.id.btnCodeReset);
         btnSendCode = findViewById(R.id.btnSendCode);
         btnUpdate = findViewById(R.id.btnUpdate);
@@ -38,6 +46,21 @@ public class AdminDeliveryGuysEditActivity extends AppCompatActivity {
         etCity = findViewById(R.id.etCity);
         etStreetAndNumber = findViewById(R.id.etStreetAndNumber);
         etCode = findViewById(R.id.etCode);
+
+        if (deliveryUser != null) {
+            etFullName.setText(deliveryUser.getFirstName() + " " + deliveryUser.getLastName());
+            etPhone.setText(deliveryUser.getPhoneNumber());
+            etCity.setText(deliveryUser.getCity());
+            etStreetAndNumber.setText(deliveryUser.getStreetNumber());
+            etCode.setText(deliveryUser.get_id());
+
+            fullName = etFullName.getText().toString();
+            phone = etPhone.getText().toString();
+            city = etCity.getText().toString();
+            streetNumber = etStreetAndNumber.getText().toString();
+            code = etCode.getText().toString();
+
+        }
 
         etCity.addTextChangedListener(new TextWatcher() {
             @Override
@@ -128,6 +151,10 @@ public class AdminDeliveryGuysEditActivity extends AppCompatActivity {
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if (deliveryUser != null) {
+                    DbUtil.deleteUser(deliveryUser.get_id(), deliveryUser.get_rev());
+                }
 
                 String[] separated = fullName.split(" ");
                 String first = "";

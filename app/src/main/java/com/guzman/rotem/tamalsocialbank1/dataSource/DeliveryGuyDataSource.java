@@ -62,9 +62,8 @@ public class DeliveryGuyDataSource extends AsyncTask<Void, Void, ArrayList<Deliv
     protected void onPostExecute(ArrayList<DeliveryUser> deliveryUsers) {
         System.out.println(deliveryUsers.toString());
 
-        if(who==0) {
+        if (who == 0) {
             DeliveryGuyAdapter adapter = new DeliveryGuyAdapter(deliveryUsers, context);
-
             listView.setAdapter(adapter);
         } else if (who == 1) {
             //admin's addapter
