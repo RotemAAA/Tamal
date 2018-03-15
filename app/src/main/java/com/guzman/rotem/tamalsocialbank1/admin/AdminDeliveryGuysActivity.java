@@ -1,14 +1,12 @@
 package com.guzman.rotem.tamalsocialbank1.admin;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.guzman.rotem.tamalsocialbank1.adapter.DeliveryGuyAdapterAdmin;
-import com.guzman.rotem.tamalsocialbank1.dataSource.DeliveryGuyDataSource;
 import com.guzman.rotem.tamalsocialbank1.R;
 
 public class AdminDeliveryGuysActivity extends AppCompatActivity {
@@ -26,9 +24,9 @@ public class AdminDeliveryGuysActivity extends AppCompatActivity {
 
 
         lvAdminDeliveryGuys = findViewById(R.id.lvAdminDeliveryGuys);
-
+/*
         DeliveryGuyAdapterAdmin deliveryGuyAdapterAdmin = new DeliveryGuyAdapterAdmin(DeliveryGuyDataSource.getData(), this);
-        lvAdminDeliveryGuys.setAdapter(deliveryGuyAdapterAdmin);
+        lvAdminDeliveryGuys.setAdapter(deliveryGuyAdapterAdmin);*/
 
         btnAddNewDeliveryGuy.setOnClickListener(new View.OnClickListener() {
             @Override

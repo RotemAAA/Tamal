@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,8 +14,6 @@ import com.guzman.rotem.tamalsocialbank1.DbUtil;
 import com.guzman.rotem.tamalsocialbank1.Donation;
 import com.guzman.rotem.tamalsocialbank1.Food;
 import com.guzman.rotem.tamalsocialbank1.R;
-
-import java.util.ArrayList;
 
 public class BookDelivery extends AppCompatActivity {
 
@@ -94,7 +91,7 @@ public class BookDelivery extends AppCompatActivity {
         DbUtil.writeToDb(getApplicationContext(), dbAcnt, dbUser, dbPass, dbName, d);
     }
 
-    private void readDonDb() {
+/*    private void readDonDb() {
         DbUtil.readFromDb(getApplicationContext(), dbAcnt, dbUser, dbPass, dbName);
 
         for (int i = 0; i < 3; i = i) {
@@ -109,6 +106,6 @@ public class BookDelivery extends AppCompatActivity {
             }
 
         }
-    }
+    }*/
 
 }
