@@ -4,10 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.guzman.rotem.tamalsocialbank1.Food;
 import com.guzman.rotem.tamalsocialbank1.R;
@@ -36,18 +34,7 @@ public class PickProductsFromList extends AppCompatActivity {
         FoodAdapter foodAdapter = new FoodAdapter(this, foods);
 
         foodListView.setAdapter(foodAdapter);
-        foodListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
-                                           int pos, long id) {
-                // TODO Auto-generated method stub
 
-                String s = "hi";
-//                Log.v("long clicked","pos: " + pos);
-                Toast.makeText(PickProductsFromList.this,s, Toast.LENGTH_LONG).show();
-                return true;
-            }
-        });
 
         btnPickDropoffPoint.setOnClickListener(new View.OnClickListener() {
             @Override
