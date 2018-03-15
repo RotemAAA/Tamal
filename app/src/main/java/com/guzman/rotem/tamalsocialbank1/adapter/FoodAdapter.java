@@ -3,6 +3,7 @@ package com.guzman.rotem.tamalsocialbank1.adapter;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -86,12 +87,30 @@ public class FoodAdapter extends BaseAdapter {
                 alertDialog.setMessage("Enter Password");
 
                 final EditText input = new EditText(context);
+                input.setText("1");
 
                 LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.MATCH_PARENT);
                 input.setLayoutParams(lp);
                 alertDialog.setView(input);
+
+                alertDialog.setPositiveButton("אישור", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //int amount = Integer.parseInt(input.getText().toString());
+                        String amount = input.getText().toString();
+                        Food f = foods.get(position);
+                        Gson gson = new Gson();
+                        String json = gson.toJson(f);
+                        Intent intent = new Intent(context, ChoosePickup.class);
+                        intent.putExtra("chosen_food", json);
+                        intent.putExtra("amount", amount);
+                        context.startActivity(intent);
+
+                    }
+                });
+
 
                 alertDialog.show();
 

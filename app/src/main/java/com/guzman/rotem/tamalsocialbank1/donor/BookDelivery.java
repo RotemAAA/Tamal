@@ -29,6 +29,7 @@ public class BookDelivery extends AppCompatActivity {
     private Button sendBtn;
 
     private Food food;
+    private int amount = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,12 @@ public class BookDelivery extends AppCompatActivity {
 
         Intent intent = getIntent();
         String chosenFood = intent.getStringExtra("chosen_food");
+        String am = intent.getStringExtra("amount");
+        if (am == null){
+            amount = 1;
+        } else {
+            amount = Integer.valueOf(am);
+        }
         Gson gson = new Gson();
         food = gson.fromJson(chosenFood, Food.class);
 
@@ -54,8 +61,7 @@ public class BookDelivery extends AppCompatActivity {
                 if (fullName.getText().toString().equals("") || city.getText().toString().equals("") || street.getText().toString().equals("") || phone.getText().toString().equals("")) {
                     Toast.makeText(getApplicationContext(), "נא למלא את השדות", Toast.LENGTH_LONG).show();
                 } else {
-                    //TODO: get the amount and set status to 0
-                    Donation donation = new Donation(fullName.getText().toString(), city.getText().toString(), street.getText().toString(), phone.getText().toString(), false, food);
+                    Donation donation = new Donation(fullName.getText().toString(), city.getText().toString(), street.getText().toString(), phone.getText().toString(), false, food, 0, amount);
                     writeDonation(donation);
                     saveDetails(donation);
                     Toast.makeText(getApplicationContext(), "תודה רבה, " + fullName.getText().toString(), Toast.LENGTH_LONG).show();

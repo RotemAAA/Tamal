@@ -15,6 +15,7 @@ public class ChoosePickup extends AppCompatActivity {
     private Button btnDropOffPoints;
 
     private String chosenFood;
+    private String amount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,7 @@ public class ChoosePickup extends AppCompatActivity {
 
         Intent intent = getIntent();
         chosenFood = intent.getStringExtra("chosen_food");
+        amount = intent.getStringExtra("amount");
 
 
         btnDropOffPoints.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +36,7 @@ public class ChoosePickup extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(ChoosePickup.this, DropOffPoints.class);
                 intent.putExtra("chosen_food", chosenFood);
+                intent.putExtra("amount", amount);
                 startActivity(intent);
             }
         });
@@ -43,6 +46,7 @@ public class ChoosePickup extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(ChoosePickup.this, NearbyDropOffPoint.class);
                 intent.putExtra("chosen_food", chosenFood);
+                intent.putExtra("amount", amount);
                 startActivity(intent);
             }
         });
@@ -52,6 +56,7 @@ public class ChoosePickup extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(ChoosePickup.this, BookDelivery.class);
                 intent.putExtra("chosen_food", chosenFood);
+                intent.putExtra("amount", amount);
                 startActivity(intent);
             }
         });
