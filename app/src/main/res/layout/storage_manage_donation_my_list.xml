@@ -3,90 +3,72 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/tvSMDonationInInventory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="144dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/varela_round"
         android:text="כרגע במלאי"
-        app:layout_constraintBottom_toTopOf="@+id/guideline44"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textColor="#50b281"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="116dp" />
 
     <TextView
         android:id="@+id/tvSMDonationInInventoryNumberv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
+        android:fontFamily="@font/varela_round"
         android:text="number"
+
+        android:textColor="#50b281"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvSMDonationInInventory"
         app:layout_constraintEnd_toStartOf="@+id/tvSMDonationInInventory"
         app:layout_constraintTop_toTopOf="@+id/tvSMDonationInInventory" />
 
     <Button
         android:id="@+id/btnSMDonationBookDelivery"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:background="@drawable/asset168"
         app:layout_constraintEnd_toStartOf="@+id/guideline48"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="130dp" />
-
-    <TextView
-        android:id="@+id/tvSMDonationProductName2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvSMDonationProductNumber2"
-        app:layout_constraintTop_toTopOf="@+id/guideline47" />
+        tools:layout_editor_absoluteY="29dp" />
 
     <TextView
         android:id="@+id/tvSMDonationProductName1"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/guideline47"
+        android:text="שם המוצר"
+
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSMDonationProductNumber1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/tvSMDonationProductNumber1"
-        app:layout_constraintTop_toTopOf="@+id/guideline44" />
+        app:layout_constraintTop_toTopOf="@+id/tvSMDonationProductNumber1" />
 
     <TextView
         android:id="@+id/tvSMDonationTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="time"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="52dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline44"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.8" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline47"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9" />
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/varela_round"
+        android:gravity="center"
+        android:text="17:05"
+        android:textColor="#e99b1f"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSMDonationDate"
+        app:layout_constraintStart_toStartOf="@+id/guideline48"
+        app:layout_constraintTop_toTopOf="@+id/tvSMDonationDate" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline48"
@@ -95,41 +77,29 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.21" />
 
-    <Button
-        android:id="@+id/btnSMDonationShowFullDetails"
-        android:layout_width="270dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@drawable/asset167"
-        app:layout_constraintBottom_toTopOf="@+id/guideline44"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:id="@+id/tvSMDonationDonorName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:text="שם התורם"
-        app:layout_constraintBottom_toTopOf="@+id/tvSMDonationInInventory"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/varela_round"
+        android:text="רותם גוזמן"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnSMDonationAccept"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/asset163"
-        app:layout_constraintBottom_toTopOf="@+id/guideline44"
         app:layout_constraintEnd_toStartOf="@+id/guideline48"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSMDonationBookDelivery" />
 
@@ -137,11 +107,13 @@
         android:id="@+id/tvSMDonationDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Date"
-        app:layout_constraintEnd_toStartOf="@+id/tvSMDonationTime"
+        android:fontFamily="@font/varela_round"
+        android:gravity="center"
+        android:text="17.03.2018"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -149,22 +121,36 @@
         android:id="@+id/tvSMDonationProductNumber1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/tvSMDonationProductName1"
+        android:padding="6dp"
+        android:text="num"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvSMDonationProductName1" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSMDonationAccept" />
 
     <TextView
-        android:id="@+id/tvSMDonationProductNumber2"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/tvSMDonationProductName2"
-        app:layout_constraintTop_toTopOf="@+id/tvSMDonationProductName2"
-        tools:layout_editor_absoluteX="16dp" />
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="סטטוס קיבולת למוצר"
+        android:fontFamily="@font/varela_round"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/tvSMDonationInInventory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSMDonationDonorName" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="num"
+        
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
 
 </android.support.constraint.ConstraintLayout>
