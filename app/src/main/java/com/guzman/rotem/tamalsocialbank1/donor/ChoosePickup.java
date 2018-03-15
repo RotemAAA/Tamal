@@ -23,7 +23,6 @@ public class ChoosePickup extends AppCompatActivity {
         setContentView(R.layout.activity_choose_pickup);
 
         btnDropOffPoints = findViewById(R.id.btnDropOffPoints);
-        btnNearbyDropoff = findViewById(R.id.btnNearbyDropOff);
         btnPickDelivery = findViewById(R.id.btnHomePickUp);
 
         Intent intent = getIntent();
@@ -41,15 +40,7 @@ public class ChoosePickup extends AppCompatActivity {
             }
         });
 
-        btnNearbyDropoff.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ChoosePickup.this, NearbyDropOffPoint.class);
-                intent.putExtra("chosen_food", chosenFood);
-                intent.putExtra("amount", amount);
-                startActivity(intent);
-            }
-        });
+
 
         btnPickDelivery.setOnClickListener(new View.OnClickListener() {
             @Override
