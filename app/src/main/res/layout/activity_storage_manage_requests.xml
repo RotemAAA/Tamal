@@ -8,38 +8,44 @@
 
     <ImageView
         android:id="@+id/ivLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="127dp"
-        android:layout_marginTop="54dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/btnRequestsNew"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline53"
+        app:layout_constraintStart_toStartOf="@+id/guideline53"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
         app:srcCompat="@drawable/asset_52_all" />
 
     <Button
         android:id="@+id/btnRequestsNew"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="204dp"
+        android:layout_width="290dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="הזמנות חדשות"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:background="@drawable/asset184"
+        app:layout_constraintBottom_toTopOf="@+id/btnRequestsInProcess"
+        app:layout_constraintEnd_toStartOf="@+id/guideline53"
+        app:layout_constraintStart_toStartOf="@+id/guideline53" />
 
     <Button
         android:id="@+id/btnRequestsInProcess"
+        android:layout_width="290dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/asset185"
+        app:layout_constraintEnd_toStartOf="@+id/guideline53"
+        app:layout_constraintStart_toStartOf="@+id/guideline53"
+        tools:layout_editor_absoluteY="339dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline53"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="60dp"
-        android:text="הזמנות בתהליך"
-        app:layout_constraintEnd_toEndOf="@+id/btnRequestsNew"
-        app:layout_constraintHorizontal_bias="0.153"
-        app:layout_constraintStart_toStartOf="@+id/btnRequestsNew"
-        app:layout_constraintTop_toBottomOf="@+id/btnRequestsNew" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
 </android.support.constraint.ConstraintLayout>
