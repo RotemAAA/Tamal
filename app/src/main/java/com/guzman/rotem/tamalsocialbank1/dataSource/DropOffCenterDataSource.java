@@ -9,6 +9,11 @@ import java.util.ArrayList;
  */
 
 public class DropOffCenterDataSource {
+    //drop off database credentials -
+    final String dbAcnt = "67817cbe-88be-4383-98a9-93784d2103e2-bluemix";
+    final String dbUser = "tiagarvereseelthanyuegul";
+    final String dbPass = "6f610d3c37d3cc9088b4e91093ca478b6daafe96";
+    final String dbName = "drop_off_centers";
 
     public static ArrayList<DropOffCenter> getDate() {
         ArrayList<DropOffCenter> data = new ArrayList<>();

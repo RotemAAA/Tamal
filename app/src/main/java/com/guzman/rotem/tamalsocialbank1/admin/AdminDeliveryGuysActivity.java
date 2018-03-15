@@ -22,12 +22,7 @@ public class AdminDeliveryGuysActivity extends AppCompatActivity {
         setContentView(R.layout.activity_admin_delivery_guys);
 
         btnAddNewDeliveryGuy = findViewById(R.id.btnAddNewDeliveryGuy);
-
-
         lvAdminDeliveryGuys = findViewById(R.id.lvAdminDeliveryGuys);
-/*
-        DeliveryGuyAdapterAdmin deliveryGuyAdapterAdmin = new DeliveryGuyAdapterAdmin(DeliveryGuyDataSource.getData(), this);
-        lvAdminDeliveryGuys.setAdapter(deliveryGuyAdapterAdmin);*/
 
         btnAddNewDeliveryGuy.setOnClickListener(new View.OnClickListener() {
             @Override
