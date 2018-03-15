@@ -213,4 +213,21 @@ public class DbUtil {
         }.execute();
     }
 
+    @SuppressLint("StaticFieldLeak")
+    public static void deleteUser(final String id, final String rev) {
+        new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... voids) {
+                CloudantClient client = ClientBuilder.account("67817cbe-88be-4383-98a9-93784d2103e2-bluemix")
+                        .username("ndstedecionstentlymnatud")
+                        .password("434006e0cef09ba9aabe33cca89e808a5139884d")
+                        .build();
+
+                Database db = client.database("users", false);
+                db.remove(id, rev);
+                Log.i("DELETE", "user removed");
+                return null;
+            }
+        }.execute();
+    }
 }
