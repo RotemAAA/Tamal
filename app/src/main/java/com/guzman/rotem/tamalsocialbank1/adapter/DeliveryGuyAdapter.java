@@ -82,12 +82,18 @@ public class DeliveryGuyAdapter extends BaseAdapter {
             @Override
             public void onClick(View view) {
                 String phone = deliveryGuy.getPhoneNumber();
-
                 Uri phoneUri = Uri.parse("tel:" + phone + "");
-
                 Intent dialIntent = new Intent(Intent.ACTION_DIAL, phoneUri);
                 context.startActivity(dialIntent);
 
+            }
+        });
+
+        btnSDGLSend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //TODO: go to donations list and with intent and extras(phone) to send from there a msg with the wanted donation
+                //TODO: update deliveryuser's list with donations / requests
             }
         });
 
@@ -95,5 +101,4 @@ public class DeliveryGuyAdapter extends BaseAdapter {
     }
 
 
-    //TODO: btnSDGLSend --> send delivery guy to donor/mother
 }
