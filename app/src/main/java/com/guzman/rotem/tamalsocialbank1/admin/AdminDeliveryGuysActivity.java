@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.guzman.rotem.tamalsocialbank1.R;
+import com.guzman.rotem.tamalsocialbank1.dataSource.DeliveryGuyDataSource;
 
 public class AdminDeliveryGuysActivity extends AppCompatActivity {
 
@@ -36,5 +37,7 @@ public class AdminDeliveryGuysActivity extends AppCompatActivity {
             }
         });
 
+        DeliveryGuyDataSource dataSource = new DeliveryGuyDataSource(lvAdminDeliveryGuys, this, 1);
+        dataSource.execute();
     }
 }

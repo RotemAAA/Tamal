@@ -24,7 +24,7 @@ public class StoraeDeliveryGuysListActivity extends AppCompatActivity {
  /*       DeliveryGuyAdapter deliveryGuyAdapter = new DeliveryGuyAdapter(DeliveryGuyDataSource.getData(),this);
         lvDeliveryGuys.setAdapter(deliveryGuyAdapter);*/
 
-        DeliveryGuyDataSource dataSource = new DeliveryGuyDataSource(lvDeliveryGuys, this);
+        DeliveryGuyDataSource dataSource = new DeliveryGuyDataSource(lvDeliveryGuys, this, 0);
         dataSource.execute();
     }
 }

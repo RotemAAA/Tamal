@@ -11,9 +11,13 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/varela_round"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.873"
         app:layout_constraintStart_toEndOf="@+id/btnSDGLCall"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="איציק רובנו" />
@@ -22,28 +26,39 @@
         android:id="@+id/tvSDGLAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/varela_round"
         android:text="אלעד 12 תל אביב"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.789"
         app:layout_constraintStart_toEndOf="@+id/btnSDGLCall"
-        app:layout_constraintTop_toBottomOf="@+id/tvSDGLName" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSDGLName"
+        app:layout_constraintVertical_bias="0.529" />
 
     <Button
         android:id="@+id/btnSDGLCall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="התקשר"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="117dp" />
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/asset_102_s_33"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSDGLSend"
+        app:layout_constraintStart_toEndOf="@+id/btnSDGLSend"
+        app:layout_constraintTop_toTopOf="@+id/btnSDGLSend" />
 
     <Button
         android:id="@+id/btnSDGLSend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:text="שלח ליעד"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/asset186"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

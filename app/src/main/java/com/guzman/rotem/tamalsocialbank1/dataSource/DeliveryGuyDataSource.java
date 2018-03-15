@@ -11,6 +11,7 @@ import com.cloudant.client.api.Database;
 import com.guzman.rotem.tamalsocialbank1.DbUtil;
 import com.guzman.rotem.tamalsocialbank1.User;
 import com.guzman.rotem.tamalsocialbank1.adapter.DeliveryGuyAdapter;
+import com.guzman.rotem.tamalsocialbank1.adapter.DeliveryGuyAdapterAdmin;
 import com.guzman.rotem.tamalsocialbank1.deliveryGuy.DeliveryUser;
 
 import java.util.ArrayList;
@@ -28,12 +29,13 @@ public class DeliveryGuyDataSource extends AsyncTask<Void, Void, ArrayList<Deliv
     @SuppressLint("StaticFieldLeak")
     private ListView listView;
     private Context context;
-
     private Database database;
+    private int who;
 
-    public DeliveryGuyDataSource(ListView listView, Context context) {
+    public DeliveryGuyDataSource(ListView listView, Context context, int who) {
         this.listView = listView;
         this.context = context;
+        this.who = who;
     }
 
     @Override
@@ -60,10 +62,15 @@ public class DeliveryGuyDataSource extends AsyncTask<Void, Void, ArrayList<Deliv
     protected void onPostExecute(ArrayList<DeliveryUser> deliveryUsers) {
         System.out.println(deliveryUsers.toString());
 
-        //TODO: adapter and populate the list
-        DeliveryGuyAdapter adapter = new DeliveryGuyAdapter(deliveryUsers, context);
+        if(who==0) {
+            DeliveryGuyAdapter adapter = new DeliveryGuyAdapter(deliveryUsers, context);
 
-        listView.setAdapter(adapter);
+            listView.setAdapter(adapter);
+        } else if (who == 1) {
+            //admin's addapter
+            DeliveryGuyAdapterAdmin adapterAdmin = new DeliveryGuyAdapterAdmin(deliveryUsers, context);
+            listView.setAdapter(adapterAdmin);
+        }
     }
 }
 
