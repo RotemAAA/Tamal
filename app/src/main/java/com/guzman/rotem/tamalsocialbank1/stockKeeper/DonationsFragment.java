@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.guzman.rotem.tamalsocialbank1.R;
+import com.guzman.rotem.tamalsocialbank1.dataSource.DonationsDataSource;
 
 /**
  * Created by tsuryohananov on 16/03/2018.
@@ -44,18 +45,17 @@ public class DonationsFragment extends android.support.v4.app.Fragment {
 
         switch (pos) {
             case 0:
-                // do
+                new DonationsDataSource(getContext(), listView, 0).execute();
                 break;
             case 1:
-                //do
+                new DonationsDataSource(getContext(), listView, 1).execute();
                 break;
             case 2:
-                //do
+                new DonationsDataSource(getContext(), listView, 2).execute();
                 break;
             default:
-                //
+                new DonationsDataSource(getContext(), listView, 0).execute();
                 break;
-
         }
     }
 }

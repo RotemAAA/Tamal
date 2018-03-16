@@ -83,7 +83,16 @@ public class DbUtil {
         try {
             return (ArrayList<User>) database.getAllDocsRequestBuilder().includeDocs(true).build().getResponse().getDocsAs(User.class);
         } catch (IOException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static ArrayList<DropOffCenter> getAllDropOffCenters(Database database) {
+        try {
+            return (ArrayList<DropOffCenter>) database.getAllDocsRequestBuilder().includeDocs(true).build().getResponse().getDocsAs(DropOffCenter.class);
+        } catch (IOException e) {
+            //e.printStackTrace();
         }
         return null;
     }
