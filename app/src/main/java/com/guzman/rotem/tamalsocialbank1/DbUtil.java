@@ -181,7 +181,7 @@ public class DbUtil {
                             break;
                         case "Manager":
                             StockKeeperUser sUser = database.find(StockKeeperUser.class, id);
-                            Log.i("WAREHOUSE MANAGER ", "Hello warehouse manager " + sUser.getFirstName() + " Welcome");
+                            Log.i("WAREHOUSE MANAGER", "Hello warehouse manager " + sUser.getFirstName() + " Welcome");
                             Gson gson1 = new Gson();
                             String json1 = gson1.toJson(sUser);
                             Intent intent1 = new Intent(context, StorageMainActivity.class);

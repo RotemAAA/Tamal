@@ -1,15 +1,14 @@
 package com.guzman.rotem.tamalsocialbank1.admin;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
 import com.guzman.rotem.tamalsocialbank1.R;
-import com.guzman.rotem.tamalsocialbank1.adapter.StockKeeperAdapter;
-import com.guzman.rotem.tamalsocialbank1.dataSource.StockKeeperDataSource;
+import com.guzman.rotem.tamalsocialbank1.dataSource.StorageUserDataSource;
 
 public class AdminStockKeeperActivity extends AppCompatActivity {
 
@@ -26,8 +25,7 @@ public class AdminStockKeeperActivity extends AppCompatActivity {
 
         lvStockKeepers = findViewById(R.id.lvStockKeepers);
 
-        StockKeeperAdapter stockKeeperAdapter = new StockKeeperAdapter(StockKeeperDataSource.getData(), this);
-        lvStockKeepers.setAdapter(stockKeeperAdapter);
+        new StorageUserDataSource(lvStockKeepers, this).execute();
 
         btnAddNewStockKeeper.setOnClickListener(new View.OnClickListener() {
             @Override
