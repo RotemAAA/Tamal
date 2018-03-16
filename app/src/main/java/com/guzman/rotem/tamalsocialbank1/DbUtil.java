@@ -32,7 +32,6 @@ import java.util.List;
 public class DbUtil {
     static ArrayList<Donation> donationArrayList;
     static ArrayList<User> userArrayList;
-    //TODO: wait for next lesson with Tomer, I think there will be better method to do so (rather those arraylists)
 
     public static ArrayList<Donation> getDonationArrayList() {
         return donationArrayList;
@@ -40,7 +39,6 @@ public class DbUtil {
 
     @SuppressLint("StaticFieldLeak")
     public static void readFromDb(final Context context, final String account, final String userName, final String pass, final String dbName) {
-        //TODO: give as parameter an arraylist and return the result / or give the listview and then set it
         AsyncTask as = new AsyncTask<Void, Void, Void>() {
 
             @Override
@@ -72,7 +70,7 @@ public class DbUtil {
 
     }
 
-    private static ArrayList<Donation> getAllDocList(Database database) {
+    public static ArrayList<Donation> getAllDocList(Database database) {
         try {
             return (ArrayList<Donation>) database.getAllDocsRequestBuilder().includeDocs(true).build().getResponse().getDocsAs(Donation.class);
         } catch (IOException e) {

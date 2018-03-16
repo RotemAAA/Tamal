@@ -15,10 +15,12 @@ public class DropOffCenterDataSource {
     final String dbPass = "6f610d3c37d3cc9088b4e91093ca478b6daafe96";
     final String dbName = "drop_off_centers";
 
+    //TODO: make it like the deliveryGuyDataSource
+
     public static ArrayList<DropOffCenter> getDate() {
         ArrayList<DropOffCenter> data = new ArrayList<>();
 
-        DropOffCenter d1 = new DropOffCenter("מרכז קהילתי נאות שושנים",
+/*        DropOffCenter d1 = new DropOffCenter("מרכז קהילתי נאות שושנים",
                 "רח\' צבי סיגלון 12 חולון",
                 "טל: 03-5503977");
 
@@ -70,7 +72,7 @@ public class DropOffCenterDataSource {
 
         data.add(new DropOffCenter("מרכז שטיינברג החדש- במה למוסיקה חיה",
                 "רח\' גבעת התחמושת 21 חולון",
-                "טל: 03-5500012"));
+                "טל: 03-5500012"));*/
 
         return data;
     }

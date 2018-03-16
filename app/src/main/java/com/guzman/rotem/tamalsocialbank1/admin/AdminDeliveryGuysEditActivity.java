@@ -167,7 +167,7 @@ public class AdminDeliveryGuysEditActivity extends AppCompatActivity {
                         Log.d("FName ** ", "" + first + "\n ");
                     } else if (i == 1) {
                         last = separated[1].trim();
-                        Log.d("MName ** ", "" + last + "\n ");
+                        Log.d("LName ** ", "" + last + "\n ");
                     } else {
                         Toast.makeText(getApplicationContext(), "נא למלא שם מלא", Toast.LENGTH_LONG).show();
                     }
