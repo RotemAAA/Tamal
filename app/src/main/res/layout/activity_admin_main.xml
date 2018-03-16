@@ -10,7 +10,7 @@
         android:id="@+id/btnManageUsers"
         android:layout_width="290dp"
         android:layout_height="70dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="28dp"
         android:background="@drawable/asset124"
         app:layout_constraintBottom_toTopOf="@+id/btnManageProducts"
         app:layout_constraintEnd_toStartOf="@+id/guideline41"
@@ -20,29 +20,31 @@
         android:id="@+id/btnManageInventory"
         android:layout_width="290dp"
         android:layout_height="85dp"
+        android:layout_marginBottom="100dp"
         android:background="@drawable/asset157"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline41"
-        app:layout_constraintStart_toStartOf="@+id/guideline41"
-        tools:layout_editor_absoluteY="301dp" />
+        app:layout_constraintStart_toStartOf="@+id/guideline41" />
 
     <ImageView
         android:id="@+id/ivLogo"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginBottom="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:contentDescription="@string/logo"
         app:layout_constraintBottom_toTopOf="@+id/btnManageUsers"
         app:layout_constraintEnd_toStartOf="@+id/guideline41"
         app:layout_constraintStart_toStartOf="@+id/guideline41"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/asset_52_all" />
 
     <Button
         android:id="@+id/btnManageProducts"
         android:layout_width="290dp"
         android:layout_height="70dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="44dp"
         android:background="@drawable/asset179"
         app:layout_constraintBottom_toTopOf="@+id/btnManageInventory"
         app:layout_constraintEnd_toStartOf="@+id/guideline41"
