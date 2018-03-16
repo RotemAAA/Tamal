@@ -17,7 +17,7 @@ public class BuyingPoints extends AppCompatActivity {
         setContentView(R.layout.activity_buying_points);
 
         lvBuyingPoints = findViewById(R.id.lvBuyingPoints);
-        new DropOffCenterDataSource(getApplicationContext(), lvBuyingPoints).execute();
+        new DropOffCenterDataSource(this, lvBuyingPoints).execute();
 
     }
 }
