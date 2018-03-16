@@ -25,7 +25,7 @@
         android:id="@+id/btnHomePickUp"
         android:layout_width="290dp"
         android:layout_height="75dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="56dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/asset144"
         app:layout_constraintBottom_toTopOf="@+id/btnDropOffPoints"
@@ -38,10 +38,11 @@
         android:id="@+id/btnDropOffPoints"
         android:layout_width="290dp"
         android:layout_height="75dp"
+        android:layout_marginBottom="144dp"
         android:background="@drawable/asset178"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline40"
-        app:layout_constraintStart_toStartOf="@+id/guideline40"
-        tools:layout_editor_absoluteY="251dp" />
+        app:layout_constraintStart_toStartOf="@+id/guideline40" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline40"
