@@ -1,7 +1,8 @@
 package com.guzman.rotem.tamalsocialbank1.adapter;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
+import android.app.Activity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +10,11 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+import com.guzman.rotem.tamalsocialbank1.DbUtil;
 import com.guzman.rotem.tamalsocialbank1.R;
+import com.guzman.rotem.tamalsocialbank1.admin.AdminStockKeeperActivity;
+import com.guzman.rotem.tamalsocialbank1.admin.AdminStockKeeperEditActivity;
 import com.guzman.rotem.tamalsocialbank1.stockKeeper.StockKeeperUser;
 
 import java.util.ArrayList;
@@ -18,15 +23,15 @@ import java.util.ArrayList;
  * Created by Rotem on 13/03/2018.
  */
 
-public class StockKeeperAdapter extends BaseAdapter{
+public class StockKeeperAdapter extends BaseAdapter {
 
     private ArrayList<StockKeeperUser> data;
-    private Context context;
+    private Activity context;
     private String firstName;
     private String lastName;
     private String fullName;
 
-    public StockKeeperAdapter(ArrayList<StockKeeperUser> data, Context context) {
+    public StockKeeperAdapter(ArrayList<StockKeeperUser> data, Activity context) {
         this.data = data;
         this.context = context;
     }
@@ -49,11 +54,11 @@ public class StockKeeperAdapter extends BaseAdapter{
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        StockKeeperUser stockKeeperUser = data.get(position);
+        final StockKeeperUser stockKeeperUser = data.get(position);
         LayoutInflater inflater = LayoutInflater.from(context);
 
-       @SuppressLint("ViewHolder")
-       View v = inflater.inflate(R.layout.admin_manage_stock_keepers_my_list, parent, false);
+        @SuppressLint("ViewHolder")
+        View v = inflater.inflate(R.layout.admin_manage_stock_keepers_my_list, parent, false);
 
         TextView tvStockKeeperName = v.findViewById(R.id.tvStockKeeperName);
         Button btnEditStockKeeper = v.findViewById(R.id.btnEditStockKeeper);
@@ -68,14 +73,21 @@ public class StockKeeperAdapter extends BaseAdapter{
         btnEditStockKeeper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: edit stock keeper
+                Gson gson = new Gson();
+                String json = gson.toJson(stockKeeperUser);
+                Intent intent = new Intent(context, AdminStockKeeperEditActivity.class);
+                intent.putExtra("toEdit", json);
+                context.startActivity(intent);
             }
         });
 
         btnDeleteStockKeeper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: delete stock keeper
+                DbUtil.deleteUser(stockKeeperUser.get_id(), stockKeeperUser.get_rev());
+                context.finish();
+                Intent intent = new Intent(context, AdminStockKeeperActivity.class);
+                context.startActivity(intent);
             }
         });
 
