@@ -22,8 +22,6 @@ public class DonationAdapter extends BaseAdapter {
 
     private ArrayList<Donation> data;
     private Context context;
-    private String firstName;
-    private String lastName;
 
     public DonationAdapter(ArrayList<Donation> data, Context context) {
         this.data = data;
@@ -65,6 +63,27 @@ public class DonationAdapter extends BaseAdapter {
         Button btnSMDonationBookDelivery = v.findViewById(R.id.btnSMDonationBookDelivery);
         Button btnSMDonationAccept = v.findViewById(R.id.btnSMDonationAccept);
 
+
+        //TODO: set date and time, show in inventory amount
+        tvSMDonationDonorName.setText(donation.getFulName());
+        tvSMDonationProductName1.setText((CharSequence) donation.getFood());
+        tvSMDonationProductNumber1.setText(donation.getAmount());
+
+        btnSMDonationBookDelivery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO: connect button to delivery guys db
+            }
+        });
+
+
+
+        btnSMDonationAccept.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO:  connect button to inventory db
+            }
+        });
 
 
         return v;
