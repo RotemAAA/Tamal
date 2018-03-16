@@ -1,5 +1,6 @@
 package com.guzman.rotem.tamalsocialbank1.admin;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
 import com.guzman.rotem.tamalsocialbank1.DbUtil;
 import com.guzman.rotem.tamalsocialbank1.R;
 import com.guzman.rotem.tamalsocialbank1.stockKeeper.StockKeeperUser;
@@ -24,6 +26,7 @@ public class AdminStockKeeperEditActivity extends AppCompatActivity {
     final String dbUser = "ndstedecionstentlymnatud";
     final String dbPass = "434006e0cef09ba9aabe33cca89e808a5139884d";
     final String dbName = "users";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +40,22 @@ public class AdminStockKeeperEditActivity extends AppCompatActivity {
         etCode = findViewById(R.id.etCode);
         etFullName = findViewById(R.id.etFullName);
         etPhone = findViewById(R.id.etPhone);
+
+        Intent intent = getIntent();
+        String json = intent.getStringExtra("skEdit");
+        Gson gson = new Gson();
+
+        final StockKeeperUser stockKeeperUser = gson.fromJson(json, StockKeeperUser.class);
+
+        if (stockKeeperUser != null) {
+            etFullName.setText(stockKeeperUser.getFirstName() + " " + stockKeeperUser.getLastName());
+            etPhone.setText(stockKeeperUser.getPhone());
+            etCode.setText(stockKeeperUser.get_id());
+
+            fullName = etFullName.getText().toString();
+            phone = etPhone.getText().toString();
+            code = etCode.getText().toString();
+        }
 
         etFullName.addTextChangedListener(new TextWatcher() {
             @Override
@@ -93,6 +112,10 @@ public class AdminStockKeeperEditActivity extends AppCompatActivity {
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if (stockKeeperUser != null) {
+                    DbUtil.deleteUser(stockKeeperUser.get_id(), stockKeeperUser.get_rev());
+                }
 
                 String[] separated = fullName.split(" ");
                 String first = "";

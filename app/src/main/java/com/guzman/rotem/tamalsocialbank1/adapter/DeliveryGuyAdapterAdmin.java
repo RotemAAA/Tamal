@@ -86,7 +86,7 @@ public class DeliveryGuyAdapterAdmin extends BaseAdapter {
                 Gson gson = new Gson();
                 String json = gson.toJson(deliveryGuy);
                 Intent intent = new Intent(context, AdminDeliveryGuysEditActivity.class);
-                intent.putExtra("toEdit", json);
+                intent.putExtra("dlEdit", json);
                 context.startActivity(intent);
             }
         });

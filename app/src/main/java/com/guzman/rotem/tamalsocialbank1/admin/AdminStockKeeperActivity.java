@@ -37,4 +37,10 @@ public class AdminStockKeeperActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    protected void onPostResume() {
+        new StorageUserDataSource(lvStockKeepers, this).execute();
+        super.onPostResume();
+    }
 }

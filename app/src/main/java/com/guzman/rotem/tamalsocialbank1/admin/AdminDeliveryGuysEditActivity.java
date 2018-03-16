@@ -32,7 +32,7 @@ public class AdminDeliveryGuysEditActivity extends AppCompatActivity {
         setContentView(R.layout.activity_admin_delivery_guys_edit);
 
         Intent intent = getIntent();
-        String json = intent.getStringExtra("toEdit");
+        String json = intent.getStringExtra("dlEdit");
         Gson gson = new Gson();
 
         final DeliveryUser deliveryUser = gson.fromJson(json, DeliveryUser.class);
