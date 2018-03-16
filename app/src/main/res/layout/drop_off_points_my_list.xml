@@ -8,54 +8,32 @@
 
     <ImageView
         android:id="@+id/ivDropOffCenterAddress"
-        android:layout_width="24dp"
-        android:layout_height="29dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline28"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivDropOffCenterName"
         app:srcCompat="@drawable/asset_76_s_07" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
 
     <ImageView
         android:id="@+id/ivDropOffCenterPhone"
-        android:layout_width="28dp"
-        android:layout_height="23dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivDropOffCenterAddress"
         app:srcCompat="@drawable/asset_77_s_07" />
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline28"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.63" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline35"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.34" />
-
     <ImageView
         android:id="@+id/ivDropOffCenterName"
-        android:layout_width="30dp"
-        android:layout_height="27dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/ivDropOffCenterAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/asset_75_s_07" />
@@ -65,37 +43,54 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:text="TextView"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/varela_round"
+        android:text="רחוב חצרים 2"
+        android:textSize="15sp"
+        android:textColor="@color/colorPrimaryText"
+        app:layout_constraintBottom_toBottomOf="@+id/ivDropOffCenterAddress"
         app:layout_constraintEnd_toStartOf="@+id/ivDropOffCenterAddress"
-        tools:layout_editor_absoluteY="43dp" />
+        app:layout_constraintStart_toEndOf="@+id/btnDropOffCenterGoToWaze"
+        app:layout_constraintTop_toTopOf="@+id/ivDropOffCenterAddress" />
 
     <TextView
         android:id="@+id/tvDropOffCenterPhone"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/varela_round"
+        android:text="טלפון 036548877"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivDropOffCenterPhone"
         app:layout_constraintEnd_toStartOf="@+id/ivDropOffCenterPhone"
-        app:layout_constraintTop_toBottomOf="@+id/tvDropOffCenterAddress" />
+        app:layout_constraintStart_toEndOf="@+id/btnDropOffCenterGoToWaze"
+        app:layout_constraintTop_toTopOf="@+id/ivDropOffCenterPhone"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/tvDropOffCenterName"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/tvDropOffCenterAddress"
-        app:layout_constraintEnd_toStartOf="@+id/ivDropOffCenterName" />
+        android:layout_marginStart="8dp"
+        android:text="מרכז קהילתי נווה ארזים"
+        android:textSize="15sp"
+        android:fontFamily="@font/varela_round"
+        android:textColor="#28bdf2"
+        app:layout_constraintBottom_toBottomOf="@+id/ivDropOffCenterName"
+        app:layout_constraintEnd_toStartOf="@+id/ivDropOffCenterName"
+        app:layout_constraintStart_toEndOf="@+id/btnDropOffCenterGoToWaze"
+        app:layout_constraintTop_toTopOf="@+id/ivDropOffCenterName" />
 
     <Button
         android:id="@+id/btnDropOffCenterGoToWaze"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/asset_78_s_07"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline35"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -9,12 +9,10 @@
         android:id="@+id/ivFood"
         android:layout_width="55dp"
         android:layout_height="52dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDisc"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvHead"
         app:srcCompat="@drawable/asset_1" />
 
     <Button
@@ -22,7 +20,8 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/asset129"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +33,8 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/asset128"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnDeleteProduct"
@@ -43,11 +43,10 @@
 
     <TextView
         android:id="@+id/tvHead"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="138dp"
+        android:layout_height="40dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:fontFamily="@font/varela_round"
         android:gravity="right"
         android:text="מטרנה Extera Care שלב 1"
@@ -57,23 +56,22 @@
         app:layout_constraintEnd_toStartOf="@+id/ivFood"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/btnEditPtoduct"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/btnEditPtoduct" />
 
     <TextView
         android:id="@+id/tvDisc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="גיל 0-6"
-        android:gravity="right"
-        android:textColor="@color/colorPrimaryText"
         android:fontFamily="@font/varela_round"
+        android:gravity="right"
+        android:text="גיל 0-6"
+        android:textColor="@color/colorPrimaryText"
         android:textSize="11sp"
 
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/btnEditPtoduct"
         app:layout_constraintEnd_toStartOf="@+id/ivFood"
         app:layout_constraintHorizontal_bias="0.976"
         app:layout_constraintStart_toEndOf="@+id/btnEditPtoduct"
