@@ -11,8 +11,8 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.guzman.rotem.tamalsocialbank1.deliveryGuy.DeliveryUser;
 import com.guzman.rotem.tamalsocialbank1.R;
+import com.guzman.rotem.tamalsocialbank1.deliveryGuy.DeliveryUser;
 
 import java.util.ArrayList;
 
@@ -92,8 +92,12 @@ public class DeliveryGuyAdapter extends BaseAdapter {
         btnSDGLSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO: go to donations list and with intent and extras(phone) to send from there a msg with the wanted donation
+/*                //TODO: go to donations list and with intent and extras(phone) to send from there a msg with the wanted donation
                 //TODO: update deliveryuser's list with donations / requests
+
+                Intent intent = new Intent(context, StorageManageDonationsActivity.class);
+                intent.putExtra("deliveryPhone", deliveryGuy.getPhoneNumber());
+                context.startActivity(intent);*/
             }
         });
 

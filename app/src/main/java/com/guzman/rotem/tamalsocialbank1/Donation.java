@@ -57,6 +57,18 @@ public class Donation {
         return isPickUp;
     }
 
+    public Food getFood() {
+        return food;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
     @Override
     public String toString() {
         return "Donation{" +
