@@ -113,7 +113,6 @@
         android:layout_height="wrap_content"
         android:background="@color/backTVDesNum"
         android:padding="8dp"
-
         android:text="20"
         android:textColor="@color/colorPrimaryTextWhite"
         android:textSize="25sp"
