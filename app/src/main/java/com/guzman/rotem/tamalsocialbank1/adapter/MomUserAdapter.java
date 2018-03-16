@@ -1,7 +1,8 @@
 package com.guzman.rotem.tamalsocialbank1.adapter;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
+import android.app.Activity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,8 +10,12 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.guzman.rotem.tamalsocialbank1.mother.MomUser;
+import com.google.gson.Gson;
+import com.guzman.rotem.tamalsocialbank1.DbUtil;
 import com.guzman.rotem.tamalsocialbank1.R;
+import com.guzman.rotem.tamalsocialbank1.admin.AdminMotherActivity;
+import com.guzman.rotem.tamalsocialbank1.admin.AdminMotherEditActivity;
+import com.guzman.rotem.tamalsocialbank1.mother.MomUser;
 
 import java.util.ArrayList;
 
@@ -21,7 +26,7 @@ import java.util.ArrayList;
 public class MomUserAdapter extends BaseAdapter {
 
     private ArrayList<MomUser> data;
-    private Context context;
+    private Activity context;
     private String firstName;
     private String lastName;
     private String fullName;
@@ -29,7 +34,7 @@ public class MomUserAdapter extends BaseAdapter {
     private String city;
     private String address;
 
-    public MomUserAdapter(ArrayList<MomUser> data, Context context) {
+    public MomUserAdapter(ArrayList<MomUser> data, Activity context) {
         this.data = data;
         this.context = context;
     }
@@ -78,7 +83,11 @@ public class MomUserAdapter extends BaseAdapter {
         btnEditMother.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: edit mother - download from server, edit data and upload with same id
+                Gson gson = new Gson();
+                String json = gson.toJson(momUser);
+                Intent intent = new Intent(context, AdminMotherEditActivity.class);
+                intent.putExtra("toEdit", json);
+                context.startActivity(intent);
             }
         });
 
@@ -86,7 +95,10 @@ public class MomUserAdapter extends BaseAdapter {
             @Override
             public void onClick(View view) {
 
-                //TODO: detete mother - server
+                DbUtil.deleteUser(momUser.get_id(), momUser.get_rev());
+                context.finish();
+                Intent intent = new Intent(context, AdminMotherActivity.class);
+                context.startActivity(intent);
             }
         });
 

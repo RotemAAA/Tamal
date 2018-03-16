@@ -1,5 +1,6 @@
 package com.guzman.rotem.tamalsocialbank1.admin;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
@@ -10,9 +11,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
 import com.guzman.rotem.tamalsocialbank1.DbUtil;
-import com.guzman.rotem.tamalsocialbank1.mother.MomUser;
 import com.guzman.rotem.tamalsocialbank1.R;
+import com.guzman.rotem.tamalsocialbank1.mother.MomUser;
 
 public class AdminMotherEditActivity extends AppCompatActivity {
 
@@ -31,6 +33,13 @@ public class AdminMotherEditActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_mother_edit);
 
+        Intent intent = getIntent();
+        String json = intent.getStringExtra("toEdit");
+        Gson gson = new Gson();
+
+        final MomUser momUser = gson.fromJson(json, MomUser.class);
+
+
         btnCodeReset = findViewById(R.id.btnCodeReset);
         btnSendCode = findViewById(R.id.btnSendCode);
         btnUpdate = findViewById(R.id.btnUpdate);
@@ -41,6 +50,22 @@ public class AdminMotherEditActivity extends AppCompatActivity {
         etPhone = findViewById(R.id.etPhone);
         etStreetAndNumber = findViewById(R.id.etStreetAndNumber);
         etFoodCapacity = findViewById(R.id.etFoodCapacity);
+
+        if (momUser != null) {
+            etFullName.setText(momUser.getFirstName() + " " + momUser.getLastName());
+            etPhone.setText(momUser.getPhone());
+            etCity.setText(momUser.getCity());
+            etStreetAndNumber.setText(momUser.getStreetNumber());
+            etCode.setText(momUser.get_id());
+            etFoodCapacity.setText(String.valueOf(momUser.getFoodLimit()));
+
+            fullName = etFullName.getText().toString();
+            phone = etPhone.getText().toString();
+            city = etCity.getText().toString();
+            streetNumber = etStreetAndNumber.getText().toString();
+            code = etCode.getText().toString();
+            foodCapacity = etFoodCapacity.getText().toString();
+        }
 
         etCity.addTextChangedListener(new TextWatcher() {
             @Override
@@ -147,6 +172,10 @@ public class AdminMotherEditActivity extends AppCompatActivity {
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if (momUser!=null) {
+                    DbUtil.deleteUser(momUser.get_id(), momUser.get_rev());
+                }
 
                 String[] separated = fullName.split(" ");
                 String first = "";
