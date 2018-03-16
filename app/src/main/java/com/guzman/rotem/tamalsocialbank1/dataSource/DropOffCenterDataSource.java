@@ -1,6 +1,15 @@
 package com.guzman.rotem.tamalsocialbank1.dataSource;
 
+import android.content.Context;
+import android.os.AsyncTask;
+import android.widget.ListView;
+
+import com.cloudant.client.api.ClientBuilder;
+import com.cloudant.client.api.CloudantClient;
+import com.cloudant.client.api.Database;
+import com.guzman.rotem.tamalsocialbank1.DbUtil;
 import com.guzman.rotem.tamalsocialbank1.DropOffCenter;
+import com.guzman.rotem.tamalsocialbank1.adapter.DropOffCenterAdapter;
 
 import java.util.ArrayList;
 
@@ -8,72 +17,35 @@ import java.util.ArrayList;
  * Created by Rotem on 10/03/2018.
  */
 
-public class DropOffCenterDataSource {
+public class DropOffCenterDataSource extends AsyncTask<Void, Void, ArrayList<DropOffCenter>> {
     //drop off database credentials -
     final String dbAcnt = "67817cbe-88be-4383-98a9-93784d2103e2-bluemix";
     final String dbUser = "tiagarvereseelthanyuegul";
     final String dbPass = "6f610d3c37d3cc9088b4e91093ca478b6daafe96";
     final String dbName = "drop_off_centers";
+    private Context context;
+    private Database database;
+    private ListView listView;
 
-    //TODO: make it like the deliveryGuyDataSource
+    public DropOffCenterDataSource(Context context, ListView listView) {
+        this.context = context;
+        this.listView = listView;
+    }
 
-    public static ArrayList<DropOffCenter> getDate() {
-        ArrayList<DropOffCenter> data = new ArrayList<>();
+    @Override
+    protected ArrayList<DropOffCenter> doInBackground(Void... voids) {
+        CloudantClient client = ClientBuilder.account(dbAcnt)
+                .username(dbUser)
+                .password(dbPass)
+                .build();
 
-/*        DropOffCenter d1 = new DropOffCenter("מרכז קהילתי נאות שושנים",
-                "רח\' צבי סיגלון 12 חולון",
-                "טל: 03-5503977");
+        database = client.database(dbName, false);
+        return DbUtil.getAllDropOffCenters(database);
+    }
 
-        DropOffCenter d2 = new DropOffCenter("מרכז קהילתי ומרכז הספורט בן גוריון",
-                "רח\' קרסל 6 חולון",
-                "טל: 03-65528490");
-
-        data.add(d1);
-
-        data.add(d2);
-
-
-        data.add(new DropOffCenter("מרכז קהילתי נווה ארזים",
-                "רח\' ישעיהו 16 חולון",
-                "טל: 03-5506772"));
-
-
-        data.add(new DropOffCenter("מרכז קהילתי וולפסון",
-                "רח\' צבי ש\"ץ 29 חולון",
-                "טל: 03-6519181"));
-
-        data.add(new DropOffCenter("מרכז קהילתי לזרוס",
-                "רח\' סנהדרין 27 חולון",
-                "טל: 03-5030068"));
-
-        data.add(new DropOffCenter("מרכז קהילתי נאות רחל",
-                "רח\' חצרים 2 חולון",
-                "טל: 03-5035499"));
-
-        data.add(new DropOffCenter("מרכז קהילתי קליין",
-                "רח\' פילדלפיה 16 חולון",
-                "טל: 03-5038083"));
-
-        data.add(new DropOffCenter("מקהל\"ת מרכז קהילתי תורני",
-                "רח\' פילדלפיה 5 חולון",
-                "טל: 03-5015529"));
-
-        data.add(new DropOffCenter("מרכז פסגות",
-                "רח\' סרלין 21 חולון",
-                "טל: 03-6530300"));
-
-        data.add(new DropOffCenter("מרכז חנקין",
-                "רח\' חנקין 109 חולון",
-                "טל: 03-6530300"));
-
-        data.add(new DropOffCenter("רעים מרכז למחול ותנועת הגוף",
-                "רח\' הופיין 44 חולון",
-                "טל: 03-5035299"));
-
-        data.add(new DropOffCenter("מרכז שטיינברג החדש- במה למוסיקה חיה",
-                "רח\' גבעת התחמושת 21 חולון",
-                "טל: 03-5500012"));*/
-
-        return data;
+    @Override
+    protected void onPostExecute(ArrayList<DropOffCenter> dropOffCenters) {
+        DropOffCenterAdapter adapter = new DropOffCenterAdapter(dropOffCenters, context);
+        listView.setAdapter(adapter);
     }
 }

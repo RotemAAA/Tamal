@@ -69,7 +69,6 @@ public class DonationsDataSource extends AsyncTask<Void, Void, ArrayList<Donatio
                 d1.add(donation);
             }
         }
-        //set adapter to the list view
-
+        //TODO: set adapter to the list view - donations adapter
     }
 }

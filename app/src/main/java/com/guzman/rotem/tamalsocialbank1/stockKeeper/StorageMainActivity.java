@@ -33,7 +33,7 @@ public class StorageMainActivity extends AppCompatActivity {
         btnManageDonations.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(StorageMainActivity.this, StorageManageDonationsActivity.class);
+                Intent intent = new Intent(StorageMainActivity.this, StorageDonationsActivity.class);
                 startActivity(intent);
             }
         });

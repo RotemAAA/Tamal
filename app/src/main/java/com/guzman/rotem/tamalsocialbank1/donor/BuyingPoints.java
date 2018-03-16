@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
 import com.guzman.rotem.tamalsocialbank1.R;
-import com.guzman.rotem.tamalsocialbank1.adapter.DropOffCenterAdapter;
 import com.guzman.rotem.tamalsocialbank1.dataSource.DropOffCenterDataSource;
 
 public class BuyingPoints extends AppCompatActivity {
@@ -18,8 +17,7 @@ public class BuyingPoints extends AppCompatActivity {
         setContentView(R.layout.activity_buying_points);
 
         lvBuyingPoints = findViewById(R.id.lvBuyingPoints);
+        new DropOffCenterDataSource(getApplicationContext(), lvBuyingPoints).execute();
 
-        DropOffCenterAdapter dropOffCenterAdapter = new DropOffCenterAdapter(DropOffCenterDataSource.getDate(), this);
-        lvBuyingPoints.setAdapter(dropOffCenterAdapter);
     }
 }

@@ -13,7 +13,14 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity
             android:name=".LogoActivity"
             android:screenOrientation="portrait" />
@@ -69,7 +76,8 @@
         <activity
             android:name=".donor.DropOffPoints"
             android:label="נקודות מסירה"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait" >
+        </activity>
         <activity
             android:name=".donor.BuyingPoints"
             android:label="נקודות קניה"
@@ -88,11 +96,6 @@
         <activity
             android:name=".stockKeeper.StorageMainActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".stockKeeper.StoraeDeliveryGuysListActivity"
@@ -102,9 +105,6 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".stockKeeper.StorageManageDeliveryActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".stockKeeper.StorageManageDonationsActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".stockKeeper.StorageDonationFullDetailsActivity"

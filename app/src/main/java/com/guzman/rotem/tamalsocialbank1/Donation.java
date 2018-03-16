@@ -26,9 +26,7 @@ public class Donation {
         this.status = status;
         this.amount = amount;
     }
-
-//TODO: ctor for pickup donation / just work it out with the boolean I made
-
+    
     public String get_id() {
         return _id;
     }
