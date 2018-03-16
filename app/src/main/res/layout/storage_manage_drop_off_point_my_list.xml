@@ -21,9 +21,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="100dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="80dp"
-        android:text="שם המרכז"
+        android:layout_marginTop="44dp"
+        android:text="מרכז קהילתי נווה ארזים"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/btnSMDropOffRemove"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -10,10 +10,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/varela_round"
         android:text="סטטוס הזמנה"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSMRequestChangeStatus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSMRequestMotherName" />
 
@@ -22,30 +25,31 @@
         android:layout_width="83dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
+        android:fontFamily="@font/varela_round"
         android:text="statusState"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvSMRequestStatus"
         app:layout_constraintEnd_toStartOf="@+id/tvSMRequestStatus"
         app:layout_constraintTop_toTopOf="@+id/tvSMRequestStatus" />
 
     <Button
         android:id="@+id/btnSMRequestCallDeliveryGuy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60sp"
+        android:layout_height="60sp"
         android:layout_marginStart="8dp"
-        android:text="התקשר לשליח"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/asset173"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="45dp" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSMRequestOrderDate" />
 
     <Button
         android:id="@+id/btnSMRequestChangeStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_width="60sp"
+        android:layout_height="60sp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="שנה סטטוס"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/asset169"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSMRequestCallDeliveryGuy" />
 
@@ -71,20 +75,27 @@
         android:id="@+id/tvSMRequestOrderTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="time"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="52dp" />
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/varela_round"
+        android:gravity="center"
+        android:text="17:05"
+        android:textColor="#e99b1f"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSMRequestOrderDate"
+        app:layout_constraintStart_toEndOf="@+id/tvSMRequestOrderDate"
+        app:layout_constraintTop_toTopOf="@+id/tvSMRequestOrderDate" />
 
     <TextView
         android:id="@+id/tvSMRequestOrderDate"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Date"
-        app:layout_constraintEnd_toStartOf="@+id/tvSMRequestOrderTime"
+        android:fontFamily="@font/varela_round"
+        android:gravity="center"
+        android:text="17.03.2018"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -93,8 +104,42 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/varela_round"
         android:text="שם האמא"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="35dp" />
+        app:layout_constraintTop_toTopOf="@+id/btnSMRequestCallDeliveryGuy" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/backTVDesType"
+        android:padding="17dp"
+        android:text="מטרנה Extra Care Comfort"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/textView5"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/backTVDesNum"
+        android:padding="8dp"
+        android:text="20"
+        android:textColor="@color/colorPrimaryTextWhite"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSMRequestChangeStatus" />
 
 </android.support.constraint.ConstraintLayout>
