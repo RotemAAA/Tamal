@@ -84,15 +84,17 @@
         android:id="@+id/button"
         android:layout_width="320dp"
         android:layout_height="75dp"
+        android:layout_marginBottom="52dp"
+
         android:layout_marginEnd="8dp"
 
         android:background="@drawable/asset182"
-
         android:fontFamily="@font/varela_round"
         android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        tools:layout_editor_absoluteY="405dp" />
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
 
     <ImageView
         android:id="@+id/ivDestinationDonorOrMother"
