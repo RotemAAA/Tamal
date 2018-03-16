@@ -60,7 +60,6 @@ public class DeliveryGuyDataSource extends AsyncTask<Void, Void, ArrayList<Deliv
 
     @Override
     protected void onPostExecute(ArrayList<DeliveryUser> deliveryUsers) {
-        System.out.println(deliveryUsers.toString());
 
         if (who == 0) {
             DeliveryGuyAdapter adapter = new DeliveryGuyAdapter(deliveryUsers, context);
