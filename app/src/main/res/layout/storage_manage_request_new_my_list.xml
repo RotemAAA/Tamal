@@ -9,160 +9,171 @@
         android:id="@+id/tvSMNewRequestInInventory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
-        android:text="number"
+        android:fontFamily="@font/varela_round"
+        android:text="5"
+        android:textColor="#50b281"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvSMNewRequestInStockNumber"
+        app:layout_constraintEnd_toStartOf="@+id/tvSMNewRequestInStockNumber"
         app:layout_constraintTop_toTopOf="@+id/tvSMNewRequestInStockNumber"
-        tools:layout_editor_absoluteX="249dp" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/btnSMNewRequestCallDeliveryGuy"
-        android:layout_width="97dp"
-        android:layout_height="84dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginStart="8dp"
-        android:text="הזמן שליח"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/asset168"
-        tools:layout_editor_absoluteY="43dp"
 
-        />
+        app:layout_constraintTop_toBottomOf="@+id/tvSMNewRequestDate"
+        app:srcCompat="@drawable/asset168" />
 
     <ImageView
         android:id="@+id/btnSMNewRequestChangeStatus"
-        android:layout_width="91dp"
-        android:layout_height="99dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginStart="8dp"
-        android:text="שנה סטטוס"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/asset169"
-        tools:layout_editor_absoluteY="99dp" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSMNewRequestCallDeliveryGuy"
+        app:srcCompat="@drawable/asset169" />
 
     <TextView
         android:id="@+id/tvSMNewRequestShowProduct2"
         android:layout_width="0dp"
-        android:layout_height="15dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="50dp"
+        android:background="@color/backTVDesType"
+        android:padding="17dp"
+        android:text="מטרנה Extra Care Comfort"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSMNewRequestShowProduct1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline47"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toEndOf="@+id/tvSMNewRequestShowProduct1"
+        app:layout_constraintTop_toTopOf="@+id/tvSMNewRequestShowProduct1" />
 
     <TextView
         android:id="@+id/tvSMNewRequestShowProduct1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/guideline47"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvSMNewRequestShowProductNumber1"
-        app:layout_constraintTop_toTopOf="@+id/guideline44" />
+        android:background="@color/backTVDesNum"
+        android:padding="8dp"
+        android:text="20"
+        android:textColor="@color/colorPrimaryTextWhite"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSMNewRequestChangeStatus"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tvSMNewRequestTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:text="time"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/varela_round"
+        android:gravity="center"
+        android:text="17:05"
+        android:textColor="#e99b1f"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvSMNewRequestDate"
         app:layout_constraintStart_toEndOf="@+id/tvSMNewRequestDate"
         app:layout_constraintTop_toTopOf="@+id/tvSMNewRequestDate"
         app:layout_constraintVertical_bias="0.0" />
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline44"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline47"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.36" />
-
     <TextView
         android:id="@+id/tvSMNewRequestMotherName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/varela_round"
         android:text="שם האמא"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="61dp" />
+        app:layout_constraintTop_toTopOf="@+id/btnSMNewRequestCallDeliveryGuy" />
 
     <TextView
         android:id="@+id/tvSMNewRequestInStockNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/varela_round"
         android:text="כרגע במלאי"
-        tools:layout_editor_absoluteX="297dp"
-        tools:layout_editor_absoluteY="143dp" />
+        android:textColor="#50b281"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSMNewRequestChangeStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
         android:id="@+id/tvSMNewRequestDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Date"
-        app:layout_constraintBottom_toTopOf="@+id/guideline49"
+        android:fontFamily="@font/varela_round"
+        android:gravity="center"
+        android:text="17.03.2018"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvSMNewRequestShowProductNumber1"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginEnd="224dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="@+id/tvSMNewRequestShowProduct2"
         app:layout_constraintEnd_toStartOf="@+id/tvSMNewRequestShowProduct2"
-        app:layout_constraintTop_toTopOf="@+id/tvSMNewRequestShowProduct2" />
+        app:layout_constraintTop_toTopOf="@+id/tvSMNewRequestShowProduct2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/varela_round"
         android:text="סטטוס קיבולת למוצר"
-        tools:layout_editor_absoluteX="243dp"
-        tools:layout_editor_absoluteY="100dp" />
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSMNewRequestMotherName" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:text="Number"
+        android:fontFamily="@font/varela_round"
+        android:text="5"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView8"
         app:layout_constraintEnd_toStartOf="@+id/textView8"
         app:layout_constraintTop_toTopOf="@+id/textView8" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="33dp"
-        android:layout_height="35dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline49"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/asset_99_s_19" />
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline49"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.07" />
 </android.support.constraint.ConstraintLayout>
