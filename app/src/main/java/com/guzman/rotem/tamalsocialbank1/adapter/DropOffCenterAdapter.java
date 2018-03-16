@@ -1,8 +1,8 @@
 package com.guzman.rotem.tamalsocialbank1.adapter;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.ActivityNotFoundException;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.view.LayoutInflater;
@@ -25,10 +25,10 @@ import java.util.ArrayList;
 public class DropOffCenterAdapter extends BaseAdapter {
 
     private ArrayList<DropOffCenter> data;
-    private Context context;
+    private Activity context;
 
 
-    public DropOffCenterAdapter(ArrayList<DropOffCenter> data, Context context) {
+    public DropOffCenterAdapter(ArrayList<DropOffCenter> data, Activity context) {
         this.data = data;
         this.context = context;
     }
@@ -73,20 +73,17 @@ public class DropOffCenterAdapter extends BaseAdapter {
 
             @Override
             public void onClick(View view) {
-                try
-                {
+                try {
                     // Launch Waze to look for Hawaii:
                     String address = center.getAddress();
                     String url = "https://waze.com/ul?q=" + address + "";
 
-
-                    Intent intent = new Intent( Intent.ACTION_VIEW, Uri.parse( url ) );
+                    //TODO: go to waze not internet
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                     context.startActivity(intent);
-                }
-                catch ( ActivityNotFoundException ex  )
-                {
+                } catch (ActivityNotFoundException ex) {
                     // If Waze is not installed, open it in Google Play:
-                    Intent intent = new Intent( Intent.ACTION_VIEW, Uri.parse( "market://details?id=com.waze" ) );
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.waze"));
                     context.startActivity(intent);
                 }
             }

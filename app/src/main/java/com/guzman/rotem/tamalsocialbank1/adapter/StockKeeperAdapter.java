@@ -76,7 +76,7 @@ public class StockKeeperAdapter extends BaseAdapter {
                 Gson gson = new Gson();
                 String json = gson.toJson(stockKeeperUser);
                 Intent intent = new Intent(context, AdminStockKeeperEditActivity.class);
-                intent.putExtra("toEdit", json);
+                intent.putExtra("skEdit", json);
                 context.startActivity(intent);
             }
         });

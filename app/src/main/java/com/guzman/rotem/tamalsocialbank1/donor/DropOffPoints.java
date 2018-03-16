@@ -18,7 +18,7 @@ public class DropOffPoints extends AppCompatActivity {
         setContentView(R.layout.activity_drop_off_points);
 
         lvDropOffPoints = findViewById(R.id.lvDropOffPoints);
-        new DropOffCenterDataSource(getApplicationContext(), lvDropOffPoints).execute();
+        new DropOffCenterDataSource(this, lvDropOffPoints).execute();
 
     }
 }

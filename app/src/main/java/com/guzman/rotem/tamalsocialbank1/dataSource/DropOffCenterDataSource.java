@@ -1,6 +1,6 @@
 package com.guzman.rotem.tamalsocialbank1.dataSource;
 
-import android.content.Context;
+import android.app.Activity;
 import android.os.AsyncTask;
 import android.widget.ListView;
 
@@ -23,11 +23,11 @@ public class DropOffCenterDataSource extends AsyncTask<Void, Void, ArrayList<Dro
     final String dbUser = "tiagarvereseelthanyuegul";
     final String dbPass = "6f610d3c37d3cc9088b4e91093ca478b6daafe96";
     final String dbName = "drop_off_centers";
-    private Context context;
+    private Activity context;
     private Database database;
     private ListView listView;
 
-    public DropOffCenterDataSource(Context context, ListView listView) {
+    public DropOffCenterDataSource(Activity context, ListView listView) {
         this.context = context;
         this.listView = listView;
     }
