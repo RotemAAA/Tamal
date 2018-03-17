@@ -114,7 +114,14 @@ public class DbUtil {
         }
         return null;
     }
-
+    public static ArrayList<Supply> getAllSupplyList(Database database) {
+        try {
+            return (ArrayList<Supply>) database.getAllDocsRequestBuilder().includeDocs(true).build().getResponse().getDocsAs(Supply.class);
+        } catch (IOException e) {
+            //e.printStackTrace();
+        }
+        return null;
+    }
     @SuppressLint("StaticFieldLeak")
     private void deleteFirst() {
         new AsyncTask<Void, Void, Void>() {

@@ -8,13 +8,15 @@ public class Supply {
     private String _id;
     private String _rev;
     private String foodName;
+    private String description;
     private long inInventory;
     private String barcode;
     private int imgSrc;
 
-    public Supply(String foodName, long inInventory, String barcode, int imgSrc) {
+    public Supply(String foodName, String description, String barcode, int imgSrc, long amount) {
         this.foodName = foodName;
-        this.inInventory = inInventory;
+        this.description = description;
+        this.inInventory = amount;
         this.barcode = barcode;
         this.imgSrc = imgSrc;
 
@@ -34,8 +36,22 @@ public class Supply {
 
     public String getBarcode() {
         return barcode;
+    }
 
+    public String getDescription() {
+        return description;
+    }
 
+    public String get_id() {
+        return _id;
+    }
+
+    public String get_rev() {
+        return _rev;
+    }
+
+    public void set_rev(String _rev) {
+        this._rev = _rev;
     }
 
     @Override
