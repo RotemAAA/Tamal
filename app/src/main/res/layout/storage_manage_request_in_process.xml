@@ -14,7 +14,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/varela_round"
-        android:text="סטטוס הזמנה"
+        android:text="@string/request_status"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnSMRequestChangeStatus"
@@ -54,23 +54,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSMRequestCallDeliveryGuy" />
 
-    <TextView
-        android:id="@+id/tvSMRequestProductsDetails2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/tvSMRequestProductsDetails1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="8dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/tvSMRequestOrderTime"
@@ -80,7 +63,7 @@
         android:fontFamily="@font/varela_round"
         android:gravity="center"
         android:text="17:05"
-        android:textColor="#e99b1f"
+        android:textColor="@color/time_color"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvSMRequestOrderDate"
         app:layout_constraintStart_toEndOf="@+id/tvSMRequestOrderDate"
