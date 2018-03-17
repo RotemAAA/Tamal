@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
@@ -16,7 +15,7 @@ import com.guzman.rotem.tamalsocialbank1.R;
 public class ScanBarcodeActivity extends AppCompatActivity implements OnClickListener {
 
     private Button scanBtn;
-    private TextView formatTxt, contentTxt;
+//    private TextView formatTxt, contentTxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +23,8 @@ public class ScanBarcodeActivity extends AppCompatActivity implements OnClickLis
         setContentView(R.layout.activity_scan_barcode);
 
         scanBtn = (Button)findViewById(R.id.btnScanBarcode);
-        formatTxt = (TextView)findViewById(R.id.scan_format);
-        contentTxt = (TextView)findViewById(R.id.scan_content);
+//        formatTxt = (TextView)findViewById(R.id.scan_format);
+//        contentTxt = (TextView)findViewById(R.id.scan_content);
         scanBtn.setOnClickListener(this);
     }
     public void onClick(View v){
@@ -43,8 +42,8 @@ public class ScanBarcodeActivity extends AppCompatActivity implements OnClickLis
 //we have a result
             String scanContent = scanningResult.getContents();
             String scanFormat = scanningResult.getFormatName();
-            formatTxt.setText("FORMAT: " + scanFormat);
-            contentTxt.setText("CONTENT: " + scanContent);
+//            formatTxt.setText("FORMAT: " + scanFormat);
+//            contentTxt.setText("CONTENT: " + scanContent);
 
             //TODO: USE SCANS
 

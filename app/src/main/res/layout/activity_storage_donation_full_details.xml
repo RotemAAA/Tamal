@@ -7,22 +7,6 @@
     android:layout_height="match_parent"
     tools:context="com.guzman.rotem.tamalsocialbank1.stockKeeper.StorageDonationFullDetailsActivity">
 
-    <TextView
-        android:id="@+id/tvSMDonationFullOrderNumber"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/varela_round"
-        android:gravity="right"
-        android:text="45"
-        android:textColor="@color/colorPrimaryText"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline23"
-        app:layout_constraintEnd_toStartOf="@+id/guideline33"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline34"
-        app:layout_constraintTop_toTopOf="@+id/guideline24"
-        app:layout_constraintVertical_bias="1.0" />
-
     <Button
         android:id="@+id/btnSMDonationFullCallDeliveryGuy"
         android:layout_width="0dp"
@@ -70,7 +54,7 @@
     <Button
         android:id="@+id/btnSMDonationFullAccept"
         android:layout_width="0dp"
-        android:layout_height="59dp"
+        android:layout_height="0dp"
         android:background="@drawable/asset164"
         app:layout_constraintBottom_toTopOf="@+id/guideline50"
         app:layout_constraintEnd_toStartOf="@+id/guideline42"
@@ -97,15 +81,16 @@
         android:id="@+id/tvSMDonationFullOrderTime"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_marginStart="8dp"
         android:fontFamily="@font/varela_round"
         android:gravity="center"
         android:text="17:05"
-        android:textSize="14sp"
         android:textColor="#e99b1f"
-        app:layout_constraintBottom_toTopOf="@+id/guideline23"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvSMDonationFullOrderDate"
         app:layout_constraintEnd_toStartOf="@+id/guideline36"
-        app:layout_constraintStart_toStartOf="@+id/guideline37"
-        app:layout_constraintTop_toTopOf="@+id/guideline24" />
+        app:layout_constraintStart_toStartOf="@+id/guideline38"
+        app:layout_constraintTop_toTopOf="@id/tvSMDonationFullOrderDate" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline23"
@@ -241,6 +226,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.85" />
+        app:layout_constraintGuide_percent="0.86" />
 
 </android.support.constraint.ConstraintLayout>

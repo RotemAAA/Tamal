@@ -41,10 +41,6 @@
             android:label="פרטים"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ExplainActivity"
-            android:label="איך זה עובד"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".donor.DonateChooseBarcodeOrListActivity"
             android:label="בחירת תרומה"
             android:screenOrientation="portrait" />
