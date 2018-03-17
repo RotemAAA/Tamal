@@ -77,7 +77,7 @@ public class DonationAdapter extends BaseAdapter {
         tvSMDonationDonorName.setText(donation.getFulName());
         tvSMDonationProductName1.setText(donation.getFood().getName());
         tvSMDonationProductNumber1.setText(String.valueOf(donation.getAmount()));
-//        tvSMDonationDate.setText(donation.g);
+        tvSMDonationDate.setText(donation.getHours());
 
 
         btnSMDonationBookDelivery.setOnClickListener(new View.OnClickListener() {
