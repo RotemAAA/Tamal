@@ -9,17 +9,10 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.google.gson.Gson;
-import com.guzman.rotem.tamalsocialbank1.Donation;
 import com.guzman.rotem.tamalsocialbank1.R;
-import com.guzman.rotem.tamalsocialbank1.Request;
-import com.guzman.rotem.tamalsocialbank1.dataSource.DeliveryGuyDataSource;
-
-import java.util.ArrayList;
 
 public class DeliveryGuyDestionations extends AppCompatActivity {
 
@@ -40,7 +33,6 @@ public class DeliveryGuyDestionations extends AppCompatActivity {
         Intent intent = getIntent();
         json = intent.getStringExtra("user");
         //dUser.DeliveryUserDataSource.getUser(id)
-        //TODO: get the user from server again (for the latest data, show some loading anim and than proceed);
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -108,27 +100,11 @@ public class DeliveryGuyDestionations extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            Gson gson = new Gson();
-            dUser = gson.fromJson(json, DeliveryUser.class);
-            DeliveryUser save = dUser;
-            dUser = DeliveryGuyDataSource.getDeliveryUser(save);
-            String des = "";
-            int i = 0;
-            try {
-                if (position == 0) {
-                    ArrayList<Donation> donations = dUser.getDonations();
-                    des = gson.toJson(donations);
-                } else {
-                    ArrayList<Request> requests = dUser.getRequests(); // arraylists for destinations
-                    des = gson.toJson(requests);
-                }
-
-            } catch (Exception e) {
-                Log.d("No Destinations", "No Destinations");
-
-                // some textview that says "no destinations"
-            }
-            return DestinationsFragment.newInstance(des, i);
+            //Gson gson = new Gson();
+            //dUser = gson.fromJson(json, DeliveryUser.class);
+/*            DeliveryUser save = dUser;
+            dUser = DeliveryGuyDataSource.getDeliveryUser(save);*/
+            return DestinationsFragment.newInstance(json, position);
         }
 
         @Override

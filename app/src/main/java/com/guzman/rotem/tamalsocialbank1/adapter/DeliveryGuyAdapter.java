@@ -52,6 +52,7 @@ public class DeliveryGuyAdapter extends BaseAdapter {
         this.context = context;
         this.d = d;
     }
+
     public DeliveryGuyAdapter(ArrayList<DeliveryUser> data, Context context, Request r) {
         this.data = data;
         this.context = context;
@@ -130,6 +131,7 @@ public class DeliveryGuyAdapter extends BaseAdapter {
                     DbUtil.deleteUser(deliveryGuy.get_id(), deliveryGuy.get_rev());
 
                     deliveryGuy.setDonations(donations);
+                    deliveryGuy.set_rev(null);
                     DeliveryUser dUser = deliveryGuy;//new DeliveryUser(deliveryGuy.get_id(), deliveryGuy.getFirstName(), deliveryGuy.getLastName(), "Delivery", deliveryGuy.getPhoneNumber(), deliveryGuy.getCity(), deliveryGuy.getStreetNumber());
                     DbUtil.writeToDb(context, dbAcnt, dbUser, dbPass, dbName, dUser);
                     // context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts(name + "\n" + address + "\n" + donorPhone, phone, null)));
@@ -138,7 +140,7 @@ public class DeliveryGuyAdapter extends BaseAdapter {
                     intentsms.putExtra("sms_body", name + "\n" + address + "\n" + donorPhone);
                     context.startActivity(intentsms);
                 }
-                if (r!=null) {
+                if (r != null) {
                     String phone = deliveryGuy.getPhoneNumber();
                     String name = r.getFirstName() + " " + r.getLastName();
                     //String address = r.getStreetAddress() + ", " + r.getCity();
