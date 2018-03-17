@@ -97,9 +97,6 @@
             android:name=".stockKeeper.StorageManageInventoryActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".stockKeeper.StorageManageDeliveryActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".stockKeeper.StorageDonationFullDetailsActivity"
             android:screenOrientation="portrait" />
         <activity
