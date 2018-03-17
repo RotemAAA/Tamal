@@ -86,6 +86,7 @@ public class StorageDonationsActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
+
             return 3;
         }
     }

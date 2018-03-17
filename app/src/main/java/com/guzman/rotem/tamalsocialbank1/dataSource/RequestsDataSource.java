@@ -78,7 +78,7 @@ public class RequestsDataSource extends AsyncTask<Void, Void, ArrayList<Request>
                 d1.add(request);
             }
         }
-        RequestAdapter adapter = new RequestAdapter(requests, context);
+        RequestAdapter adapter = new RequestAdapter(d1, context);
         listView.setAdapter(adapter);
     }
 }

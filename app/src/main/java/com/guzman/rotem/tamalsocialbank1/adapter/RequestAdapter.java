@@ -92,7 +92,6 @@ public class RequestAdapter extends BaseAdapter {
         btnSMNewRequestCallDeliveryGuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: connect to delivery guy
                 request.setStatus(1);
                 DbUtil.updateRequest(request, context);
                 Gson gson = new Gson();
