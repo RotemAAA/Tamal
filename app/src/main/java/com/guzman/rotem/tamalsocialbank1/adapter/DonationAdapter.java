@@ -67,8 +67,8 @@ public class DonationAdapter extends BaseAdapter {
         TextView tvSMDonationProductName1 = v.findViewById(R.id.tvSMDonationProductName1);
         TextView tvSMDonationProductNumber1 = v.findViewById(R.id.tvSMDonationProductNumber1);
         TextView tvSMDonationDonorName = v.findViewById(R.id.tvSMDonationDonorName);
-/*        TextView tvSMDonationDate = v.findViewById(R.id.tvSMDonationDate);
-        TextView tvSMDonationTime = v.findViewById(R.id.tvSMDonationTime);*/
+        TextView tvSMDonationDate = v.findViewById(R.id.tvSMDonationDate);
+        TextView tvSMDonationTime = v.findViewById(R.id.tvSMDonationTime);
         Button btnSMDonationBookDelivery = v.findViewById(R.id.btnSMDonationBookDelivery);
         Button btnSMDonationAccept = v.findViewById(R.id.btnSMDonationAccept);
 
@@ -77,6 +77,8 @@ public class DonationAdapter extends BaseAdapter {
         tvSMDonationDonorName.setText(donation.getFulName());
         tvSMDonationProductName1.setText(donation.getFood().getName());
         tvSMDonationProductNumber1.setText(String.valueOf(donation.getAmount()));
+//        tvSMDonationDate.setText(donation.g);
+
 
         btnSMDonationBookDelivery.setOnClickListener(new View.OnClickListener() {
             @Override

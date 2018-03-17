@@ -42,11 +42,12 @@ public class LeaveDetailsActivity extends AppCompatActivity{
                 String userName = etFullName.getText().toString();
                 String userPhone = etPhone.getText().toString();
 
-                //TODO: design the spinner
-                //TODO: Mail to the Amuta
+
+
+
             }
         });
-
+        //TODO: Mail to the Amuta
     }
 
 
