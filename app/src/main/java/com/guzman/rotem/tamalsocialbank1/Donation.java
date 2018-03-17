@@ -91,6 +91,10 @@ public class Donation {
                 ", streetAddress='" + streetAddress + '\'' +
                 ", phone='" + phone + '\'' +
                 ", isPickUp=" + isPickUp +
+                ", food=" + food +
+                ", status=" + status +
+                ", amount=" + amount +
+                ", hours='" + hours + '\'' +
                 '}';
     }
 }
