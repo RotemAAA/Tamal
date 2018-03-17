@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="rtl"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -13,7 +14,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/varela_round"
-        android:text="כרגע במלאי"
+        android:text="כרגע במלאי:"
         android:textColor="#50b281"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnSMDonationAccept"
