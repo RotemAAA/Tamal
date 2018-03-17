@@ -10,17 +10,25 @@ import com.guzman.rotem.tamalsocialbank1.donor.MainDonorsActivity;
 import com.guzman.rotem.tamalsocialbank1.donor.StoriesActivity;
 import com.guzman.rotem.tamalsocialbank1.registration.RegestrationMainActivity;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     private Button btnFastDonation;
     private Button btnStories;
     private Button btnLogin;
 
 
+    ArrayList<Supply> supplies = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        supplies.add(new Supply("מטרנה Extra Care - שלב 1", 0,"7290013083661", R.drawable.b7290013083661));
+        supplies.add(new Supply("מטרנה Extra Care - שלב 1", 0,"7290013083661"));
+        supplies.add(new Supply("מטרנה Extra Care - שלב 1", 0,"7290013083661"));
 
         btnFastDonation = findViewById(R.id.btnFastDonation);
 
