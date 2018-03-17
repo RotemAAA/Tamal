@@ -9,14 +9,18 @@
 
     <Button
         android:id="@+id/btnAddNewDeliveryGuy"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="290dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/asset120"
-        app:layout_constraintBottom_toTopOf="@+id/gh15"
-        app:layout_constraintEnd_toStartOf="@+id/gv90"
+        app:layout_constraintBottom_toTopOf="@+id/gh20"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.347"
-        app:layout_constraintStart_toStartOf="@+id/gv10"
-        app:layout_constraintTop_toTopOf="@+id/gh5" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/lvAdminDeliveryGuys"
@@ -34,33 +38,5 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.2" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.15" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.05" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gv90"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gv10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
 
 </android.support.constraint.ConstraintLayout>

@@ -9,241 +9,125 @@
 
     <Button
         android:id="@+id/btnSendCode"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/asset111"
-        app:layout_constraintBottom_toTopOf="@+id/gh15"
-        app:layout_constraintEnd_toStartOf="@+id/gv25"
-        app:layout_constraintStart_toStartOf="@+id/gv10"
-        app:layout_constraintTop_toTopOf="@+id/gh5" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etCode"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/asset110"
+        android:layout_height="46dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/round_details_edit_text_light_blue"
         android:ems="10"
+        android:fontFamily="@font/varela_round"
         android:gravity="right"
         android:hint="@string/code"
-        android:fontFamily="@font/varela_round"
         android:inputType="textPersonName"
         android:padding="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/gh15"
-        app:layout_constraintEnd_toStartOf="@+id/gv90"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCodeReset"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="@+id/gv50"
-        app:layout_constraintTop_toTopOf="@+id/gh5" />
+        app:layout_constraintStart_toEndOf="@+id/btnCodeReset"
+        app:layout_constraintTop_toTopOf="@+id/btnCodeReset" />
 
     <Button
         android:id="@+id/btnCodeReset"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/asset112"
-        app:layout_constraintBottom_toTopOf="@+id/gh15"
-        app:layout_constraintEnd_toStartOf="@+id/gv45"
-        app:layout_constraintStart_toStartOf="@+id/gv30"
-        app:layout_constraintTop_toTopOf="@+id/gh5"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toEndOf="@+id/btnSendCode"
+        app:layout_constraintTop_toTopOf="@+id/btnSendCode" />
 
     <EditText
         android:id="@+id/etFullName"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/asset113"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/round_details_edit_text_black"
         android:ems="10"
-        android:hint="@string/full_name"
         android:fontFamily="@font/varela_round"
+        android:gravity="right"
+        android:hint="@string/full_name"
         android:inputType="textPersonName"
         android:padding="15dp"
-        android:gravity="right"
-        app:layout_constraintBottom_toTopOf="@+id/gh30"
-        app:layout_constraintEnd_toStartOf="@+id/gv90"
-        app:layout_constraintStart_toStartOf="@+id/gv10"
-        app:layout_constraintTop_toTopOf="@+id/gh20"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCode" />
 
     <EditText
         android:id="@+id/etPhone"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/asset113"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/round_details_edit_text_black"
         android:ems="10"
+        android:fontFamily="@font/varela_round"
         android:gravity="right"
         android:hint="@string/cell_phone"
-        android:fontFamily="@font/varela_round"
         android:inputType="phone"
         android:padding="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/gh45"
-        app:layout_constraintEnd_toStartOf="@+id/gv90"
-        app:layout_constraintStart_toStartOf="@+id/gv10"
-        app:layout_constraintTop_toTopOf="@+id/gh35" />
+        app:layout_constraintEnd_toEndOf="@+id/etFullName"
+        app:layout_constraintStart_toStartOf="@+id/etFullName"
+        app:layout_constraintTop_toBottomOf="@+id/etFullName" />
 
     <EditText
         android:id="@+id/etCity"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/asset114"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/round_details_edit_text_light_blue"
         android:ems="10"
-        android:hint="@string/city"
         android:fontFamily="@font/varela_round"
-        android:inputType="textPersonName"
         android:gravity="right"
+        android:hint="@string/city"
+        android:inputType="textPersonName"
         android:padding="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/gh60"
-        app:layout_constraintEnd_toStartOf="@+id/gv90"
-        app:layout_constraintStart_toStartOf="@+id/gv10"
-        app:layout_constraintTop_toTopOf="@+id/gh50" />
+        app:layout_constraintEnd_toEndOf="@+id/etPhone"
+        app:layout_constraintStart_toStartOf="@+id/etPhone"
+        app:layout_constraintTop_toBottomOf="@+id/etPhone" />
 
     <EditText
         android:id="@+id/etStreetAndNumber"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/asset114"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/round_details_edit_text_light_blue"
         android:ems="10"
-        android:hint="@string/street_and_number"
         android:fontFamily="@font/varela_round"
-        android:inputType="textPersonName"
         android:gravity="right"
+        android:hint="@string/street_and_number"
+        android:inputType="textPersonName"
         android:padding="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/gh75"
-        app:layout_constraintEnd_toStartOf="@+id/gv90"
-        app:layout_constraintStart_toStartOf="@+id/gv10"
-        app:layout_constraintTop_toTopOf="@+id/gh65" />
+        app:layout_constraintEnd_toEndOf="@+id/etCity"
+        app:layout_constraintStart_toStartOf="@+id/etCity"
+        app:layout_constraintTop_toBottomOf="@+id/etCity" />
 
     <Button
         android:id="@+id/btnUpdate"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/asset116"
-        app:layout_constraintBottom_toTopOf="@+id/gh90"
-        app:layout_constraintEnd_toStartOf="@+id/gv90"
-        app:layout_constraintStart_toStartOf="@+id/gv10"
-        app:layout_constraintTop_toTopOf="@+id/gh80" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.05" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.15" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh30"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh35"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.35" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh45"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.45" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh50"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh60"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh75"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.75" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh65"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh80"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.8" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gh90"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9041096" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gv90"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/etStreetAndNumber"
+        app:layout_constraintStart_toStartOf="@+id/etStreetAndNumber"
+        app:layout_constraintTop_toBottomOf="@+id/etStreetAndNumber" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gv10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gv50"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gv45"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.45" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gv30"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.3" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/gv25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.25" />
 
 </android.support.constraint.ConstraintLayout>
