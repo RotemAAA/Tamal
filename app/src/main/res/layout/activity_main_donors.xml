@@ -11,16 +11,18 @@
         android:id="@+id/tvCompanyName"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/varela_round"
         android:gravity="center"
         android:text="@string/tamal_social_bank"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryText"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/gh40"
+        app:layout_constraintBottom_toTopOf="@+id/gh45"
         app:layout_constraintEnd_toStartOf="@+id/gv80"
         app:layout_constraintStart_toStartOf="@+id/gv20"
-        app:layout_constraintTop_toTopOf="@+id/gh25" />
+        app:layout_constraintTop_toTopOf="@+id/gh20" />
 
     <Button
         android:id="@+id/btnFoodDonation"
@@ -59,7 +61,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="0dp"
-        android:background="@drawable/asset143"
+        android:background="@drawable/asset191"
         app:layout_constraintBottom_toTopOf="@+id/gh94"
         app:layout_constraintEnd_toStartOf="@+id/gv85"
         app:layout_constraintStart_toStartOf="@+id/gv15"
@@ -112,21 +114,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.61" />
+        app:layout_constraintGuide_percent="0.63" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gh76"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.76" />
+        app:layout_constraintGuide_percent="0.78" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gh81"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.81" />
+        app:layout_constraintGuide_percent="0.83" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gh94"
