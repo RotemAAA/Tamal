@@ -140,9 +140,9 @@ public class DeliveryGuyAdapter extends BaseAdapter {
                 }
                 if (r!=null) {
                     String phone = deliveryGuy.getPhoneNumber();
-                    String name = d.getFulName();
-                    String address = d.getStreetAddress() + ", " + d.getCity();
-                    String donorPhone = d.getPhone();
+                    String name = r.getFirstName() + " " + r.getLastName();
+                    //String address = r.getStreetAddress() + ", " + r.getCity();
+                    //String donorPhone = r.get();
 
                     ArrayList<Request> requests = deliveryGuy.getRequests();
                     if (requests == null) {
@@ -157,7 +157,7 @@ public class DeliveryGuyAdapter extends BaseAdapter {
                     // context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts(name + "\n" + address + "\n" + donorPhone, phone, null)));
 
                     Intent intentsms = new Intent(Intent.ACTION_VIEW, Uri.parse("sms:" + phone));
-                    intentsms.putExtra("sms_body", name + "\n" + address + "\n" + donorPhone);
+                    intentsms.putExtra("sms_body", name /*+ "\n" + address + "\n" + donorPhone*/);
                     context.startActivity(intentsms);
                 }
             }
