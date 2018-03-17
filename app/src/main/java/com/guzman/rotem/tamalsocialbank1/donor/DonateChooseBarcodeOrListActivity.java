@@ -7,11 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.guzman.rotem.tamalsocialbank1.Food;
 import com.guzman.rotem.tamalsocialbank1.R;
-import com.guzman.rotem.tamalsocialbank1.adapter.FoodAdapter;
-
-import java.util.ArrayList;
+import com.guzman.rotem.tamalsocialbank1.dataSource.FoodDataSource;
 
 public class DonateChooseBarcodeOrListActivity extends AppCompatActivity {
 
@@ -27,13 +24,13 @@ public class DonateChooseBarcodeOrListActivity extends AppCompatActivity {
 
         lvDonorsProducts = findViewById(R.id.lvDonorsProducts);
 
-        ArrayList<Food> foods = new ArrayList<>();
+/*        ArrayList<Food> foods = new ArrayList<>();
         Food food = new Food("מטרנה extra care comfort", "דל לקטוז פרו ביוטי","35633567437", R.drawable.asset_1);
         foods.add(food);
         FoodAdapter foodAdapter = new FoodAdapter(this, foods);
 
-        lvDonorsProducts.setAdapter(foodAdapter);
-
+        lvDonorsProducts.setAdapter(foodAdapter);*/
+        new FoodDataSource(this, lvDonorsProducts).execute();
 
         toScanBarcode = findViewById(R.id.btnToScanBarcode);
 

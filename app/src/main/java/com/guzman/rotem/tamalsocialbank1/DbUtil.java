@@ -106,6 +106,15 @@ public class DbUtil {
         return null;
     }
 
+    public static ArrayList<Food> getAllFoodList(Database database) {
+        try {
+            return (ArrayList<Food>) database.getAllDocsRequestBuilder().includeDocs(true).build().getResponse().getDocsAs(Food.class);
+        } catch (IOException e) {
+            //e.printStackTrace();
+        }
+        return null;
+    }
+
     @SuppressLint("StaticFieldLeak")
     private void deleteFirst() {
         new AsyncTask<Void, Void, Void>() {

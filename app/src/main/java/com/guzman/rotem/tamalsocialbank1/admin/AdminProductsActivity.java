@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.guzman.rotem.tamalsocialbank1.R;
-import com.guzman.rotem.tamalsocialbank1.adapter.AdminProductsAdapter;
 import com.guzman.rotem.tamalsocialbank1.dataSource.FoodDataSource;
 
 public class AdminProductsActivity extends AppCompatActivity {
@@ -24,6 +23,8 @@ public class AdminProductsActivity extends AppCompatActivity {
         btnAddNewProduct = findViewById(R.id.btnAddNewProduct);
         lvProducts = findViewById(R.id.lvProducts);
 
+        new FoodDataSource(this, lvProducts).execute();
+
         btnAddNewProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,7 +33,7 @@ public class AdminProductsActivity extends AppCompatActivity {
             }
         });
 
-        AdminProductsAdapter adminProductsAdapter = new AdminProductsAdapter(FoodDataSource.getData(), this);
-        lvProducts.setAdapter(adminProductsAdapter);
+/*        AdminProductsAdapter adminProductsAdapter = new AdminProductsAdapter(FoodDataSource.getData(), this);
+        lvProducts.setAdapter(adminProductsAdapter);*/
     }
 }
