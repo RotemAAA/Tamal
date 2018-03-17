@@ -152,6 +152,7 @@ public class DeliveryGuyAdapter extends BaseAdapter {
                     DbUtil.deleteUser(deliveryGuy.get_id(), deliveryGuy.get_rev());
 
                     deliveryGuy.setRequests(requests);
+                    deliveryGuy.set_rev(null);
                     DeliveryUser dUser = deliveryGuy;//new DeliveryUser(deliveryGuy.get_id(), deliveryGuy.getFirstName(), deliveryGuy.getLastName(), "Delivery", deliveryGuy.getPhoneNumber(), deliveryGuy.getCity(), deliveryGuy.getStreetNumber());
                     DbUtil.writeToDb(context, dbAcnt, dbUser, dbPass, dbName, dUser);
                     // context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts(name + "\n" + address + "\n" + donorPhone, phone, null)));
