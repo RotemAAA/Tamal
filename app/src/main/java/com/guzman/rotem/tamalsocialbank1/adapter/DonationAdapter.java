@@ -1,6 +1,7 @@
 package com.guzman.rotem.tamalsocialbank1.adapter;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
+import com.guzman.rotem.tamalsocialbank1.DbUtil;
 import com.guzman.rotem.tamalsocialbank1.Donation;
 import com.guzman.rotem.tamalsocialbank1.R;
 import com.guzman.rotem.tamalsocialbank1.stockKeeper.StoraeDeliveryGuysListActivity;
@@ -22,6 +24,10 @@ import java.util.ArrayList;
  */
 
 public class DonationAdapter extends BaseAdapter {
+    final String dbAcnt = "67817cbe-88be-4383-98a9-93784d2103e2-bluemix";
+    final String dbUser = "towellephapenerenefortic";
+    final String dbPass = "8e602a9f89d418e279e3855219b98f4570340926";
+    final String dbName = "demo";
 
     private ArrayList<Donation> data;
     private Context context;
@@ -70,12 +76,13 @@ public class DonationAdapter extends BaseAdapter {
         //TODO: set date and time, show in inventory amount
         tvSMDonationDonorName.setText(donation.getFulName());
         tvSMDonationProductName1.setText(donation.getFood().getName());
-        tvSMDonationProductNumber1.setText(donation.getAmount());
+        tvSMDonationProductNumber1.setText(/*donation.getAmount()*/"3");
 
         btnSMDonationBookDelivery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: connect button to delivery guys db
+                donation.setStatus(1);
+                DbUtil.updateDonation(donation, context);
                 Gson gson = new Gson();
                 String json = gson.toJson(donation);
                 Intent intent = new Intent(context, StoraeDeliveryGuysListActivity.class);
@@ -88,7 +95,11 @@ public class DonationAdapter extends BaseAdapter {
         btnSMDonationAccept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO:  connect button to inventory db
+                //TODO: take the product name bring the supply json from server by the name, change ths status of donation, ++ supply amount
+                donation.setStatus(2);
+                DbUtil.updateDonation(donation, context);
+
+                ((Activity) context).recreate();
             }
         });
 

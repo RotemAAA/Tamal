@@ -112,7 +112,7 @@ public class DeliveryGuyAdapter extends BaseAdapter {
                 if (d != null) {
                     String phone = deliveryGuy.getPhoneNumber();
                     String name = d.getFulName();
-                    String address = d.getStreetAddress();
+                    String address = d.getStreetAddress() + ", " + d.getCity();
                     String donorPhone = d.getPhone();
 
                     ArrayList<Donation> donations = deliveryGuy.getDonations();
@@ -125,8 +125,11 @@ public class DeliveryGuyAdapter extends BaseAdapter {
                     deliveryGuy.setDonations(donations);
                     DeliveryUser dUser = new DeliveryUser(deliveryGuy.get_id(), deliveryGuy.getFirstName(), deliveryGuy.getLastName(), "Delivery", deliveryGuy.getPhoneNumber(), deliveryGuy.getCity(), deliveryGuy.getStreetNumber());
                     DbUtil.writeToDb(context, dbAcnt, dbUser, dbPass, dbName, dUser);
-                    context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts(name + "\n" + address + "\n" + donorPhone, phone, null)));
+                    // context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts(name + "\n" + address + "\n" + donorPhone, phone, null)));
 
+                    Intent intentsms = new Intent(Intent.ACTION_VIEW, Uri.parse("sms:" + phone));
+                    intentsms.putExtra("sms_body", name + "\n" + address + "\n" + donorPhone);
+                    context.startActivity(intentsms);
                 }
             }
         });

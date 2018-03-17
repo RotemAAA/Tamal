@@ -67,6 +67,14 @@ public class Donation {
         return amount;
     }
 
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public void set_rev(String _rev) {
+        this._rev = _rev;
+    }
+
     @Override
     public String toString() {
         return "Donation{" +

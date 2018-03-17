@@ -8,6 +8,7 @@ import com.guzman.rotem.tamalsocialbank1.mother.MomUser;
 
 public class Request{
     private String _id;
+    private String _rev;
     private String firstName;
     private String lastName;
     private int status; // 0 processing, 1 delivery , 2 done
@@ -34,6 +35,14 @@ public class Request{
 
     public int getStatus() {
         return status;
+    }
+
+    public String get_rev() {
+        return _rev;
+    }
+
+    public void set_rev(String _rev) {
+        this._rev = _rev;
     }
 
     @Override

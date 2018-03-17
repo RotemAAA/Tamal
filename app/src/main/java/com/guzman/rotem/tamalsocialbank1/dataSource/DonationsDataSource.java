@@ -9,6 +9,7 @@ import com.cloudant.client.api.CloudantClient;
 import com.cloudant.client.api.Database;
 import com.guzman.rotem.tamalsocialbank1.DbUtil;
 import com.guzman.rotem.tamalsocialbank1.Donation;
+import com.guzman.rotem.tamalsocialbank1.adapter.DonationAdapter;
 
 import java.util.ArrayList;
 
@@ -24,12 +25,12 @@ public class DonationsDataSource extends AsyncTask<Void, Void, ArrayList<Donatio
     private Context context;
     private Database database;
     private ListView listView;
-    private int what;
+    private int status;
 
-    public DonationsDataSource(Context context, ListView listView, int what) {
+    public DonationsDataSource(Context context, ListView listView, int status) {
         this.context = context;
         this.listView = listView;
-        this.what = what;
+        this.status = status;
     }
 
     @Override
@@ -46,7 +47,7 @@ public class DonationsDataSource extends AsyncTask<Void, Void, ArrayList<Donatio
     @Override
     protected void onPostExecute(ArrayList<Donation> donations) {
         //get the donations adapter and set adapter
-        switch (what) {
+        switch (status) {
             case 0:
                 setDonations(donations, 0, listView);
                 break;
@@ -69,6 +70,9 @@ public class DonationsDataSource extends AsyncTask<Void, Void, ArrayList<Donatio
                 d1.add(donation);
             }
         }
-        //TODO: set adapter to the list view - donations adapter
+        DonationAdapter adapter = new DonationAdapter(d1, context);
+        listView.setAdapter(adapter);
     }
+
+
 }
