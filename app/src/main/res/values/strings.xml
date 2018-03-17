@@ -56,4 +56,7 @@
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <string name="tab_text_3">Tab 3</string>
+    <string name="in_inventory">כרגע במלאי:</string>
+    <string name="product_capacity">קיבולת למוצר:</string>
+    <string name="request_status">סטטוס הזמנה:</string>
 </resources>

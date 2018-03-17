@@ -13,4 +13,6 @@
     <color name="backTVDesNum">#5eacc9</color>
     <color name="backTVDesType">#ebf9f2</color>
     <color name="inStockProduct">#50b281</color>
+    <color name="time_color">#e99b1f</color>
+    <color name="colorPrimaryTextLight">#28bdf2</color>
 </resources>
