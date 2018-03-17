@@ -50,15 +50,14 @@ public class DestinationDataSource extends AsyncTask<Void, Void, ArrayList> {
 
         Database db = client.database(dbName, false);
         deliveryUser = db.find(DeliveryUser.class, save.get_id());
+        ArrayList arr = null;
         if (i == 0) {
-            return deliveryUser.getDonations();
+            arr = deliveryUser.getDonations();
         }
         if (i == 1) {
-            return deliveryUser.getRequests();
+            arr = deliveryUser.getRequests();
         }
-
-
-        return null;
+        return arr;
     }
 
     @Override

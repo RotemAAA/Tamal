@@ -10,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.guzman.rotem.tamalsocialbank1.DbUtil;
 import com.guzman.rotem.tamalsocialbank1.Donation;
 import com.guzman.rotem.tamalsocialbank1.R;
 import com.guzman.rotem.tamalsocialbank1.Request;
@@ -50,8 +51,7 @@ public class DestinationAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        @SuppressLint("ViewHolder")
-        View v = inflater.inflate(R.layout.delivery_guy_destination_list_my_list, parent, false);
+        @SuppressLint("ViewHolder") final View v = inflater.inflate(R.layout.delivery_guy_destination_list_my_list, parent, false);
         Donation donation = null;
         Request request = null;
         if (i == 0) {
@@ -61,15 +61,6 @@ public class DestinationAdapter extends BaseAdapter {
         if (i == 1) {
             request = (Request) arrayList.get(position);
         }
-/*        if (arrayList != null) {
-            if (arrayList.get(0) instanceof Donation) {
-                ArrayList<Donation> donations = arrayList;
-                donation = donations.get(position);
-            } else if (arrayList.get(0) instanceof Request) {
-                ArrayList<Request> requests = arrayList;
-                request = requests.get(position);
-            }
-        }*/
 
         TextView tvName = v.findViewById(R.id.tvDestinationContactName);
         TextView tvAddress = v.findViewById(R.id.tvDestinationAddress);
@@ -103,9 +94,32 @@ public class DestinationAdapter extends BaseAdapter {
             }
         });
 
+        final Donation finalDonation1 = donation;
+        final Request finalRequest1 = request;
         btnGet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (finalDonation1 != null) {
+                    if (finalDonation1.getStatus() != 1) {
+                        finalDonation1.setStatus(1);
+                        DbUtil.updateDonation(finalDonation1, context);
+                    }
+/*                    if (finalDonation1.getStatus() != 2) {
+                        finalDonation1.setStatus(2);
+                        DbUtil.updateDonation(finalDonation1, context);
+                    }*/
+                }
+                if (finalRequest1 != null) {
+                    if (finalRequest1.getStatus() != 1) {
+                        finalRequest1.setStatus(1);
+                        DbUtil.updateRequest(finalRequest1, context);
+                    }
+/*                    if (finalRequest1.getStatus() != 2) {
+                        finalRequest1.setStatus(2);
+                        DbUtil.updateRequest(finalRequest1, context);
+                    }*/
+
+                }
 
                 ((Activity) context).recreate();
             }
