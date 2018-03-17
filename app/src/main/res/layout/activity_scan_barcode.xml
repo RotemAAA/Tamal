@@ -2,59 +2,24 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layoutDirection="rtl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layoutDirection="rtl"
     tools:context="com.guzman.rotem.tamalsocialbank1.donor.ScanBarcodeActivity">
 
     <Button
         android:id="@+id/btnScanBarcode"
-        android:layout_width="320dp"
-        android:layout_height="75dp"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
 
 
-        android:layout_marginTop="8dp"
         android:background="@drawable/asset181"
         android:fontFamily="@font/varela_round"
         android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/gh5" />
-
-    <TextView
-        android:id="@+id/scan_format"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:hint="Scan Format..."
-        android:textIsSelectable="true"
-        app:layout_constraintBottom_toTopOf="@+id/gh5"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="0.179"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gv35" />
-
-    <TextView
-        android:id="@+id/scan_content"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:hint="Scan Content"
-        android:textIsSelectable="true"
-        app:layout_constraintBottom_toTopOf="@+id/gh5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.608"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/gv35" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline138"
+        app:layout_constraintEnd_toStartOf="@+id/guideline142"
+        app:layout_constraintStart_toStartOf="@+id/guideline145"
+        app:layout_constraintTop_toTopOf="@+id/guideline137" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -70,44 +35,41 @@
 
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/varela_round"
         android:gravity="center"
         android:text="@string/tamal_social_bank"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryText"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/gv35"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintStart_toStartOf="@+id/guideline" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline137"
+        app:layout_constraintEnd_toStartOf="@+id/guideline143"
+        app:layout_constraintStart_toStartOf="@+id/guideline144"
+        app:layout_constraintTop_toTopOf="@+id/guideline140" />
 
 
     <Button
         android:id="@+id/button"
-        android:layout_width="320dp"
-        android:layout_height="75dp"
-        android:layout_marginBottom="52dp"
-
-        android:layout_marginEnd="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
 
         android:background="@drawable/asset182"
         android:fontFamily="@font/varela_round"
         android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintBottom_toTopOf="@+id/guideline136"
+        app:layout_constraintEnd_toStartOf="@+id/guideline142"
         app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="@+id/guideline" />
+        app:layout_constraintStart_toStartOf="@+id/guideline145"
+        app:layout_constraintTop_toTopOf="@+id/guideline139" />
 
     <ImageView
         android:id="@+id/ivDestinationDonorOrMother"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline140"
+        app:layout_constraintEnd_toStartOf="@+id/guideline143"
+        app:layout_constraintStart_toStartOf="@+id/guideline144"
+        app:layout_constraintTop_toTopOf="@+id/guideline141"
         app:srcCompat="@drawable/asset_52_all" />
 
     <android.support.constraint.Guideline
@@ -124,20 +86,90 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.43835616" />
 
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline136"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline137"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.53" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline138"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.68" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline139"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.78" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline140"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline141"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline142"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline143"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline144"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline145"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
     <!--<ImageView-->
-        <!--android:id="@+id/imageView3"-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_marginBottom="16dp"-->
-        <!--android:layout_marginEnd="16dp"-->
-        <!--android:layout_marginStart="16dp"-->
-        <!--android:layout_marginTop="16dp"-->
-        <!--android:elevation="2dp"-->
-        <!--app:layout_constraintBottom_toTopOf="@+id/gh20"-->
-        <!--app:layout_constraintEnd_toStartOf="@+id/gv7"-->
-        <!--app:layout_constraintStart_toStartOf="@+id/gh45"-->
-        <!--app:layout_constraintTop_toTopOf="@+id/gh5"-->
-        <!--app:layout_constraintVertical_bias="0.727"-->
-        <!--app:srcCompat="@drawable/asset_84_s_32" />-->
+    <!--android:id="@+id/imageView3"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_marginBottom="16dp"-->
+    <!--android:layout_marginEnd="16dp"-->
+    <!--android:layout_marginStart="16dp"-->
+    <!--android:layout_marginTop="16dp"-->
+    <!--android:elevation="2dp"-->
+    <!--app:layout_constraintBottom_toTopOf="@+id/gh20"-->
+    <!--app:layout_constraintEnd_toStartOf="@+id/gv7"-->
+    <!--app:layout_constraintStart_toStartOf="@+id/gh45"-->
+    <!--app:layout_constraintTop_toTopOf="@+id/gh5"-->
+    <!--app:layout_constraintVertical_bias="0.727"-->
+    <!--app:srcCompat="@drawable/asset_84_s_32" />-->
 
 </android.support.constraint.ConstraintLayout>

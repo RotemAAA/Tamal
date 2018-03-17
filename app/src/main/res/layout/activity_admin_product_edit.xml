@@ -59,7 +59,7 @@
         android:id="@+id/button2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="סיים והוסף מוצר"
+        android:background="@drawable/asset189"
         app:layout_constraintBottom_toTopOf="@+id/guideline95"
         app:layout_constraintEnd_toStartOf="@+id/guideline97"
         app:layout_constraintStart_toStartOf="@+id/guideline96"
@@ -69,7 +69,7 @@
         android:id="@+id/button3"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="הוסף תמונה"
+        android:background="@drawable/asset188"
         app:layout_constraintBottom_toTopOf="@+id/guideline93"
         app:layout_constraintEnd_toStartOf="@+id/guideline97"
         app:layout_constraintStart_toStartOf="@+id/guideline96"
@@ -129,21 +129,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.704501" />
+        app:layout_constraintGuide_percent="0.73" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline94"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.75" />
+        app:layout_constraintGuide_percent="0.78" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline95"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.85" />
+        app:layout_constraintGuide_percent="0.9" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline96"

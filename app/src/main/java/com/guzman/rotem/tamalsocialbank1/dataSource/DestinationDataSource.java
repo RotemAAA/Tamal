@@ -7,8 +7,9 @@ import android.widget.ListView;
 import com.cloudant.client.api.ClientBuilder;
 import com.cloudant.client.api.CloudantClient;
 import com.cloudant.client.api.Database;
-import com.guzman.rotem.tamalsocialbank1.adapter.DonationAdapter;
-import com.guzman.rotem.tamalsocialbank1.adapter.RequestAdapter;
+import com.guzman.rotem.tamalsocialbank1.Donation;
+import com.guzman.rotem.tamalsocialbank1.Request;
+import com.guzman.rotem.tamalsocialbank1.adapter.DestinationAdapter;
 import com.guzman.rotem.tamalsocialbank1.deliveryGuy.DeliveryUser;
 
 import java.util.ArrayList;
@@ -48,7 +49,7 @@ public class DestinationDataSource extends AsyncTask<Void, Void, ArrayList> {
                 .build();
 
         Database db = client.database(dbName, false);
-        db.find(deliveryUser.get_id());
+        deliveryUser = db.find(DeliveryUser.class, save.get_id());
         if (i == 0) {
             return deliveryUser.getDonations();
         }
@@ -63,12 +64,14 @@ public class DestinationDataSource extends AsyncTask<Void, Void, ArrayList> {
     @Override
     protected void onPostExecute(ArrayList arrayList) {
         if (i == 0) {
-            DonationAdapter adapter = new DonationAdapter(arrayList, context);
+            ArrayList<Donation> donations = arrayList;
+            DestinationAdapter adapter = new DestinationAdapter(donations, context, 0);
             if (arrayList != null)
                 listView.setAdapter(adapter);
         }
         if (i == 1) {
-            RequestAdapter adapter = new RequestAdapter(arrayList, context);
+            ArrayList<Request> requests = arrayList;
+            DestinationAdapter adapter = new DestinationAdapter(requests, context, 1);
             if (arrayList != null)
                 listView.setAdapter(adapter);
         }
