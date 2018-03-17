@@ -10,20 +10,23 @@ import com.guzman.rotem.tamalsocialbank1.donor.MainDonorsActivity;
 import com.guzman.rotem.tamalsocialbank1.donor.StoriesActivity;
 import com.guzman.rotem.tamalsocialbank1.registration.RegestrationMainActivity;
 
-import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity {
     private Button btnFastDonation;
     private Button btnStories;
     private Button btnLogin;
 
 
-    ArrayList<Food> foods = new ArrayList<>();
+    /*ArrayList<Food> foods = new ArrayList<>();*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+/*        final String dbAcnt = "67817cbe-88be-4383-98a9-93784d2103e2-bluemix";
+        final String dbUser = "tsmandereeprownwastedits";
+        final String dbPass = "740918fb3ecb293aef7fa749b895a7bb103a3557";
+        final String dbName = "products";
 
 
         foods.add(new Food("מטרנה Extra Care", "שלב 1","7290013083661", R.drawable.b7290013083661));
@@ -66,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
         foods.add(new Food("סופרסל בייבי - Baby", "שלב 3","7296073237464", R.drawable.b7296073237464));
 
 
+        for (Food food : foods) {
+            DbUtil.writeToDb(this, dbAcnt, dbUser, dbPass, dbName, food);
+        }*/
 
 
 
