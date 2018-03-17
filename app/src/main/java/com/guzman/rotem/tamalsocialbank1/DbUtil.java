@@ -97,8 +97,13 @@ public class DbUtil {
         return null;
     }
 
-    public static ArrayList<User> getUserArrayList() {
-        return userArrayList;
+    public static ArrayList<Request> getAllReqList(Database database) {
+        try {
+            return (ArrayList<Request>) database.getAllDocsRequestBuilder().includeDocs(true).build().getResponse().getDocsAs(Request.class);
+        } catch (IOException e) {
+            //e.printStackTrace();
+        }
+        return null;
     }
 
     @SuppressLint("StaticFieldLeak")
@@ -280,4 +285,46 @@ public class DbUtil {
         }.execute();
     }
 
+    @SuppressLint("StaticFieldLeak")
+    public static void deleteRequest(final Request request) {
+        new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... voids) {
+                CloudantClient client = ClientBuilder.account("67817cbe-88be-4383-98a9-93784d2103e2-bluemix")
+                        .username("brommeninimelleandeeding")
+                        .password("9cb4e3bf199f7c0c8eb51d862befb9899c5f0df1")
+                        .build();
+
+                Database db = client.database("requests", false);
+                db.remove(request.get_id(), request.get_rev());
+                Log.i("DELETE", "request removed");
+                return null;
+            }
+        }.execute();
+    }
+
+
+    @SuppressLint("StaticFieldLeak")
+    public static void updateRequest(final Request request, final Context context) {
+        final String dbAcnt = "67817cbe-88be-4383-98a9-93784d2103e2-bluemix";
+        final String dbUser = "brommeninimelleandeeding";
+        final String dbPass = "9cb4e3bf199f7c0c8eb51d862befb9899c5f0df1";
+        final String dbName = "requests";
+        new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... voids) {
+                CloudantClient client = ClientBuilder.account(dbAcnt)
+                        .username(dbUser)
+                        .password(dbPass)
+                        .build();
+
+                Database db = client.database(dbName, false);
+                db.remove(request.get_id(), request.get_rev());
+                Log.i("DELETE", "req removed");
+                request.set_rev(null);
+                DbUtil.writeToDb(context, dbAcnt, dbUser, dbPass, dbName, request);
+                return null;
+            }
+        }.execute();
+    }
 }

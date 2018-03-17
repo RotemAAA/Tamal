@@ -98,10 +98,7 @@ public class DonationAdapter extends BaseAdapter {
                 //TODO: take the product name bring the supply json from server by the name, change ths status of donation, ++ supply amount
                 donation.setStatus(2);
                 DbUtil.updateDonation(donation, context);
-/*
-                Intent intent = new Intent(context, StorageDonationsActivity.class);
-                context.startActivity(intent);
-*/
+
                 ((Activity) context).recreate();
             }
         });

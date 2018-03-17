@@ -38,6 +38,7 @@ public class DonationsFragment extends android.support.v4.app.Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         listView = view.findViewById(R.id.donationsLV);
+
         // go to donations data source and populate the right type of donations (switch position)
         Bundle args = getArguments();
         int pos = args.getInt("pos"); // 0 - new , 1 - processing , 2  - done

@@ -25,12 +25,12 @@ public class DonationsDataSource extends AsyncTask<Void, Void, ArrayList<Donatio
     private Context context;
     private Database database;
     private ListView listView;
-    private int what;
+    private int status;
 
-    public DonationsDataSource(Context context, ListView listView, int what) {
+    public DonationsDataSource(Context context, ListView listView, int status) {
         this.context = context;
         this.listView = listView;
-        this.what = what;
+        this.status = status;
     }
 
     @Override
@@ -47,7 +47,7 @@ public class DonationsDataSource extends AsyncTask<Void, Void, ArrayList<Donatio
     @Override
     protected void onPostExecute(ArrayList<Donation> donations) {
         //get the donations adapter and set adapter
-        switch (what) {
+        switch (status) {
             case 0:
                 setDonations(donations, 0, listView);
                 break;
