@@ -81,8 +81,8 @@ public class DonationAdapter extends BaseAdapter {
         btnSMDonationBookDelivery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                donation.setStatus(1);
-                DbUtil.updateDonation(donation, context);
+/*                donation.setStatus(1);
+                DbUtil.updateDonation(donation, context);*/
                 Gson gson = new Gson();
                 String json = gson.toJson(donation);
                 Intent intent = new Intent(context, StoraeDeliveryGuysListActivity.class);

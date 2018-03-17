@@ -28,8 +28,8 @@ public class StorageManageInventoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_storage_manage_inventory);
 
         btnAddByBarcode = findViewById(R.id.btnAddByBarcode);
-        formatTxt = (TextView)findViewById(R.id.scan_format);
-        contentTxt = (TextView)findViewById(R.id.scan_content);
+/*        formatTxt = (TextView)findViewById(R.id.scan_format);
+        contentTxt = (TextView)findViewById(R.id.scan_content);*/
         lvInventory = findViewById(R.id.lvInventory);
 
 
