@@ -69,14 +69,14 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:background="@color/backTVDesType"
+        android:fontFamily="@font/varela_round"
         android:padding="17dp"
         android:text="מטרנה Extra Care Comfort"
-        android:fontFamily="@font/varela_round"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvDestinationoodNum"
-        tools:layout_editor_absoluteY="95dp" />
+        app:layout_constraintStart_toEndOf="@+id/tvDestinationoodNum" />
 
     <TextView
         android:id="@+id/tvDestinationoodNum"
