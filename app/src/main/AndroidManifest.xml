@@ -14,7 +14,6 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,7 +22,7 @@
         </activity>
         <activity
             android:name=".LogoActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="preloaded_fonts"
@@ -76,7 +75,7 @@
         <activity
             android:name=".donor.DropOffPoints"
             android:label="נקודות מסירה"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".donor.BuyingPoints"
             android:label="נקודות קניה"
@@ -94,10 +93,10 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".stockKeeper.StorageMainActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".stockKeeper.StoraeDeliveryGuysListActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".stockKeeper.StorageManageInventoryActivity"
             android:screenOrientation="portrait" />
@@ -130,7 +129,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".admin.AdminStockKeeperActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".admin.AdminStockKeeperEditActivity"
             android:screenOrientation="portrait" />
@@ -165,12 +164,12 @@
         <activity
             android:name=".stockKeeper.StorageDonationsActivity"
             android:label="@string/title_activity_storage_donations"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".stockKeeper.StorageRequestsActivity"
             android:label="@string/title_activity_storage_requests"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".donor.DropOffConfirmationForWaze"></activity>
     </application>
 
 </manifest>
