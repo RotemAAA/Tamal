@@ -2,9 +2,9 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layoutDirection="rtl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layoutDirection="rtl"
     tools:context="com.guzman.rotem.tamalsocialbank1.admin.AdminMotherEditActivity">
 
     <Button
@@ -12,7 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/asset111"
-        app:layout_constraintBottom_toTopOf="@+id/gh15"
+        app:layout_constraintBottom_toTopOf="@+id/guideline41"
         app:layout_constraintEnd_toStartOf="@+id/gv25"
         app:layout_constraintStart_toStartOf="@+id/gv10"
         app:layout_constraintTop_toTopOf="@+id/gh5" />
@@ -21,24 +21,24 @@
         android:id="@+id/etCode"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/asset110"
+        android:background="@drawable/round_details_edit_text_light_blue"
         android:ems="10"
-        android:gravity="right"
-        android:hint="@string/code"
         android:fontFamily="@font/varela_round"
+        android:gravity="right|center"
+        android:hint="@string/code"
         android:inputType="textPersonName"
-        android:padding="15dp"
+        android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@+id/gh15"
         app:layout_constraintEnd_toStartOf="@+id/gv90"
         app:layout_constraintStart_toStartOf="@+id/gv50"
-        app:layout_constraintTop_toTopOf="@+id/gh5" />
+        app:layout_constraintTop_toTopOf="@+id/guideline85" />
 
     <Button
         android:id="@+id/btnCodeReset"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/asset112"
-        app:layout_constraintBottom_toTopOf="@+id/gh15"
+        app:layout_constraintBottom_toTopOf="@+id/guideline41"
         app:layout_constraintEnd_toStartOf="@+id/gv45"
         app:layout_constraintStart_toStartOf="@+id/gv30"
         app:layout_constraintTop_toTopOf="@+id/gh5" />
@@ -47,13 +47,13 @@
         android:id="@+id/etFullName"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/asset113"
+        android:background="@drawable/round_details_edit_text_black"
         android:ems="10"
-        android:gravity="right"
-        android:hint="@string/full_name"
         android:fontFamily="@font/varela_round"
+        android:gravity="right|center"
+        android:hint="@string/full_name"
         android:inputType="textPersonName"
-        android:padding="15dp"
+        android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@+id/gh28"
         app:layout_constraintEnd_toStartOf="@+id/gv90"
         app:layout_constraintStart_toStartOf="@+id/gv10"
@@ -63,13 +63,13 @@
         android:id="@+id/etPhone"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/asset113"
+        android:background="@drawable/round_details_edit_text_black"
         android:ems="10"
-        android:gravity="right"
-        android:hint="@string/phone"
         android:fontFamily="@font/varela_round"
+        android:gravity="right|center"
+        android:hint="@string/phone"
         android:inputType="phone"
-        android:padding="15dp"
+        android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@+id/gh41"
         app:layout_constraintEnd_toStartOf="@+id/gv90"
         app:layout_constraintStart_toStartOf="@+id/gv10"
@@ -79,13 +79,13 @@
         android:id="@+id/etCity"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/asset114"
+        android:background="@drawable/round_details_edit_text_light_blue"
         android:ems="10"
-        android:gravity="right"
-        android:hint="@string/city"
         android:fontFamily="@font/varela_round"
+        android:gravity="right|center"
+        android:hint="@string/city"
         android:inputType="textPersonName"
-        android:padding="15dp"
+        android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@+id/gh54"
         app:layout_constraintEnd_toStartOf="@+id/gv90"
         app:layout_constraintStart_toStartOf="@+id/gv10"
@@ -95,13 +95,13 @@
         android:id="@+id/etStreetAndNumber"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/asset114"
+        android:background="@drawable/round_details_edit_text_light_blue"
         android:ems="10"
-        android:gravity="right"
-        android:hint="@string/street_and_number"
         android:fontFamily="@font/varela_round"
+        android:gravity="right|center"
+        android:hint="@string/street_and_number"
         android:inputType="textPersonName"
-        android:padding="15dp"
+        android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@+id/gh75"
         app:layout_constraintEnd_toStartOf="@+id/gv90"
         app:layout_constraintStart_toStartOf="@+id/gv10"
@@ -121,13 +121,13 @@
         android:id="@+id/etFoodCapacity"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/asset114"
+        android:background="@drawable/round_details_edit_text_light_blue"
         android:ems="10"
-        android:gravity="right"
-        android:hint="@string/food_capacity"
         android:fontFamily="@font/varela_round"
+        android:gravity="right|center"
+        android:hint="@string/food_capacity"
         android:inputType="textPersonName"
-        android:padding="15dp"
+        android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@+id/gh80"
         app:layout_constraintEnd_toStartOf="@+id/gv90"
         app:layout_constraintStart_toStartOf="@+id/gv10"
@@ -152,21 +152,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.3" />
+        app:layout_constraintGuide_percent="0.28" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gv45"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintGuide_percent="0.43" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gv50"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.47" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gv90"
@@ -180,14 +180,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.05" />
+        app:layout_constraintGuide_percent="0.03" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gh15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.15" />
+        app:layout_constraintGuide_percent="0.13" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gh18"
@@ -271,6 +271,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9315069" />
+        app:layout_constraintGuide_percent="0.95" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.14" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.04" />
 
 </android.support.constraint.ConstraintLayout>

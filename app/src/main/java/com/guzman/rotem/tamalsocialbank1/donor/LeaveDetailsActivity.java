@@ -8,6 +8,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.guzman.rotem.tamalsocialbank1.R;
+import com.guzman.rotem.tamalsocialbank1.adapter.HoursAdapter;
+import com.guzman.rotem.tamalsocialbank1.dataSource.HoursDataSource;
 
 public class LeaveDetailsActivity extends AppCompatActivity{
 
@@ -27,6 +29,11 @@ public class LeaveDetailsActivity extends AppCompatActivity{
         etFullName = findViewById(R.id.etFullName);
         etPhone = findViewById(R.id.etPhone);
         btnSend = findViewById(R.id.btnSend);
+        spinnerPickHour = findViewById(R.id.spnrPickHour);
+
+
+        HoursAdapter hoursAdapter = new HoursAdapter(this, HoursDataSource.getData());
+        spinnerPickHour.setAdapter(hoursAdapter);
 
 
         btnSend.setOnClickListener(new View.OnClickListener() {
