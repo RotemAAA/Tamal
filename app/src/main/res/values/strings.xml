@@ -59,4 +59,5 @@
     <string name="in_inventory">כרגע במלאי:</string>
     <string name="product_capacity">קיבולת למוצר:</string>
     <string name="request_status">סטטוס הזמנה:</string>
+    <string name="wanted_hours">שעות רצויות:</string>
 </resources>
