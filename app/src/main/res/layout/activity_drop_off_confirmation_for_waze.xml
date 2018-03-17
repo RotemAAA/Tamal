@@ -2,10 +2,9 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layoutDirection="rtl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.guzman.rotem.tamalsocialbank1.donor.DropOffConfirmation">
+    tools:context="com.guzman.rotem.tamalsocialbank1.donor.DropOffConfirmationForWaze">
 
     <TextView
         android:id="@+id/textView"
@@ -184,16 +183,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/gh57" />
 
-    <Button
-        android:id="@+id/btnConfirm"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/asset153"
-        app:layout_constraintBottom_toTopOf="@+id/gh95"
-        app:layout_constraintEnd_toStartOf="@+id/gv90"
-        app:layout_constraintStart_toStartOf="@+id/gv10"
-        app:layout_constraintTop_toTopOf="@+id/gh82" />
-
     <android.support.constraint.Guideline
         android:id="@+id/gh52"
         android:layout_width="wrap_content"
@@ -285,4 +274,32 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.1" />
 
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="אשר מסירה"
+        app:layout_constraintBottom_toTopOf="@+id/gh95"
+        app:layout_constraintEnd_toStartOf="@+id/gv90"
+        app:layout_constraintTop_toTopOf="@+id/gh82" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="בטל"
+        app:layout_constraintBottom_toTopOf="@+id/gh95"
+        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gv10"
+        app:layout_constraintTop_toTopOf="@+id/gh82" />
+
 </android.support.constraint.ConstraintLayout>
+
