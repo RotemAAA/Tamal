@@ -6,7 +6,7 @@ import com.guzman.rotem.tamalsocialbank1.mother.MomUser;
  * Created by tsuryohananov on 06/03/2018.
  */
 
-public class Request{
+public class Request {
     private String _id;
     private String _rev;
     private String firstName;
@@ -43,6 +43,10 @@ public class Request{
 
     public void set_rev(String _rev) {
         this._rev = _rev;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 
     @Override

@@ -9,6 +9,7 @@ import com.cloudant.client.api.CloudantClient;
 import com.cloudant.client.api.Database;
 import com.guzman.rotem.tamalsocialbank1.DbUtil;
 import com.guzman.rotem.tamalsocialbank1.Request;
+import com.guzman.rotem.tamalsocialbank1.adapter.RequestAdapter;
 
 import java.util.ArrayList;
 
@@ -32,6 +33,13 @@ public class RequestsDataSource extends AsyncTask<Void, Void, ArrayList<Request>
         this.listView = listView;
         this.status = status;
     }
+
+    public RequestsDataSource(Context context, ListView listView, int status, Request r) {
+        this.context = context;
+        this.listView = listView;
+        this.status = status;
+    }
+
 
     @Override
     protected ArrayList<Request> doInBackground(Void... voids) {
@@ -70,8 +78,7 @@ public class RequestsDataSource extends AsyncTask<Void, Void, ArrayList<Request>
                 d1.add(request);
             }
         }
-        //TODO: RequestAdapter - update, delete, etc... methods ready on DbUtil
-        //DonationAdapter adapter = new DonationAdapter(d1, context);
-        //listView.setAdapter(adapter);
+        RequestAdapter adapter = new RequestAdapter(requests, context);
+        listView.setAdapter(adapter);
     }
 }

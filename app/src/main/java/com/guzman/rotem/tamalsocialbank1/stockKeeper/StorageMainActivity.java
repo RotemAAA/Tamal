@@ -43,7 +43,7 @@ public class StorageMainActivity extends AppCompatActivity {
         btnManageRequests.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(StorageMainActivity.this, StorageManageRequestsActivity.class);
+                Intent intent = new Intent(StorageMainActivity.this, StorageRequestsActivity.class);
                 startActivity(intent);
             }
         });

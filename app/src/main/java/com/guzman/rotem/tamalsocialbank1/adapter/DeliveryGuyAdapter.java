@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.guzman.rotem.tamalsocialbank1.DbUtil;
 import com.guzman.rotem.tamalsocialbank1.Donation;
 import com.guzman.rotem.tamalsocialbank1.R;
+import com.guzman.rotem.tamalsocialbank1.Request;
 import com.guzman.rotem.tamalsocialbank1.deliveryGuy.DeliveryUser;
 
 import java.util.ArrayList;
@@ -39,6 +40,7 @@ public class DeliveryGuyAdapter extends BaseAdapter {
     private String city;
     private String address;
     private Donation d;
+    private Request r;
 
     public DeliveryGuyAdapter(ArrayList<DeliveryUser> data, Context context) {
         this.data = data;
@@ -49,6 +51,11 @@ public class DeliveryGuyAdapter extends BaseAdapter {
         this.data = data;
         this.context = context;
         this.d = d;
+    }
+    public DeliveryGuyAdapter(ArrayList<DeliveryUser> data, Context context, Request r) {
+        this.data = data;
+        this.context = context;
+        this.r = r;
     }
 
 
@@ -123,7 +130,29 @@ public class DeliveryGuyAdapter extends BaseAdapter {
                     DbUtil.deleteUser(deliveryGuy.get_id(), deliveryGuy.get_rev());
 
                     deliveryGuy.setDonations(donations);
-                    DeliveryUser dUser = new DeliveryUser(deliveryGuy.get_id(), deliveryGuy.getFirstName(), deliveryGuy.getLastName(), "Delivery", deliveryGuy.getPhoneNumber(), deliveryGuy.getCity(), deliveryGuy.getStreetNumber());
+                    DeliveryUser dUser = deliveryGuy;//new DeliveryUser(deliveryGuy.get_id(), deliveryGuy.getFirstName(), deliveryGuy.getLastName(), "Delivery", deliveryGuy.getPhoneNumber(), deliveryGuy.getCity(), deliveryGuy.getStreetNumber());
+                    DbUtil.writeToDb(context, dbAcnt, dbUser, dbPass, dbName, dUser);
+                    // context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts(name + "\n" + address + "\n" + donorPhone, phone, null)));
+
+                    Intent intentsms = new Intent(Intent.ACTION_VIEW, Uri.parse("sms:" + phone));
+                    intentsms.putExtra("sms_body", name + "\n" + address + "\n" + donorPhone);
+                    context.startActivity(intentsms);
+                }
+                if (r!=null) {
+                    String phone = deliveryGuy.getPhoneNumber();
+                    String name = d.getFulName();
+                    String address = d.getStreetAddress() + ", " + d.getCity();
+                    String donorPhone = d.getPhone();
+
+                    ArrayList<Request> requests = deliveryGuy.getRequests();
+                    if (requests == null) {
+                        requests = new ArrayList<>();
+                    }
+                    requests.add(r);
+                    DbUtil.deleteUser(deliveryGuy.get_id(), deliveryGuy.get_rev());
+
+                    deliveryGuy.setRequests(requests);
+                    DeliveryUser dUser = deliveryGuy;//new DeliveryUser(deliveryGuy.get_id(), deliveryGuy.getFirstName(), deliveryGuy.getLastName(), "Delivery", deliveryGuy.getPhoneNumber(), deliveryGuy.getCity(), deliveryGuy.getStreetNumber());
                     DbUtil.writeToDb(context, dbAcnt, dbUser, dbPass, dbName, dUser);
                     // context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts(name + "\n" + address + "\n" + donorPhone, phone, null)));
 
