@@ -28,7 +28,7 @@ public class StorageManageInventoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_storage_manage_inventory);
 
         btnAddByBarcode = findViewById(R.id.btnAddByBarcode);
-/*        formatTxt = (TextView)findViewById(R.id.scan_format);
+       /* formatTxt = (TextView)findViewById(R.id.scan_format);
         contentTxt = (TextView)findViewById(R.id.scan_content);*/
         lvInventory = findViewById(R.id.lvInventory);
 
@@ -48,8 +48,8 @@ public class StorageManageInventoryActivity extends AppCompatActivity {
 //we have a result
             String scanContent = scanningResult.getContents();
             String scanFormat = scanningResult.getFormatName();
-            formatTxt.setText("FORMAT: " + scanFormat);
-            contentTxt.setText("CONTENT: " + scanContent);
+           /* formatTxt.setText("FORMAT: " + scanFormat);
+            contentTxt.setText("CONTENT: " + scanContent);*/
 
             //TODO: USE SCANS
 

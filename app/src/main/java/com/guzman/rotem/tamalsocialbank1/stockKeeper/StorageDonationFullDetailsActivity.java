@@ -22,7 +22,6 @@ public class StorageDonationFullDetailsActivity extends AppCompatActivity {
 
 
         tvSMDonationFullOrderDate = findViewById(R.id.tvSMDonationFullOrderDate);
-        //tvSMDonationFullOrderNumer = findViewById(R.id.tvSMDonationFullOrderNumber);
         tvSMDonationFullOrderTime = findViewById(R.id.tvSMDonationFullOrderTime);
         btnSMDonationFullCallDeliveryGuy = findViewById(R.id.btnSMDonationFullCallDeliveryGuy);
         btnSMDonationFullAccept = findViewById(R.id.btnSMDonationFullAccept);

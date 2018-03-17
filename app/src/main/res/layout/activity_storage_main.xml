@@ -2,72 +2,57 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layoutDirection="rtl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layoutDirection="rtl"
     tools:context="com.guzman.rotem.tamalsocialbank1.stockKeeper.StorageMainActivity"
     tools:layout_editor_absoluteY="81dp">
 
     <Button
         android:id="@+id/btnManageInventory"
-        android:layout_width="290dp"
-        android:layout_height="80dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/asset192"
         android:textColor="@color/colorPrimaryTextWhite"
         android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="@+id/btnSendDeliveryGuy"
-        app:layout_constraintStart_toStartOf="@+id/btnSendDeliveryGuy"
-        app:layout_constraintTop_toBottomOf="@+id/btnSendDeliveryGuy" />
-
-    <Button
-        android:id="@+id/btnManageDelivery"
-        android:layout_width="290dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/asset158"
-        android:textColor="@color/colorPrimaryTextWhite"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnManageDonations"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/btnManageDonations"
-        app:layout_constraintTop_toBottomOf="@+id/btnManageDonations"
-        app:layout_constraintVertical_bias="0.217" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline149"
+        app:layout_constraintEnd_toStartOf="@+id/guideline154"
+        app:layout_constraintStart_toStartOf="@+id/guideline155"
+        app:layout_constraintTop_toTopOf="@+id/guideline148" />
 
     <Button
         android:id="@+id/btnManageRequests"
-        android:layout_width="290dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/asset193"
         android:textColor="@color/colorPrimaryTextWhite"
         android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="@+id/btnManageInventory"
-        app:layout_constraintTop_toBottomOf="@+id/btnManageInventory" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline152"
+        app:layout_constraintEnd_toStartOf="@+id/guideline154"
+        app:layout_constraintStart_toStartOf="@+id/guideline155"
+        app:layout_constraintTop_toTopOf="@+id/guideline150" />
 
 
     <Button
         android:id="@+id/btnManageDonations"
-        android:layout_width="290dp"
-        android:layout_height="81dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/asset160"
-        app:layout_constraintEnd_toEndOf="@+id/btnManageRequests"
-        app:layout_constraintStart_toStartOf="@+id/btnManageRequests"
-        app:layout_constraintTop_toBottomOf="@+id/btnManageRequests" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/asset194"
+        app:layout_constraintBottom_toTopOf="@+id/guideline153"
+        app:layout_constraintEnd_toStartOf="@+id/guideline154"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline155"
+        app:layout_constraintTop_toTopOf="@+id/guideline151" />
 
     <Button
         android:id="@+id/btnSendDeliveryGuy"
-        android:layout_width="311dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/asset144"
-        app:layout_constraintEnd_toStartOf="@+id/guideline17"
-        app:layout_constraintStart_toStartOf="@+id/guideline17"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline147"
+        app:layout_constraintEnd_toStartOf="@+id/guideline154"
+        app:layout_constraintStart_toStartOf="@+id/guideline155"
+        app:layout_constraintTop_toTopOf="@+id/guideline146" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline17"
@@ -75,5 +60,75 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline146"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.16" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline147"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline148"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline149"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline150"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline151"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline152"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline153"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline154"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline155"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
 
 </android.support.constraint.ConstraintLayout>
