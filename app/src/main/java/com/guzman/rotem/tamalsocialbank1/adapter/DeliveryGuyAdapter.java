@@ -11,6 +11,8 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.guzman.rotem.tamalsocialbank1.DbUtil;
+import com.guzman.rotem.tamalsocialbank1.Donation;
 import com.guzman.rotem.tamalsocialbank1.R;
 import com.guzman.rotem.tamalsocialbank1.deliveryGuy.DeliveryUser;
 
@@ -22,6 +24,12 @@ import java.util.ArrayList;
 
 public class DeliveryGuyAdapter extends BaseAdapter {
 
+    final String dbAcnt = "67817cbe-88be-4383-98a9-93784d2103e2-bluemix";
+    final String dbUser = "ndstedecionstentlymnatud";
+    final String dbPass = "434006e0cef09ba9aabe33cca89e808a5139884d";
+    final String dbName = "users";
+
+
     private ArrayList<DeliveryUser> data;
     private Context context;
     private String firstName;
@@ -30,11 +38,19 @@ public class DeliveryGuyAdapter extends BaseAdapter {
     private String streetAndNumber;
     private String city;
     private String address;
+    private Donation d;
 
     public DeliveryGuyAdapter(ArrayList<DeliveryUser> data, Context context) {
         this.data = data;
         this.context = context;
     }
+
+    public DeliveryGuyAdapter(ArrayList<DeliveryUser> data, Context context, Donation d) {
+        this.data = data;
+        this.context = context;
+        this.d = d;
+    }
+
 
     @Override
     public int getCount() {
@@ -52,7 +68,7 @@ public class DeliveryGuyAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, final View convertView, ViewGroup parent) {
 
         final DeliveryUser deliveryGuy = data.get(position);
 
@@ -92,12 +108,26 @@ public class DeliveryGuyAdapter extends BaseAdapter {
         btnSDGLSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-/*                //TODO: go to donations list and with intent and extras(phone) to send from there a msg with the wanted donation
-                //TODO: update deliveryuser's list with donations / requests
 
-                Intent intent = new Intent(context, StorageManageDonationsActivity.class);
-                intent.putExtra("deliveryPhone", deliveryGuy.getPhoneNumber());
-                context.startActivity(intent);*/
+                if (d != null) {
+                    String phone = deliveryGuy.getPhoneNumber();
+                    String name = d.getFulName();
+                    String address = d.getStreetAddress();
+                    String donorPhone = d.getPhone();
+
+                    ArrayList<Donation> donations = deliveryGuy.getDonations();
+                    if (donations == null) {
+                        donations = new ArrayList<>();
+                    }
+                    donations.add(d);
+                    DbUtil.deleteUser(deliveryGuy.get_id(), deliveryGuy.get_rev());
+
+                    deliveryGuy.setDonations(donations);
+                    DeliveryUser dUser = new DeliveryUser(deliveryGuy.get_id(), deliveryGuy.getFirstName(), deliveryGuy.getLastName(), "Delivery", deliveryGuy.getPhoneNumber(), deliveryGuy.getCity(), deliveryGuy.getStreetNumber());
+                    DbUtil.writeToDb(context, dbAcnt, dbUser, dbPass, dbName, dUser);
+                    context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts(name + "\n" + address + "\n" + donorPhone, phone, null)));
+
+                }
             }
         });
 

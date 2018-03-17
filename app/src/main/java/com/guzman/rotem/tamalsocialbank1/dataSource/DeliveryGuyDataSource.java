@@ -9,6 +9,7 @@ import com.cloudant.client.api.ClientBuilder;
 import com.cloudant.client.api.CloudantClient;
 import com.cloudant.client.api.Database;
 import com.guzman.rotem.tamalsocialbank1.DbUtil;
+import com.guzman.rotem.tamalsocialbank1.Donation;
 import com.guzman.rotem.tamalsocialbank1.User;
 import com.guzman.rotem.tamalsocialbank1.adapter.DeliveryGuyAdapter;
 import com.guzman.rotem.tamalsocialbank1.adapter.DeliveryGuyAdapterAdmin;
@@ -31,11 +32,19 @@ public class DeliveryGuyDataSource extends AsyncTask<Void, Void, ArrayList<Deliv
     private Context context;
     private Database database;
     private int who;
+    private Donation d;
 
     public DeliveryGuyDataSource(ListView listView, Context context, int who) {
         this.listView = listView;
         this.context = context;
         this.who = who;
+    }
+
+    public DeliveryGuyDataSource(ListView listView, Context context, int who, Donation d) {
+        this.listView = listView;
+        this.context = context;
+        this.who = who;
+        this.d = d;
     }
 
     @Override
@@ -62,8 +71,13 @@ public class DeliveryGuyDataSource extends AsyncTask<Void, Void, ArrayList<Deliv
     protected void onPostExecute(ArrayList<DeliveryUser> deliveryUsers) {
 
         if (who == 0) {
-            DeliveryGuyAdapter adapter = new DeliveryGuyAdapter(deliveryUsers, context);
-            listView.setAdapter(adapter);
+            if (d != null) {
+                DeliveryGuyAdapter adapter = new DeliveryGuyAdapter(deliveryUsers, context, d);
+                listView.setAdapter(adapter);
+            } else {
+                DeliveryGuyAdapter adapter = new DeliveryGuyAdapter(deliveryUsers, context);
+                listView.setAdapter(adapter);
+            }
         } else if (who == 1) {
             //admin's addapter
             DeliveryGuyAdapterAdmin adapterAdmin = new DeliveryGuyAdapterAdmin(deliveryUsers, context);

@@ -74,11 +74,10 @@ public class DropOffCenterAdapter extends BaseAdapter {
             @Override
             public void onClick(View view) {
                 try {
-                    // Launch Waze to look for Hawaii:
                     String address = center.getAddress();
+                    //address = address.replace(" ", "%20");
                     String url = "https://waze.com/ul?q=" + address + "";
 
-                    //TODO: go to waze not internet
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                     context.startActivity(intent);
                 } catch (ActivityNotFoundException ex) {

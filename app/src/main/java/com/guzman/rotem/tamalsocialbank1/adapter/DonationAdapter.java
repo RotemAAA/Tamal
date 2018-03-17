@@ -2,6 +2,7 @@ package com.guzman.rotem.tamalsocialbank1.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,8 +10,10 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
 import com.guzman.rotem.tamalsocialbank1.Donation;
 import com.guzman.rotem.tamalsocialbank1.R;
+import com.guzman.rotem.tamalsocialbank1.stockKeeper.StoraeDeliveryGuysListActivity;
 
 import java.util.ArrayList;
 
@@ -44,7 +47,7 @@ public class DonationAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup paren) {
+    public View getView(int position, final View convertView, ViewGroup paren) {
 
         final Donation donation = data.get(position);
 
@@ -53,29 +56,33 @@ public class DonationAdapter extends BaseAdapter {
         @SuppressLint("ViewHolder")
         View v = inflater.inflate(R.layout.storage_manage_donation_my_list, paren, false);
 
-        TextView tvSMDonationInInventory = v.findViewById(R.id.tvSMDonationInInventory);
-        TextView tvSMDonationInInventoryNumberv = v.findViewById(R.id.tvSMDonationInInventoryNumberv);
+        //TextView tvSMDonationAmount = v.findViewById(R.id.tvSMDonationInInventory);
+        //TextView tvSMDonationInInventoryNumberv = v.findViewById(R.id.tvSMDonationInInventoryNumberv);
         TextView tvSMDonationProductName1 = v.findViewById(R.id.tvSMDonationProductName1);
         TextView tvSMDonationProductNumber1 = v.findViewById(R.id.tvSMDonationProductNumber1);
         TextView tvSMDonationDonorName = v.findViewById(R.id.tvSMDonationDonorName);
-        TextView tvSMDonationDate = v.findViewById(R.id.tvSMDonationDate);
-        TextView tvSMDonationTime = v.findViewById(R.id.tvSMDonationTime);
+/*        TextView tvSMDonationDate = v.findViewById(R.id.tvSMDonationDate);
+        TextView tvSMDonationTime = v.findViewById(R.id.tvSMDonationTime);*/
         Button btnSMDonationBookDelivery = v.findViewById(R.id.btnSMDonationBookDelivery);
         Button btnSMDonationAccept = v.findViewById(R.id.btnSMDonationAccept);
 
 
         //TODO: set date and time, show in inventory amount
         tvSMDonationDonorName.setText(donation.getFulName());
-        tvSMDonationProductName1.setText((CharSequence) donation.getFood());
+        tvSMDonationProductName1.setText(donation.getFood().getName());
         tvSMDonationProductNumber1.setText(donation.getAmount());
 
         btnSMDonationBookDelivery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //TODO: connect button to delivery guys db
+                Gson gson = new Gson();
+                String json = gson.toJson(donation);
+                Intent intent = new Intent(context, StoraeDeliveryGuysListActivity.class);
+                intent.putExtra("theDonation", json);
+                context.startActivity(intent);
             }
         });
-
 
 
         btnSMDonationAccept.setOnClickListener(new View.OnClickListener() {
