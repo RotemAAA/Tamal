@@ -14,11 +14,6 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".LogoActivity"
@@ -126,16 +121,27 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".admin.AdminMainActivity"
-            android:screenOrientation="portrait" />
+            android:label="מנהל מערכת"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".admin.AdminUsersMainActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".admin.AdminDeliveryGuysActivity"
-            android:screenOrientation="portrait"></activity>
+            android:label="ניהול שליחים"
+            android:screenOrientation="portrait">
+        </activity>
         <activity
             android:name=".admin.AdminDeliveryGuysEditActivity"
-            android:screenOrientation="portrait" />
+            android:label="עריכת שליח"
+            android:screenOrientation="portrait">
+        </activity>
         <activity
             android:name=".admin.AdminStockKeeperActivity"
             android:screenOrientation="portrait" >
