@@ -2,22 +2,22 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layoutDirection="rtl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layoutDirection="rtl"
     tools:context="com.guzman.rotem.tamalsocialbank1.admin.AdminStockKeeperEditActivity">
 
     <EditText
         android:id="@+id/etCode"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@drawable/round_details_edit_text_light_blue"
         android:ems="10"
-        android:hint="@string/code"
         android:fontFamily="@font/varela_round"
-        android:background="@drawable/asset110"
-        android:gravity="right"
-        android:padding="15dp"
+        android:gravity="right|center"
+        android:hint="@string/code"
         android:inputType="textPersonName"
+        android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@+id/gh15"
         app:layout_constraintEnd_toStartOf="@+id/gv90"
         app:layout_constraintStart_toStartOf="@+id/gv50"
@@ -26,7 +26,7 @@
     <Button
         android:id="@+id/btnCodeReset"
         android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_height="0dp"
         android:background="@drawable/asset112"
         app:layout_constraintBottom_toTopOf="@+id/gh15"
         app:layout_constraintEnd_toStartOf="@+id/gv45"
@@ -50,14 +50,13 @@
         android:id="@+id/etFullName"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/asset113"
+        android:background="@drawable/round_details_edit_text_black"
         android:ems="10"
         android:fontFamily="@font/varela_round"
-
+        android:gravity="right|center"
         android:hint="@string/full_name"
         android:inputType="textPersonName"
-        android:padding="15dp"
-        android:textAlignment="center"
+        android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@+id/gh40"
         app:layout_constraintEnd_toStartOf="@+id/gv90"
         app:layout_constraintStart_toStartOf="@+id/gv10"
@@ -67,13 +66,13 @@
         android:id="@+id/etPhone"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@drawable/round_details_edit_text_black"
         android:ems="10"
+        android:fontFamily="@font/varela_round"
+        android:gravity="right|center"
         android:hint="@string/phone"
         android:inputType="phone"
-        android:background="@drawable/asset113"
-        android:fontFamily="@font/varela_round"
-        android:gravity="right"
-        android:padding="15dp"
+        android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@+id/gh65"
         app:layout_constraintEnd_toStartOf="@+id/gv90"
         app:layout_constraintStart_toStartOf="@+id/gv10"
@@ -94,42 +93,42 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.82" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gh80"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.77" />
+        app:layout_constraintGuide_percent="0.7" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gh65"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65" />
+        app:layout_constraintGuide_percent="0.55" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gh55"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.53" />
+        app:layout_constraintGuide_percent="0.45" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gh40"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4" />
+        app:layout_constraintGuide_percent="0.35" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gh30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.27" />
+        app:layout_constraintGuide_percent="0.25" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gh15"
