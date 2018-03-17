@@ -198,7 +198,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline30"
         app:layout_constraintStart_toStartOf="@+id/guideline31"
         app:layout_constraintTop_toTopOf="@+id/guideline24"
-        app:srcCompat="@drawable/asset_90_s_15" />
+        app:srcCompat="@drawable/asset_90_s_15"/>
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline42"

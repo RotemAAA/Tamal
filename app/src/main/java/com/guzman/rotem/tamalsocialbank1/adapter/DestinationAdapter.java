@@ -34,7 +34,7 @@ public class DestinationAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 0;
+        return arrayList.size();
     }
 
     @Override
