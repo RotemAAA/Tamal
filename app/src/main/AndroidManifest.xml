@@ -14,12 +14,16 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".LogoActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait"></activity>
 
         <meta-data
             android:name="preloaded_fonts"
@@ -72,8 +76,7 @@
         <activity
             android:name=".donor.DropOffPoints"
             android:label="נקודות מסירה"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".donor.BuyingPoints"
             android:label="נקודות קניה"
@@ -88,16 +91,13 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".registration.RegistrationChooseActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".stockKeeper.StorageMainActivity"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".stockKeeper.StoraeDeliveryGuysListActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".stockKeeper.StorageManageInventoryActivity"
             android:screenOrientation="portrait" />
@@ -121,31 +121,19 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".admin.AdminMainActivity"
-            android:label="מנהל מערכת"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".admin.AdminUsersMainActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".admin.AdminDeliveryGuysActivity"
-            android:label="ניהול שליחים"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".admin.AdminDeliveryGuysEditActivity"
-            android:label="עריכת שליח"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".admin.AdminStockKeeperActivity"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".admin.AdminStockKeeperEditActivity"
             android:screenOrientation="portrait" />
@@ -176,10 +164,15 @@
             android:name=".deliveryGuy.DeliveryGuyDestionations"
             android:label="@string/title_activity_delivery_guy_destionations"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".stockKeeper.StorageDonationsActivity"
             android:label="@string/title_activity_storage_donations"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".stockKeeper.StorageRequestsActivity"
+            android:label="@string/title_activity_storage_requests"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
