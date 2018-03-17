@@ -12,4 +12,5 @@
     <color name="colorHalfButtonLightBrown">#efefef</color>
     <color name="backTVDesNum">#5eacc9</color>
     <color name="backTVDesType">#ebf9f2</color>
+    <color name="inStockProduct">#50b281</color>
 </resources>
