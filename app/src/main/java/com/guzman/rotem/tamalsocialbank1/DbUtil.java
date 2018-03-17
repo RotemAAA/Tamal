@@ -237,4 +237,47 @@ public class DbUtil {
             }
         }.execute();
     }
+
+    @SuppressLint("StaticFieldLeak")
+    public static void deleteDonation(final Donation donation) {
+        new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... voids) {
+                CloudantClient client = ClientBuilder.account("67817cbe-88be-4383-98a9-93784d2103e2-bluemix")
+                        .username("towellephapenerenefortic")
+                        .password("8e602a9f89d418e279e3855219b98f4570340926")
+                        .build();
+
+                Database db = client.database("demo", false);
+                db.remove(donation.get_id(), donation.get_rev());
+                Log.i("DELETE", "donation removed");
+                return null;
+            }
+        }.execute();
+    }
+
+    @SuppressLint("StaticFieldLeak")
+    public static void updateDonation(final Donation donation, final Context context) {
+        final String dbAcnt = "67817cbe-88be-4383-98a9-93784d2103e2-bluemix";
+        final String dbUser = "towellephapenerenefortic";
+        final String dbPass = "8e602a9f89d418e279e3855219b98f4570340926";
+        final String dbName = "demo";
+        new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... voids) {
+                CloudantClient client = ClientBuilder.account("67817cbe-88be-4383-98a9-93784d2103e2-bluemix")
+                        .username("towellephapenerenefortic")
+                        .password("8e602a9f89d418e279e3855219b98f4570340926")
+                        .build();
+
+                Database db = client.database("demo", false);
+                db.remove(donation.get_id(), donation.get_rev());
+                Log.i("DELETE", "donation removed");
+                donation.set_rev(null);
+                DbUtil.writeToDb(context, dbAcnt, dbUser, dbPass, dbName, donation);
+                return null;
+            }
+        }.execute();
+    }
+
 }

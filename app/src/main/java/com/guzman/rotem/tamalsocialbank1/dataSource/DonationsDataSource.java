@@ -9,6 +9,7 @@ import com.cloudant.client.api.CloudantClient;
 import com.cloudant.client.api.Database;
 import com.guzman.rotem.tamalsocialbank1.DbUtil;
 import com.guzman.rotem.tamalsocialbank1.Donation;
+import com.guzman.rotem.tamalsocialbank1.adapter.DonationAdapter;
 
 import java.util.ArrayList;
 
@@ -69,6 +70,9 @@ public class DonationsDataSource extends AsyncTask<Void, Void, ArrayList<Donatio
                 d1.add(donation);
             }
         }
-        //TODO: set adapter to the list view - donations adapter
+        DonationAdapter adapter = new DonationAdapter(d1, context);
+        listView.setAdapter(adapter);
     }
+
+
 }

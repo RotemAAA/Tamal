@@ -15,12 +15,11 @@ import com.guzman.rotem.tamalsocialbank1.dataSource.DonationsDataSource;
  */
 
 public class DonationsFragment extends android.support.v4.app.Fragment {
-
+    private StorageDonationsActivity.SectionsPagerAdapter sectionsPagerAdapter;
     public DonationsFragment() {
     }
 
     public static DonationsFragment newInstance(int i) {
-
         Bundle args = new Bundle();
         args.putInt("pos", i);
         DonationsFragment fragment = new DonationsFragment();
@@ -58,4 +57,28 @@ public class DonationsFragment extends android.support.v4.app.Fragment {
                 break;
         }
     }
+
+/*    @Override
+    public void onResume() {
+        listView.findViewById(R.id.donationsLV);
+        Bundle args = getArguments();
+        int pos = args.getInt("pos"); // 0 - new , 1 - processing , 2  - done
+
+        switch (pos) {
+            case 0:
+                new DonationsDataSource(getContext(), listView, 0).execute();
+                break;
+            case 1:
+                new DonationsDataSource(getContext(), listView, 1).execute();
+                break;
+            case 2:
+                new DonationsDataSource(getContext(), listView, 2).execute();
+                break;
+            default:
+                new DonationsDataSource(getContext(), listView, 0).execute();
+                break;
+        }
+        super.onResume();
+    }*/
+
 }
