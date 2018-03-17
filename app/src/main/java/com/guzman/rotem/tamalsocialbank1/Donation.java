@@ -15,8 +15,9 @@ public class Donation {
     private Food food; //TODO: arraylist cuz I want to give the user the option to donate multiple types of food
     private int status; // 0, 1, 2 - received, delivery, accepted
     private int amount;
+    private String hours;
 
-    public Donation(String fulName, String city, String streetAddress, String phone, boolean isPickUp, Food food, int status, int amount) {
+    public Donation(String fulName, String city, String streetAddress, String phone, boolean isPickUp, Food food, int status, int amount, String hours) {
         this.fulName = fulName;
         this.city = city;
         this.streetAddress = streetAddress;
@@ -25,8 +26,9 @@ public class Donation {
         this.food = food;
         this.status = status;
         this.amount = amount;
+        this.hours = hours;
     }
-    
+
     public String get_id() {
         return _id;
     }
@@ -65,6 +67,10 @@ public class Donation {
 
     public int getAmount() {
         return amount;
+    }
+
+    public String getHours() {
+        return hours;
     }
 
     public void setStatus(int status) {

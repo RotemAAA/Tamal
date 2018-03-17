@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -14,6 +15,10 @@ import com.guzman.rotem.tamalsocialbank1.DbUtil;
 import com.guzman.rotem.tamalsocialbank1.Donation;
 import com.guzman.rotem.tamalsocialbank1.Food;
 import com.guzman.rotem.tamalsocialbank1.R;
+import com.guzman.rotem.tamalsocialbank1.adapter.HoursAdapter;
+import com.guzman.rotem.tamalsocialbank1.dataSource.HoursDataSource;
+
+import java.util.ArrayList;
 
 public class BookDelivery extends AppCompatActivity {
 
@@ -27,9 +32,11 @@ public class BookDelivery extends AppCompatActivity {
     private EditText street;
     private EditText phone;
     private Button sendBtn;
+    private Spinner spinner;
 
     private Food food;
     private int amount = 1;
+    private String hoursP;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,19 +48,28 @@ public class BookDelivery extends AppCompatActivity {
         street = findViewById(R.id.etStreetAndNumber);
         phone = findViewById(R.id.etPhone);
         sendBtn = findViewById(R.id.btnSend);
+        spinner = findViewById(R.id.spnrPickHour);
+        ArrayList<Hour> hours = HoursDataSource.getData();
+        HoursAdapter adapter = new HoursAdapter(this, hours);
+        spinner.setAdapter(adapter);
+
 
         getDetailsSp();
 
         Intent intent = getIntent();
         String chosenFood = intent.getStringExtra("chosen_food");
         String am = intent.getStringExtra("amount");
-        if (am == null){
+        if (am == null) {
             amount = 1;
         } else {
             amount = Integer.valueOf(am);
         }
         Gson gson = new Gson();
         food = gson.fromJson(chosenFood, Food.class);
+        Hour hour1 = (Hour) spinner.getSelectedItem();
+        hoursP = hour1.getHour();
+        //hoursP = spinner.getSelectedItem().toString();
+
 
         sendBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +77,7 @@ public class BookDelivery extends AppCompatActivity {
                 if (fullName.getText().toString().equals("") || city.getText().toString().equals("") || street.getText().toString().equals("") || phone.getText().toString().equals("")) {
                     Toast.makeText(getApplicationContext(), "נא למלא את השדות", Toast.LENGTH_LONG).show();
                 } else {
-                    Donation donation = new Donation(fullName.getText().toString(), city.getText().toString(), street.getText().toString(), phone.getText().toString(), false, food, 0, amount);
+                    Donation donation = new Donation(fullName.getText().toString(), city.getText().toString(), street.getText().toString(), phone.getText().toString(), false, food, 0, amount, hoursP);
                     writeDonation(donation);
                     saveDetails(donation);
                     Toast.makeText(getApplicationContext(), "תודה רבה, " + fullName.getText().toString(), Toast.LENGTH_LONG).show();
