@@ -17,6 +17,7 @@ import com.google.gson.Gson;
 import com.guzman.rotem.tamalsocialbank1.Donation;
 import com.guzman.rotem.tamalsocialbank1.R;
 import com.guzman.rotem.tamalsocialbank1.Request;
+import com.guzman.rotem.tamalsocialbank1.dataSource.DeliveryGuyDataSource;
 
 import java.util.ArrayList;
 
@@ -56,6 +57,23 @@ public class DeliveryGuyDestionations extends AppCompatActivity {
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                mViewPager.setAdapter(mSectionsPagerAdapter);
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
 
     }
 
@@ -92,6 +110,8 @@ public class DeliveryGuyDestionations extends AppCompatActivity {
         public Fragment getItem(int position) {
             Gson gson = new Gson();
             dUser = gson.fromJson(json, DeliveryUser.class);
+            DeliveryUser save = dUser;
+            dUser = DeliveryGuyDataSource.getDeliveryUser(save);
             String des = "";
             int i = 0;
             try {

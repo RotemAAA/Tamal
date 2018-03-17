@@ -73,7 +73,7 @@ public class StorageRequestsActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
 
             //return newInstance method factory design
-            return null;
+            return RequestsFragment.newInstance(position);
         }
 
         @Override

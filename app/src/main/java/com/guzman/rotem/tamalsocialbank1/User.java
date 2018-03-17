@@ -54,6 +54,10 @@ public class User {
         this.role = role;
     }
 
+    public void set_rev(String _rev) {
+        this._rev = _rev;
+    }
+
     @Override
     public String toString() {
         return "User{" +

@@ -2,6 +2,7 @@ package com.guzman.rotem.tamalsocialbank1.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,8 +10,11 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+import com.guzman.rotem.tamalsocialbank1.DbUtil;
 import com.guzman.rotem.tamalsocialbank1.R;
 import com.guzman.rotem.tamalsocialbank1.Request;
+import com.guzman.rotem.tamalsocialbank1.stockKeeper.StoraeDeliveryGuysListActivity;
 
 import java.util.ArrayList;
 
@@ -54,7 +58,7 @@ public class RequestAdapter extends BaseAdapter {
         LayoutInflater inflater = LayoutInflater.from(context);
 
         @SuppressLint("ViewHolder")
-        View v = inflater.inflate(R.layout.storage_manage_donation_my_list, parent, false);
+        View v = inflater.inflate(R.layout.storage_manage_request_new_my_list, parent, false);
 
         TextView tvSMNewRequestInInventory = v.findViewById(R.id.tvSMNewRequestInInventory);
         TextView tvSMNewRequestShowProduct2 = v.findViewById(R.id.tvSMNewRequestShowProduct2);
@@ -76,12 +80,12 @@ public class RequestAdapter extends BaseAdapter {
 
         tvSMNewRequestMotherName.setText(fullName);
 
-        //TODO: add the other stuff to request class?
 
         btnSMNewRequestChangeStatus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: change request status
+                //TODO: Alert Dialog?
+                //DbUtil.updateRequest();
             }
         });
 
@@ -89,6 +93,14 @@ public class RequestAdapter extends BaseAdapter {
             @Override
             public void onClick(View view) {
                 //TODO: connect to delivery guy
+                request.setStatus(1);
+                DbUtil.updateRequest(request, context);
+                Gson gson = new Gson();
+                String json = gson.toJson(request);
+                Intent intent = new Intent(context, StoraeDeliveryGuysListActivity.class);
+                intent.putExtra("theRequest", json);
+                context.startActivity(intent);
+
             }
         });
 
