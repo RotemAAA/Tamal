@@ -13,7 +13,7 @@
         android:fontFamily="@font/varela_round"
         android:gravity="center"
         android:text="TextView"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorPrimaryTextWhite"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
