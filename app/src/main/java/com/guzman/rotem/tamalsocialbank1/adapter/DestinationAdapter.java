@@ -104,21 +104,13 @@ public class DestinationAdapter extends BaseAdapter {
                         finalDonation1.setStatus(1);
                         DbUtil.updateDonation(finalDonation1, context);
                     }
-/*                    if (finalDonation1.getStatus() != 2) {
-                        finalDonation1.setStatus(2);
-                        DbUtil.updateDonation(finalDonation1, context);
-                    }*/
+
                 }
                 if (finalRequest1 != null) {
                     if (finalRequest1.getStatus() != 1) {
                         finalRequest1.setStatus(1);
                         DbUtil.updateRequest(finalRequest1, context);
                     }
-/*                    if (finalRequest1.getStatus() != 2) {
-                        finalRequest1.setStatus(2);
-                        DbUtil.updateRequest(finalRequest1, context);
-                    }*/
-
                 }
 
                 ((Activity) context).recreate();

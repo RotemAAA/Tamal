@@ -14,7 +14,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/varela_round"
         android:text="5"
-        android:textColor="#50b281"
+        android:textColor="@color/inStockProduct"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvSMNewRequestInStockNumber"
         app:layout_constraintEnd_toStartOf="@+id/tvSMNewRequestInStockNumber"
@@ -130,16 +130,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvSMNewRequestShowProductNumber1"
-        android:layout_width="wrap_content"
-        android:layout_height="19dp"
-        android:layout_marginEnd="224dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/tvSMNewRequestShowProduct2"
-        app:layout_constraintEnd_toStartOf="@+id/tvSMNewRequestShowProduct2"
-        app:layout_constraintTop_toTopOf="@+id/tvSMNewRequestShowProduct2"
-        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView8"
@@ -148,7 +138,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/varela_round"
-        android:text="קיבולת למוצר"
+        android:text="קיבולת למוצר:"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"

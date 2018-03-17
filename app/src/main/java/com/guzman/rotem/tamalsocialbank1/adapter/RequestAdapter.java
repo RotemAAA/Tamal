@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-import com.guzman.rotem.tamalsocialbank1.DbUtil;
 import com.guzman.rotem.tamalsocialbank1.R;
 import com.guzman.rotem.tamalsocialbank1.Request;
 import com.guzman.rotem.tamalsocialbank1.stockKeeper.StoraeDeliveryGuysListActivity;
@@ -92,8 +91,8 @@ public class RequestAdapter extends BaseAdapter {
         btnSMNewRequestCallDeliveryGuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                request.setStatus(1);
-                DbUtil.updateRequest(request, context);
+                //request.setStatus(1);
+                //DbUtil.updateRequest(request, context);
                 Gson gson = new Gson();
                 String json = gson.toJson(request);
                 Intent intent = new Intent(context, StoraeDeliveryGuysListActivity.class);

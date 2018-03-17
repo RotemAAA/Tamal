@@ -76,7 +76,7 @@ public class DonationAdapter extends BaseAdapter {
         //TODO: set date and time, show in inventory amount
         tvSMDonationDonorName.setText(donation.getFulName());
         tvSMDonationProductName1.setText(donation.getFood().getName());
-        tvSMDonationProductNumber1.setText(/*donation.getAmount()*/"3");
+        tvSMDonationProductNumber1.setText(String.valueOf(donation.getAmount()));
 
         btnSMDonationBookDelivery.setOnClickListener(new View.OnClickListener() {
             @Override
