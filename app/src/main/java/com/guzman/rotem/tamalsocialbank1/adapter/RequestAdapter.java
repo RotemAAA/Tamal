@@ -62,10 +62,8 @@ public class RequestAdapter extends BaseAdapter {
         TextView tvSMNewRequestInInventory = v.findViewById(R.id.tvSMNewRequestInInventory);
         TextView tvSMNewRequestShowProduct2 = v.findViewById(R.id.tvSMNewRequestShowProduct2);
         TextView tvSMNewRequestShowProductnumber = v.findViewById(R.id.tvSMNewRequestShowProduct1);
-        TextView tvSMNewRequestTime = v.findViewById(R.id.tvSMNewRequestTime);
         TextView tvSMNewRequestMotherName = v.findViewById(R.id.tvSMNewRequestMotherName);
         TextView tvSMNewRequestInStockNumber = v.findViewById(R.id.tvSMNewRequestInStockNumber);
-        TextView tvSMNewRequestDate = v.findViewById(R.id.tvSMNewRequestDate);
         //TextView tvSMNewRequestShowProductNumber1 = v.findViewById(R.id.tvSMNewRequestShowProductNumber1);
         TextView tvSMNewRequestProductCapacity = v.findViewById(R.id.textView8);
         TextView tvSMNewRequestProductCapacityNumber = v.findViewById(R.id.textView9);

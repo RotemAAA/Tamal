@@ -70,7 +70,7 @@
         android:layout_marginStart="16dp"
         android:fontFamily="@font/varela_round"
         android:gravity="center"
-        android:text="17:05"
+        android:text="@string/wanted_hours"
         android:textColor="@color/time_color"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvSMDonationDate"
