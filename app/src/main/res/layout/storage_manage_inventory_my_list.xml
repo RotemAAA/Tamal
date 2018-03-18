@@ -23,24 +23,28 @@
         android:id="@+id/tvFoodeName"
         android:layout_width="182dp"
         android:layout_height="62dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/varela_round"
+        android:gravity="center_vertical"
         android:text="מטרנה Extra Care Comfort"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
-        android:gravity="center_vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/ivFoodType"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ivFoodType"
         app:layout_constraintStart_toEndOf="@+id/tvNumberInInventory"
-        app:layout_constraintTop_toTopOf="@+id/ivFoodType" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <EditText
         android:id="@+id/tvNumberInInventory"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/backTVDesNum"
         android:text="50"
+        android:inputType="number"
+        android:ems="10"
         android:gravity="center"
         android:textColor="@color/colorPrimaryTextWhite"
         android:fontFamily="@font/varela_round"
