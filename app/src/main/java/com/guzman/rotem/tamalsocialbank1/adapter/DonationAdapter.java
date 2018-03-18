@@ -73,7 +73,6 @@ public class DonationAdapter extends BaseAdapter {
         Button btnSMDonationAccept = v.findViewById(R.id.btnSMDonationAccept);
 
 
-        //TODO: set date and time, show in inventory amount
         tvSMDonationDonorName.setText(donation.getFulName());
         tvSMDonationProductName1.setText(donation.getFood().getName());
         tvSMDonationProductNumber1.setText(String.valueOf(donation.getAmount()));
@@ -97,7 +96,6 @@ public class DonationAdapter extends BaseAdapter {
         btnSMDonationAccept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: take the product name bring the supply json from server by the name, change ths status of donation, ++ supply amount
                 donation.setStatus(2);
                 DbUtil.updateDonation(donation, context);
                 DbUtil.updateSupply(donation, context);
