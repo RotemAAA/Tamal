@@ -11,6 +11,8 @@ public class Request {
     private String _rev;
     private String firstName;
     private String lastName;
+    private String address;
+    private String phone;
     private int status; // 0 processing, 1 delivery , 2 done
 
 
@@ -19,6 +21,8 @@ public class Request {
         this.firstName = user.getFirstName();
         this.lastName = user.getLastName();
         this.status = status;
+        this.address = user.getStreetNumber() + " " + user.getCity();
+        this.phone = user.getPhone();
     }
 
     public String get_id() {
@@ -43,6 +47,14 @@ public class Request {
 
     public void set_rev(String _rev) {
         this._rev = _rev;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getPhone() {
+        return phone;
     }
 
     public void setStatus(int status) {

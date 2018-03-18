@@ -100,6 +100,8 @@ public class DonationAdapter extends BaseAdapter {
                 //TODO: take the product name bring the supply json from server by the name, change ths status of donation, ++ supply amount
                 donation.setStatus(2);
                 DbUtil.updateDonation(donation, context);
+                DbUtil.updateSupply(donation, context);
+
 
                 ((Activity) context).recreate();
             }

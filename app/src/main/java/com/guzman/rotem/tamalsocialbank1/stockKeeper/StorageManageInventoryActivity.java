@@ -40,7 +40,7 @@ public class StorageManageInventoryActivity extends AppCompatActivity {
 //we have a result
             String scanContent = scanningResult.getContents();
             String scanFormat = scanningResult.getFormatName();
-           /* formatTxt.setText("FORMAT: " + scanFormat);
+/*            formatTxt.setText("FORMAT: " + scanFormat);
             contentTxt.setText("CONTENT: " + scanContent);*/
 
             //TODO: USE SCANS

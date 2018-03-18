@@ -114,6 +114,7 @@ public class DbUtil {
         }
         return null;
     }
+
     public static ArrayList<Supply> getAllSupplyList(Database database) {
         try {
             return (ArrayList<Supply>) database.getAllDocsRequestBuilder().includeDocs(true).build().getResponse().getDocsAs(Supply.class);
@@ -122,6 +123,7 @@ public class DbUtil {
         }
         return null;
     }
+
     @SuppressLint("StaticFieldLeak")
     private void deleteFirst() {
         new AsyncTask<Void, Void, Void>() {
@@ -286,17 +288,25 @@ public class DbUtil {
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... voids) {
-                CloudantClient client = ClientBuilder.account("67817cbe-88be-4383-98a9-93784d2103e2-bluemix")
-                        .username("towellephapenerenefortic")
-                        .password("8e602a9f89d418e279e3855219b98f4570340926")
-                        .build();
+                try {
 
-                Database db = client.database("demo", false);
-                db.remove(donation.get_id(), donation.get_rev());
-                Log.i("DELETE", "donation removed");
-                donation.set_rev(null);
-                DbUtil.writeToDb(context, dbAcnt, dbUser, dbPass, dbName, donation);
+
+                    CloudantClient client = ClientBuilder.account("67817cbe-88be-4383-98a9-93784d2103e2-bluemix")
+                            .username("towellephapenerenefortic")
+                            .password("8e602a9f89d418e279e3855219b98f4570340926")
+                            .build();
+
+                    Database db = client.database("demo", false);
+                    db.remove(donation.get_id(), donation.get_rev());
+                    Log.i("DELETE", "donation removed");
+                    donation.set_rev(null);
+                    DbUtil.writeToDb(context, dbAcnt, dbUser, dbPass, dbName, donation);
+
+                } catch (Exception e) {
+//                    m
+                }
                 return null;
+
             }
         }.execute();
     }
@@ -343,4 +353,43 @@ public class DbUtil {
             }
         }.execute();
     }
+
+    @SuppressLint("StaticFieldLeak")
+    public static void updateSupply(final Donation donation, final Context context) {
+        final String dbAcnt = "67817cbe-88be-4383-98a9-93784d2103e2-bluemix";
+        final String dbUser = "tionsedgandidideperassio";
+        final String dbPass = "4bf6f9c4478a6ee21689e348ea0d0cf83a2c8d9d";
+        final String dbName = "inventory";
+        new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... voids) {
+                CloudantClient client = ClientBuilder.account(dbAcnt)
+                        .username(dbUser)
+                        .password(dbPass)
+                        .build();
+
+                Database db = client.database(dbName, false);
+
+                ArrayList<Supply> supplies = DbUtil.getAllSupplyList(db);
+                String name = donation.getFood().getName();
+                for (Supply supply : supplies) {
+                    if (supply.getFoodName().equals(name)) {
+                        supply.setInInventory(supply.getInInventory() + donation.getAmount());
+                        //supply.set_rev(null);
+                        db.update(supply);
+/*                        supply.set_rev(null);
+                        DbUtil.writeToDb(context, dbAcnt, dbUser, dbPass, dbName, supply);*/
+                    }
+                }
+
+                //db.remove(donation.get_id(), donation.get_rev());
+                //Log.i("DELETE", "req removed");
+                //donation.set_rev(null);
+
+                return null;
+            }
+        }.execute();
+    }
+
+
 }

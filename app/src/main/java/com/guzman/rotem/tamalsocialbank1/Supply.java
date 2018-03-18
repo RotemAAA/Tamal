@@ -50,6 +50,10 @@ public class Supply {
         return _rev;
     }
 
+    public void setInInventory(long inInventory) {
+        this.inInventory = inInventory;
+    }
+
     public void set_rev(String _rev) {
         this._rev = _rev;
     }
