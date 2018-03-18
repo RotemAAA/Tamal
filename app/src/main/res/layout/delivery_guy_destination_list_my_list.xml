@@ -29,8 +29,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/round_exept_button"
-        android:text="קבל"
+        android:background="@drawable/asset206"
         app:layout_constraintBottom_toTopOf="@+id/tvDestinationFoodType"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
