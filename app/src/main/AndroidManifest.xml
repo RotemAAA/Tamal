@@ -152,7 +152,7 @@
             android:screenOrientation="portrait"/>
         <activity
             android:name=".deliveryGuy.DeliveryGuyDestionations"
-            android:label="@string/title_activity_delivery_guy_destionations"
+            android:label="משלוחים"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

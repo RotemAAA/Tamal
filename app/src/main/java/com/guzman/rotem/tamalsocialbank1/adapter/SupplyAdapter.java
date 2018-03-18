@@ -2,10 +2,13 @@ package com.guzman.rotem.tamalsocialbank1.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -53,13 +56,34 @@ public class SupplyAdapter extends BaseAdapter {
         View v = inflater.inflate(R.layout.storage_manage_inventory_my_list, parent, false);
 
         TextView tvFoodName = v.findViewById(R.id.tvFoodeName);
-        TextView tvNumberInInventory = v.findViewById(R.id.tvNumberInInventory);
+        final EditText tvNumberInInventory = v.findViewById(R.id.tvNumberInInventory);
         ImageView ivFoodType = v.findViewById(R.id.ivFoodType);
 
         String s = (supply.getInInventory()) + "";
 
         tvFoodName.setText(supply.getFoodName());
         tvNumberInInventory.setText(s);
+
+        String s1 = tvNumberInInventory.getText().toString();
+
+        tvNumberInInventory.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+
+
+            }
+        });
 
 
         return v;
