@@ -33,12 +33,12 @@
 
     <Button
         android:id="@+id/btnSMNewRequestChangeStatus"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/asset209"
+        android:background="@drawable/asset207"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSMNewRequestCallDeliveryGuy" />

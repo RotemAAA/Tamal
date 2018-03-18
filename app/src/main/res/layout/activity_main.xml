@@ -132,7 +132,7 @@
         android:id="@+id/btnLogin"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/asset135"
+        android:background="@drawable/asset211"
         app:layout_constraintBottom_toTopOf="@+id/gh94"
         app:layout_constraintEnd_toStartOf="@+id/gv90"
         app:layout_constraintHorizontal_bias="0.512"
@@ -165,14 +165,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.81" />
+        app:layout_constraintGuide_percent="0.82" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gh94"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.94" />
+        app:layout_constraintGuide_percent="0.92" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gv80"
