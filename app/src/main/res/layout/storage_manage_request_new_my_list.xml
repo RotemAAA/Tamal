@@ -35,44 +35,15 @@
         android:id="@+id/btnSMNewRequestChangeStatus"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSMNewRequestCallDeliveryGuy"
-        android:background="@drawable/asset169" />
-
-    <TextView
-        android:id="@+id/tvSMNewRequestShowProduct2"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:background="@color/backTVDesType"
-        android:padding="17dp"
-        android:text="מטרנה Extra Care Comfort"
-        android:fontFamily="@font/varela_round"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvSMNewRequestShowProduct1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvSMNewRequestShowProduct1"
-        app:layout_constraintTop_toTopOf="@+id/tvSMNewRequestShowProduct1" />
-
-    <TextView
-        android:id="@+id/tvSMNewRequestShowProduct1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@color/backTVDesNum"
-        android:padding="8dp"
-        android:text="20"
-        android:fontFamily="@font/varela_round"
-        android:textColor="@color/colorPrimaryTextWhite"
-        android:textSize="25sp"
+        android:background="@drawable/asset209"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSMNewRequestChangeStatus"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSMNewRequestCallDeliveryGuy" />
 
-<!--
+    <!--
     <TextView
         android:id="@+id/tvSMNewRequestTime"
         android:layout_width="wrap_content"
@@ -96,7 +67,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/varela_round"
-        android:text="שם האמא"
+        android:text="רותם גוזמן"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -137,13 +108,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/varela_round"
         android:text="@string/product_capacity"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSMNewRequestMotherName" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
         android:id="@+id/textView9"
@@ -157,5 +128,18 @@
         app:layout_constraintBottom_toBottomOf="@+id/textView8"
         app:layout_constraintEnd_toStartOf="@+id/textView8"
         app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/varela_round"
+        android:text="יוסף פפר 4, פתח תקווה"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSMNewRequestMotherName" />
 
 </android.support.constraint.ConstraintLayout>
