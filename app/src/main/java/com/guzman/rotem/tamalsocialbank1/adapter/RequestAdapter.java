@@ -59,9 +59,9 @@ public class RequestAdapter extends BaseAdapter {
         @SuppressLint("ViewHolder")
         View v = inflater.inflate(R.layout.storage_manage_request_new_my_list, parent, false);
 
-        TextView tvSMNewRequestInInventory = v.findViewById(R.id.tvSMNewRequestInInventory);
+//        TextView tvSMNewRequestInInventory = v.findViewById(R.id.tvSMNewRequestInInventory);
         TextView tvSMNewRequestMotherName = v.findViewById(R.id.tvSMNewRequestMotherName);
-        TextView tvSMNewRequestInStockNumber = v.findViewById(R.id.tvSMNewRequestInStockNumber);
+//        TextView tvSMNewRequestInStockNumber = v.findViewById(R.id.tvSMNewRequestInStockNumber);
         //TextView tvSMNewRequestShowProductNumber1 = v.findViewById(R.id.tvSMNewRequestShowProductNumber1);
         TextView tvSMNewRequestProductCapacity = v.findViewById(R.id.textView8);
         TextView tvSMNewRequestProductCapacityNumber = v.findViewById(R.id.textView9);
