@@ -1,6 +1,7 @@
 package com.guzman.rotem.tamalsocialbank1.adapter;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
+import com.guzman.rotem.tamalsocialbank1.DbUtil;
 import com.guzman.rotem.tamalsocialbank1.R;
 import com.guzman.rotem.tamalsocialbank1.Request;
 import com.guzman.rotem.tamalsocialbank1.stockKeeper.StoraeDeliveryGuysListActivity;
@@ -50,7 +52,7 @@ public class RequestAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, final View convertView, ViewGroup parent) {
 
         final Request request = data.get(position);
 
@@ -79,8 +81,10 @@ public class RequestAdapter extends BaseAdapter {
         btnSMNewRequestChangeStatus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: Alert Dialog?
-                //DbUtil.updateRequest();
+                request.setStatus(2);
+                DbUtil.updateRequest(request, context);
+                //notifyDataSetChanged();
+                ((Activity) context).recreate();
             }
         });
 
