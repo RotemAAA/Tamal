@@ -1,7 +1,6 @@
 package com.guzman.rotem.tamalsocialbank1.adapter;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -65,6 +64,7 @@ public class DestinationAdapter extends BaseAdapter {
         TextView tvName = v.findViewById(R.id.tvDestinationContactName);
         TextView tvAddress = v.findViewById(R.id.tvDestinationAddress);
         TextView tvFoodName = v.findViewById(R.id.tvDestinationFoodType);
+        TextView tvAmount = v.findViewById(R.id.tvDestinationoodNum);
         Button btnCall = v.findViewById(R.id.btnCallDestination);
         Button btnGet = v.findViewById(R.id.btnSMDonationFullAccept);
 
@@ -72,12 +72,10 @@ public class DestinationAdapter extends BaseAdapter {
             tvName.setText(donation.getFulName());
             tvAddress.setText(donation.getStreetAddress());
             tvFoodName.setText(donation.getFood().getName());
+            tvAmount.setText(String.valueOf(donation.getAmount()));
         } else if (request != null) {
             tvName.setText(request.getFirstName() + " " + request.getLastName());
-            //tvAddress.setText(request.get);
-            //TODO: make get address method in Request
-            tvAddress.setText("לגרום לזה לקרות! חחח");
-            tvFoodName.setText("אוכל טעים");
+            tvAddress.setText(request.getAddress());
         }
 
         final Donation finalDonation = donation;
@@ -101,8 +99,9 @@ public class DestinationAdapter extends BaseAdapter {
             public void onClick(View v) {
                 if (finalDonation1 != null) {
                     if (finalDonation1.getStatus() != 1) {
-                        finalDonation1.setStatus(1);
-                        DbUtil.updateDonation(finalDonation1, context);
+                        Donation d = finalDonation1;
+                        d.setStatus(1);
+                        DbUtil.updateDonation(d, context);
                     }
 
                 }
@@ -113,7 +112,7 @@ public class DestinationAdapter extends BaseAdapter {
                     }
                 }
 
-                ((Activity) context).recreate();
+                //((Activity) context).recreate();
             }
         });
 
