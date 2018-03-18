@@ -262,6 +262,24 @@ public class DbUtil {
     }
 
     @SuppressLint("StaticFieldLeak")
+    public static void updateUser(final DeliveryUser user) {
+        new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... voids) {
+                CloudantClient client = ClientBuilder.account("67817cbe-88be-4383-98a9-93784d2103e2-bluemix")
+                        .username("ndstedecionstentlymnatud")
+                        .password("434006e0cef09ba9aabe33cca89e808a5139884d")
+                        .build();
+
+                Database db = client.database("users", false);
+                db.update(user);
+                Log.i("DELETE", "user removed");
+                return null;
+            }
+        }.execute();
+    }
+
+    @SuppressLint("StaticFieldLeak")
     public static void deleteDonation(final Donation donation) {
         new AsyncTask<Void, Void, Void>() {
             @Override
@@ -377,6 +395,7 @@ public class DbUtil {
                         supply.setInInventory(supply.getInInventory() + donation.getAmount());
                         //supply.set_rev(null);
                         db.update(supply);
+//                        Toast.makeText(context, "נשמר במלאי", Toast.LENGTH_LONG).show();
 /*                        supply.set_rev(null);
                         DbUtil.writeToDb(context, dbAcnt, dbUser, dbPass, dbName, supply);*/
                     }

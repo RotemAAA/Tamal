@@ -1,7 +1,7 @@
 package com.guzman.rotem.tamalsocialbank1.adapter;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
+import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +13,7 @@ import com.guzman.rotem.tamalsocialbank1.DbUtil;
 import com.guzman.rotem.tamalsocialbank1.Donation;
 import com.guzman.rotem.tamalsocialbank1.R;
 import com.guzman.rotem.tamalsocialbank1.Request;
+import com.guzman.rotem.tamalsocialbank1.deliveryGuy.DeliveryUser;
 
 import java.util.ArrayList;
 
@@ -22,14 +23,27 @@ import java.util.ArrayList;
 
 public class DestinationAdapter extends BaseAdapter {
 
-    private ArrayList arrayList;
-    private Context context;
-    private int i;
+    final String dbAcnt = "67817cbe-88be-4383-98a9-93784d2103e2-bluemix";
+    final String dbUser = "ndstedecionstentlymnatud";
+    final String dbPass = "434006e0cef09ba9aabe33cca89e808a5139884d";
+    final String dbName = "users";
 
-    public DestinationAdapter(ArrayList arrayList, Context context, int i) {
+    private ArrayList arrayList;
+    private Activity context;
+    private int i;
+    private DeliveryUser user;
+
+    public DestinationAdapter(ArrayList arrayList, Activity context, int i) {
         this.arrayList = arrayList;
         this.context = context;
         this.i = i;
+    }
+
+    public DestinationAdapter(ArrayList arrayList, Activity context, int i, DeliveryUser user) {
+        this.arrayList = arrayList;
+        this.context = context;
+        this.i = i;
+        this.user = user;
     }
 
     @Override
@@ -48,7 +62,7 @@ public class DestinationAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, final View convertView, ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(context);
         @SuppressLint("ViewHolder") final View v = inflater.inflate(R.layout.delivery_guy_destination_list_my_list, parent, false);
         Donation donation = null;
@@ -66,7 +80,7 @@ public class DestinationAdapter extends BaseAdapter {
         TextView tvFoodName = v.findViewById(R.id.tvDestinationFoodType);
         TextView tvAmount = v.findViewById(R.id.tvDestinationoodNum);
         Button btnCall = v.findViewById(R.id.btnCallDestination);
-        Button btnGet = v.findViewById(R.id.btnSMDonationFullAccept);
+        final Button btnGet = v.findViewById(R.id.btnSMDonationFullAccept);
 
         if (donation != null) {
             tvName.setText(donation.getFulName());
@@ -88,6 +102,7 @@ public class DestinationAdapter extends BaseAdapter {
                     finalDonation.getPhone(); // this is the phone to call to
                 } else if (finalRequest != null) {
                     // no phone in request
+                    finalRequest.getPhone(); //TODO: Call
                 }
             }
         });
@@ -102,6 +117,15 @@ public class DestinationAdapter extends BaseAdapter {
                         Donation d = finalDonation1;
                         d.setStatus(1);
                         DbUtil.updateDonation(d, context);
+                        if (user != null) {
+                            DeliveryUser secUser = user;
+                            secUser.setDonations(new ArrayList<Donation>());
+                            DbUtil.updateUser(secUser);
+                            btnGet.setVisibility(View.INVISIBLE);
+/*                            DbUtil.deleteUser(user.get_id(), user.get_rev());
+                            DbUtil.writeToDb(context, dbAcnt, dbUser, dbPass, dbName, secUser);*/
+
+                        }
                     }
 
                 }
@@ -109,10 +133,19 @@ public class DestinationAdapter extends BaseAdapter {
                     if (finalRequest1.getStatus() != 1) {
                         finalRequest1.setStatus(1);
                         DbUtil.updateRequest(finalRequest1, context);
+                        if (user != null) {
+                            DeliveryUser secUser = user;
+                            secUser.setRequests(new ArrayList<Request>());
+                            DbUtil.updateUser(secUser);
+                            btnGet.setVisibility(View.INVISIBLE);
+/*                            DbUtil.deleteUser(user.get_id(), user.get_rev());
+                            DbUtil.writeToDb(context, dbAcnt, dbUser, dbPass, dbName, secUser);*/
+
+                        }
                     }
                 }
 
-                //((Activity) context).recreate();
+                context.recreate();
             }
         });
 

@@ -64,13 +64,13 @@ public class DestinationDataSource extends AsyncTask<Void, Void, ArrayList> {
     protected void onPostExecute(ArrayList arrayList) {
         if (i == 0) {
             ArrayList<Donation> donations = arrayList;
-            DestinationAdapter adapter = new DestinationAdapter(donations, context, 0);
+            DestinationAdapter adapter = new DestinationAdapter(donations, context, 0, deliveryUser);
             if (arrayList != null)
                 listView.setAdapter(adapter);
         }
         if (i == 1) {
             ArrayList<Request> requests = arrayList;
-            DestinationAdapter adapter = new DestinationAdapter(requests, context, 1);
+            DestinationAdapter adapter = new DestinationAdapter(requests, context, 1, deliveryUser);
             if (arrayList != null)
                 listView.setAdapter(adapter);
         }
