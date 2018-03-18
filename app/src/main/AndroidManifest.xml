@@ -136,12 +136,6 @@
             android:name=".clerk.ClerkMainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".stockKeeper.StorageRequestsNewActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".stockKeeper.StorageRequestsInProccessActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".admin.AdminProductsActivity"
             android:screenOrientation="portrait" />
         <activity
