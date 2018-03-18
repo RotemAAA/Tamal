@@ -15,6 +15,7 @@ import com.google.gson.Gson;
 import com.guzman.rotem.tamalsocialbank1.DbUtil;
 import com.guzman.rotem.tamalsocialbank1.Donation;
 import com.guzman.rotem.tamalsocialbank1.R;
+import com.guzman.rotem.tamalsocialbank1.dataSource.InNowDataSource;
 import com.guzman.rotem.tamalsocialbank1.stockKeeper.StoraeDeliveryGuysListActivity;
 
 import java.util.ArrayList;
@@ -52,6 +53,7 @@ public class DonationAdapter extends BaseAdapter {
         return 0;
     }
 
+    @SuppressLint("StaticFieldLeak")
     @Override
     public View getView(int position, final View convertView, ViewGroup paren) {
 
@@ -62,8 +64,9 @@ public class DonationAdapter extends BaseAdapter {
         @SuppressLint("ViewHolder")
         View v = inflater.inflate(R.layout.storage_manage_donation_my_list, paren, false);
 
-        //TextView tvSMDonationAmount = v.findViewById(R.id.tvSMDonationInInventory);
-        //TextView tvSMDonationInInventoryNumberv = v.findViewById(R.id.tvSMDonationInInventoryNumberv);
+
+        //final TextView tvSMDonationAmount = v.findViewById(R.id.tvSMDonationInInventory);
+        final TextView tvSMDonationInInventoryNumberv = v.findViewById(R.id.tvSMDonationInInventoryNumberv);
         TextView tvSMDonationProductName1 = v.findViewById(R.id.tvSMDonationProductName1);
         TextView tvSMDonationProductNumber1 = v.findViewById(R.id.tvSMDonationProductNumber1);
         TextView tvSMDonationDonorName = v.findViewById(R.id.tvSMDonationDonorName);
@@ -72,13 +75,13 @@ public class DonationAdapter extends BaseAdapter {
         Button btnSMDonationBookDelivery = v.findViewById(R.id.btnSMDonationBookDelivery);
         Button btnSMDonationAccept = v.findViewById(R.id.btnSMDonationAccept);
 
-
+        InNowDataSource dataSource = new InNowDataSource(donation, tvSMDonationInInventoryNumberv);
+        dataSource.execute();
         tvSMDonationDonorName.setText(donation.getFulName());
         tvSMDonationProductName1.setText(donation.getFood().getName());
         tvSMDonationProductNumber1.setText(String.valueOf(donation.getAmount()));
         tvSMDonationDate.setText(donation.getHours());
-
-
+        
         btnSMDonationBookDelivery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
