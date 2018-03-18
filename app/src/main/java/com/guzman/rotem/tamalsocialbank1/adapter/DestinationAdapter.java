@@ -2,6 +2,8 @@ package com.guzman.rotem.tamalsocialbank1.adapter;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -102,7 +104,12 @@ public class DestinationAdapter extends BaseAdapter {
                     finalDonation.getPhone(); // this is the phone to call to
                 } else if (finalRequest != null) {
                     // no phone in request
-                    finalRequest.getPhone(); //TODO: Call
+                    String phone = finalRequest.getPhone();//TODO: Call
+                    Uri phoneUri = Uri.parse("tel:" + phone);
+
+                    Intent dialIntent = new Intent(Intent.ACTION_DIAL, phoneUri);
+
+                    context.startActivity(dialIntent);
                 }
             }
         });
