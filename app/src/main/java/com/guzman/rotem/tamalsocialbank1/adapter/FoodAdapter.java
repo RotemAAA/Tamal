@@ -84,7 +84,7 @@ public class FoodAdapter extends BaseAdapter {
 
                 final AlertDialog.Builder alertDialog = new AlertDialog.Builder(context);
                 alertDialog.setTitle("בחר כמות");
-                alertDialog.setMessage("Enter Password");
+                alertDialog.setMessage("הכנס כמות: ");
 
                 final EditText input = new EditText(context);
                 input.setText("1");
