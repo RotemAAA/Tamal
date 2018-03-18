@@ -148,7 +148,8 @@
             android:name=".admin.AdminProductEditActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".donor.StoriesActivity" />
-        <activity android:name=".registration.RegistrationWebViewActivity" />
+        <activity android:name=".registration.RegistrationWebViewActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".deliveryGuy.DeliveryGuyDestionations"
             android:label="@string/title_activity_delivery_guy_destionations"
@@ -156,13 +157,16 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".stockKeeper.StorageDonationsActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_storage_donations"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".stockKeeper.StorageRequestsActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_storage_requests"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".donor.DropOffConfirmationForWaze"></activity>
+        <activity android:name=".donor.DropOffConfirmationForWaze"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

@@ -14,9 +14,10 @@
         android:background="@drawable/asset117"
         app:layout_constraintBottom_toTopOf="@+id/gh55"
         app:layout_constraintEnd_toStartOf="@+id/gv90"
-        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/gv10"
-        app:layout_constraintTop_toTopOf="@+id/gh45" />
+        app:layout_constraintTop_toTopOf="@+id/gh45"
+        app:layout_constraintVertical_bias="1.0" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gh20"
