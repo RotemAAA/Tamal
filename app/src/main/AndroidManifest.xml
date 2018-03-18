@@ -13,6 +13,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
+            android:label="הבנק החברתי למזון תינוקות"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -86,64 +87,84 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".registration.RegistrationChooseActivity"
+            android:label="התחברות"
             android:screenOrientation="portrait" />
         <activity
             android:name=".stockKeeper.StorageMainActivity"
+            android:label="מנהל מחסן"
             android:screenOrientation="portrait" />
         <activity
             android:name=".stockKeeper.StoraeDeliveryGuysListActivity"
+            android:label="שליחים"
             android:screenOrientation="portrait" />
         <activity
             android:name=".stockKeeper.StorageManageInventoryActivity"
+            android:label="מלאי"
             android:screenOrientation="portrait" />
         <activity
             android:name=".stockKeeper.StorageDonationFullDetailsActivity"
+
             android:screenOrientation="portrait" />
         <activity
             android:name=".stockKeeper.StorageManageDropOffPointsActivity"
+            android:label="נקודות מסירה"
             android:screenOrientation="portrait" />
         <activity
             android:name=".stockKeeper.StorageAddNewDropOffPointActivity"
+            android:label="נקודת מסירה חדשה"
             android:screenOrientation="portrait" />
         <activity
             android:name=".registration.RegestrationMainActivity"
+            android:label="התחברות"
             android:screenOrientation="portrait" />
         <activity
             android:name=".admin.AdminMainActivity"
+            android:label="מנהל מערכת"
             android:screenOrientation="portrait" />
         <activity
             android:name=".admin.AdminUsersMainActivity"
+            android:label="משתמשים"
             android:screenOrientation="portrait" />
         <activity
             android:name=".admin.AdminDeliveryGuysActivity"
+            android:label="שליחים"
             android:screenOrientation="portrait" />
         <activity
             android:name=".admin.AdminDeliveryGuysEditActivity"
+            android:label="עריכת/יצירת שליח"
             android:screenOrientation="portrait" />
         <activity
             android:name=".admin.AdminStockKeeperActivity"
+            android:label="מחסנאים"
             android:screenOrientation="portrait" />
         <activity
             android:name=".admin.AdminStockKeeperEditActivity"
+            android:label="עריכת/יצירת מנהל מחסן"
             android:screenOrientation="portrait" />
         <activity
             android:name=".admin.AdminMotherActivity"
+            android:label="מקבקשים/מבקשות"
             android:screenOrientation="portrait" />
         <activity
             android:name=".admin.AdminMotherEditActivity"
+            android:label="עריכת/יצירת מבקשים"
             android:screenOrientation="portrait" />
         <activity
             android:name=".clerk.ClerkMainActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".admin.AdminProductsActivity"
+            android:label="מוצרים"
             android:screenOrientation="portrait" />
         <activity
             android:name=".admin.AdminProductEditActivity"
+            android:label="עריכת/יצירת מוצר"
             android:screenOrientation="portrait" />
-        <activity android:name=".donor.StoriesActivity" />
+        <activity android:name=".donor.StoriesActivity"
+            android:label="סיפורים"/>
         <activity android:name=".registration.RegistrationWebViewActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:label="הרשמה"/>
         <activity
             android:name=".deliveryGuy.DeliveryGuyDestionations"
             android:label="משלוחים"
@@ -152,15 +173,17 @@
         <activity
             android:name=".stockKeeper.StorageDonationsActivity"
             android:screenOrientation="portrait"
-            android:label="@string/title_activity_storage_donations"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:label="תרומות"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".stockKeeper.StorageRequestsActivity"
             android:screenOrientation="portrait"
-            android:label="@string/title_activity_storage_requests"
+            android:label="בקשות"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".donor.DropOffConfirmationForWaze"
-            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".donor.DropOffConfirmationForWaze"
+            android:screenOrientation="portrait"
+            android:label="וייז" />
     </application>
 
 </manifest>
