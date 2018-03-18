@@ -10,16 +10,14 @@ import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
-import com.guzman.rotem.tamalsocialbank1.dataSource.SupplyDataSource;
 import com.guzman.rotem.tamalsocialbank1.R;
-import com.guzman.rotem.tamalsocialbank1.adapter.SupplyAdapter;
+import com.guzman.rotem.tamalsocialbank1.dataSource.SupplyDataSource;
 
 public class StorageManageInventoryActivity extends AppCompatActivity {
 
     private Button btnAddByBarcode;
     private ListView lvInventory;
     private TextView formatTxt, contentTxt;
-
 
 
     @Override
@@ -32,15 +30,9 @@ public class StorageManageInventoryActivity extends AppCompatActivity {
         contentTxt = (TextView)findViewById(R.id.scan_content);*/
         lvInventory = findViewById(R.id.lvInventory);
 
-
-
-        SupplyAdapter supplyAdapter = new SupplyAdapter(SupplyDataSource.getData(), this);
-        lvInventory.setAdapter(supplyAdapter);
-
-
-
-
+        new SupplyDataSource(lvInventory, this).execute();
     }
+
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
 //retrieve scan result
         IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
@@ -54,7 +46,7 @@ public class StorageManageInventoryActivity extends AppCompatActivity {
             //TODO: USE SCANS
 
 
-        }else{
+        } else {
             Toast toast = Toast.makeText(getApplicationContext(),
                     "No scan data received!", Toast.LENGTH_SHORT);
             toast.show();
